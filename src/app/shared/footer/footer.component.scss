@@ -1,0 +1,38 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.footer {
+  background: $mono-grey4;
+  padding-top: 101px;
+
+  // Section 1 - Ready for Mantle
+  &__section1 {
+    margin-bottom: 104px;
+  }
+
+  &__header {
+    margin-bottom: 12px;
+    @include header3($earth-maroon);
+  }
+
+  &__subheader {
+    @include copyLarge($mono-grey1);
+  }
+
+  // Section 2 - Contact Info
+  &__label {
+    color: $earth-maroon;
+    margin-bottom: 20px;
+  }
+
+  &__section-title {
+    color: $earth-maroon;
+    margin-bottom: 20px;
+  }
+
+  &__footnote {
+    margin-top: 15px;
+    border-top: 1px solid red;
+    padding: 30px 0;
+  }
+}

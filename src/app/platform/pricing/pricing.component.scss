@@ -1,0 +1,40 @@
+@import "src/styles/base/_variables";
+@import "src/styles/base/_typography";
+
+.pricing {
+  // Section 1
+  &__section1 {
+    margin-top: 246px;
+    margin-bottom: 146px;
+    max-width: 549px;
+  }
+
+  &__header1 {
+    margin-bottom: 16px;
+    @include header1($earth-maroon);
+  }
+
+  &__heading-label {
+    @include caption2($earth-red);
+  }
+
+  // Section 2
+  &__section2 {
+    margin-bottom: 365px;
+  }
+
+  &__section-label {
+    margin-top: 27px;
+    margin-left: -27px;
+    @include caption2($earth-maroon);
+  }
+
+  &__price-label {
+    margin-top: 30px;
+    @include caption2($mono-grey1);
+  }
+
+  &__info {
+    margin-top: 48px;
+  }
+}

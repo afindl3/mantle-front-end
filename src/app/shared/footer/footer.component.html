@@ -1,0 +1,72 @@
+<div class="footer">
+  <div class="container">
+    <div class="footer__section1 row">
+      <div class="col-12 col-md-7">
+        <h3 class="footer__header">{{ isPrimaryContent ? header1 : header2 }}</h3>
+        <p class="footer__subheader">{{ isPrimaryContent ? subheader1 : subheader2 }}</p>
+      </div>
+      <div class="col-12 col-md-5">
+        <div class="row">
+          <div class="col-6">
+            <button class="button__primary">Request access</button>
+          </div>
+          <div class="col-6">
+            <button class="button__secondary">FAQ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <label class="footer__label">Follow us</label>
+        <div class="mb-5">
+          <img src="assets/icons/youtube.png" />
+          <img class="ml-3 mr-3" src="assets/icons/linkedin.png" />
+          <img src="assets/icons/github.png" />
+        </div>
+        <img class="mb-2" src="assets/icons/logo-primary.png" />
+        <p>506 Mcgill St. Suite 500 Montreal (QC) H2Y 2H6 Canada</p>
+        <p>+1 (844) 657-3228 <a>info@mantleblockchain.com</a></p>
+      </div>
+
+      <div class="col-12 col-md-6 d-flex justify-content-between">
+        <div>
+          <label class="footer__section-title" [routerLink]="'/platform'">Platform</label>
+          <ul>
+            <li class="mb-4" [routerLink]="">What is Mantle?</li>
+            <li class="mb-4" [routerLink]="">What Makes Us Different</li>
+            <li class="mb-4" [routerLink]="">Privacy</li>
+            <li class="mb-4" [routerLink]="">Auditing</li>
+            <li class="mb-4" [routerLink]="">Case Studies</li>
+            <li class="mb-4" [routerLink]="'/platform/pricing'">Pricing</li>
+          </ul>
+        </div>
+        <div>
+          <label class="footer__section-title" [routerLink]="'/developers'">Developers</label>
+          <ul>
+            <li class="mb-4" [routerLink]="'/developers/developer-program'">Developer Program</li>
+            <li class="mb-4" [routerLink]="'/developers/partner-program'">Partner Program</li>
+            <li class="mb-4">Quickstart</li>
+            <li class="mb-4" [routerLink]="'/developers/insights'">Insights</li>
+            <li class="mb-4">Documentation</li>
+            <li class="mb-4" [routerLink]="'/developers/supported-networks'">Supported Networks</li>
+          </ul>
+        </div>
+        <div>
+          <label class="footer__section-title" [routerLink]="'/company'">Company</label>
+          <ul>
+            <li class="mb-4" [routerLink]="'/company/about'">About</li>
+            <li class="mb-4" [routerLink]="'/company/careers'">Careers</li>
+            <li class="mb-4" [routerLink]="'/company/faq'">FAQ</li>
+            <li class="mb-4">Contact Us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__footnote">
+      <p>Mantle Technology. All Rights Reserved. | Privacy | Terms & Conditions</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,129 @@
+<div class="contact-form">
+  <div class="contact-form__content-container container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3 class="contact-form__header">{{ title }}</h3>
+        <p class="contact-form__subheader">{{ subtitle }}</p>
+      </div>
+
+      <div *ngIf="formType === 'account'" class="col-12 col-md-6">
+        <div class="row">
+          <div class="col-6">
+            <input class="contact-form__input-text" type="text" placeholder="First Name" />
+          </div>
+          <div class="col-6">
+            <input class="contact-form__input-text" type="text" placeholder="Last Name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <input class="contact-form__input-text" type="email" placeholder="Email address" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <input class="contact-form__input-text" type="text" placeholder="Company" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <input
+              class="contact-form__input-text contact-form__input-textbox"
+              type="email"
+              placeholder="Describe your project in max 5000 characters"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mb-3 d-flex">
+            <div>
+              <input class="contact-form__input-radio mr-3" type="radio" />
+            </div>
+            <label>
+              I agree to receive communications from Mantle Technology about out APIs and content that may be of
+              interest to you. By clicking Enroll Now below, you consent to allows Mantle Technology to store and
+              process the personal informatioinn submitted above to provide you the contetnt requested. You may
+              unsubscribe at any time.
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mb-3 d-flex">
+            <div>
+              <input class="contact-form__input-radio mr-3" type="radio" />
+            </div>
+            <label>I agree to the terms of service. This is required for enrolling to the Developerr Program</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button class="button__primary">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="formType === 'partner'" class="col-12 col-md-6">
+        <div class="row">
+          <div class="col-6">
+            <input class="contact-form__input-text" type="text" placeholder="First Name" />
+          </div>
+          <div class="col-6">
+            <input class="contact-form__input-text" type="text" placeholder="Last Name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <input class="contact-form__input-text" type="email" placeholder="Email address" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <input class="contact-form__input-text" type="email" placeholder="Job title" />
+          </div>
+          <div class="col-4">
+            <input class="contact-form__input-text" type="email" placeholder="Company" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-10">
+            <input class="contact-form__input-text" type="tel" placeholder="Phone number (optional)" />
+          </div>
+          <div class="col-2">
+            <input class="contact-form__input-text" type="text" placeholder="Countrty" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <input class="contact-form__input-text" type="dropdown" placeholder="Choose a partnership type" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button class="button__primary">Submit Form</button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="formType === 'newsletter'" class="col-12 col-md-6">
+        <div class="row">
+          <div class="col-6">
+            <input class="contact-form__input-text" type="text" placeholder="First Name" />
+          </div>
+          <div class="col-6">
+            <input class="contact-form__input-text" type="text" placeholder="Last Name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <input class="contact-form__input-text" type="email" placeholder="Email address" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button class="button__primary">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

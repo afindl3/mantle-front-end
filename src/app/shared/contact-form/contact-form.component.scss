@@ -1,0 +1,71 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.contact-form {
+  background: $earth-maroon;
+  color: $mono-white;
+
+  &__content-container {
+    padding-top: 93px;
+    padding-bottom: 76px;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+    @include subhead1($mono-white);
+  }
+
+  &__subheader {
+    @include copyLarge($mono-white);
+  }
+
+  &__input-text {
+    padding: 10px;
+    background: $earth-maroon;
+    border: 1px solid $mono-white;
+    width: 100%;
+    margin-bottom: 15px;
+    color: $mono-white;
+    &::placeholder {
+      color: $mono-white;
+    }
+  }
+
+  &__input-textbox {
+    height: 150px;
+    &::placeholder {
+      transform: translate3d(0, -50px, 0);
+    }
+  }
+
+  &__input-radio {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0 0 0 1px $mono-white;
+  }
+
+  &__input-radio:focus {
+    border: 1px solid $mono-white;
+  }
+
+  &__input-radio:before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 30% auto;
+    border-radius: 50%;
+  }
+
+  &__input-radio:checked {
+    box-shadow: 0 0 0 1px $mono-white;
+    border: none;
+  }
+
+  &__input-radio:checked:before {
+    background: $mono-white;
+  }
+}

@@ -1,0 +1,84 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.partner-program {
+  padding-top: 246px;
+
+  // Section 1 - Let's grow
+  &__section1 {
+    margin-bottom: 146px;
+  }
+
+  &__section1--left {
+    z-index: 1;
+  }
+
+  &__section1--right {
+    margin-left: -200px;
+  }
+
+  &__link {
+    @include captionSubNav($earth-brown);
+    margin-top: 200px;
+    span {
+      @include captionSubNav($mono-grey3);
+    }
+  }
+
+  &__header1 {
+    margin-bottom: 16px;
+    @include header1($earth-maroon);
+  }
+
+  &__heading-label {
+    margin-bottom: 20px;
+    @include caption2($earth-red);
+  }
+
+  // Section 2 - Together we can build global trust
+  &__section2 {
+    margin-bottom: 136px;
+  }
+
+  &__header2 {
+    margin-bottom: 32px;
+    max-width: 452px;
+    @include header3($earth-maroon);
+  }
+
+  &__subheader2 {
+    margin-bottom: 90px;
+    max-width: 452px;
+    @include copyLarge($mono-grey1);
+  }
+
+  &__tile-container {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 785px;
+    display: flex;
+  }
+
+  &__tile {
+    margin: 15px;
+  }
+
+  &__tile--offset {
+    margin: 300px 15px;
+  }
+
+  // Section 3 - A world of possibilities
+  &__section3 {
+    margin-bottom: 99px;
+  }
+
+  &__header3 {
+    max-width: 646px;
+    @include header3($earth-maroon);
+  }
+
+  &__description3 {
+    margin-bottom: 47px;
+    @include copyMedium($mono-grey1);
+  }
+}
