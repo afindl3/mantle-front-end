@@ -1,0 +1,97 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.careers {
+  padding-top: 246px;
+
+  // Section 1 - Delivering trust
+  &__section1 {
+    margin-bottom: 146px;
+  }
+
+  &__section1--left {
+    z-index: 1;
+  }
+
+  &__section1--right {
+    margin-left: -200px;
+  }
+
+  &__link {
+    @include captionSubNav($earth-brown);
+    margin-top: 200px;
+    span {
+      @include captionSubNav($mono-grey3);
+    }
+  }
+
+  &__header1 {
+    margin-bottom: 16px;
+    @include header1($earth-maroon);
+  }
+
+  &__heading-label {
+    margin-bottom: 20px;
+    @include caption2($earth-red);
+  }
+
+  // Section 2 - Work with the Mantle team
+  &__section2 {
+    margin-left: 70px;
+    margin-bottom: 93px;
+    display: flex;
+  }
+
+  &__header2 {
+    margin-bottom: 21px;
+    @include subhead2($earth-maroon);
+  }
+
+  &__index {
+    margin-left: 38px;
+  }
+
+  &__index-label {
+    margin-bottom: 28px;
+    @include caption2($earth-red);
+  }
+
+  &__index-item {
+    display: flex;
+    margin-bottom: 11px;
+  }
+
+  // Section 3 - Open roles
+  &__section3 {
+    margin-left: 70px;
+    margin-bottom: 136px;
+  }
+
+  &__header3 {
+    @include header3($earth-maroon);
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__department {
+    display: block;
+    margin-top: 10px;
+    @include caption2($earth-red);
+  }
+
+  &__role {
+    display: block;
+    padding-bottom: 28px;
+    border-bottom: 1px solid $earth-orange;
+    @include subhead2($earth-maroon);
+  }
+
+  &__see-more {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    @include copyMicro($mono-black);
+  }
+}

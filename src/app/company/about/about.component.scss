@@ -37,34 +37,46 @@
 
   // Section 2 - Work with the Mantle team
   &__section2 {
+    margin-left: 70px;
     margin-bottom: 136px;
     display: flex;
   }
 
-  &__blog-image {
-    width: 100%;
-  }
-
   &__header2 {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
     @include subhead2($earth-maroon);
   }
 
-  &__blog-footnote-container {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 18px;
-    margin-bottom: 60px;
-    border-top: 1px solid $earth-orange;
+  &__people-container {
+    margin-top: 66px;
   }
 
-  &__blog-footnote {
-    @include caption2($mono-grey1);
+  &__person-container {
+    margin: 0 auto;
+    max-width: 257px;
+  }
+
+  &__headshot {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 4px;
+    @include subhead2($earth-maroon);
+  }
+
+  &__position {
+    display: block;
+    padding-bottom: 32px;
+    margin-bottom: 55px;
+    border-bottom: 1px solid $earth-orange;
+    @include caption2($earth-red);
   }
 
   &__index {
     margin-left: 38px;
-    text-align: right;
   }
 
   &__index-label {
@@ -74,7 +86,31 @@
 
   &__index-item {
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__circle--filled {
+    margin-right: 15px;
+    height: 25px;
+    width: 25px;
+    background: $earth-orange;
+    border-radius: 50%;
+  }
+
+  &__circle--empty {
+    margin-right: 15px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid $earth-orange;
+    border-radius: 50%;
+  }
+
+  &__index-year {
+    @include caption2($earth-maroon);
+  }
+
+  &__index-title {
     margin-bottom: 16px;
+    @include subhead1($earth-maroon);
   }
 }

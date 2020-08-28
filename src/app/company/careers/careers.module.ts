@@ -3,13 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { CareersRoutingModule } from './careers-routing.module';
 import { CareersComponent } from './careers.component';
-
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [CareersComponent],
-  imports: [
-    CommonModule,
-    CareersRoutingModule
-  ]
+  imports: [CommonModule, CareersRoutingModule, SharedModule],
 })
-export class CareersModule { }
+export class CareersModule {}

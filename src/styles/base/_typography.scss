@@ -31,6 +31,15 @@
 }
 
 // Tags
+@mixin caption1($color) {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.25em;
+  // BOLD CIRCULAR
+  font-family: $circular-std-regular;
+  color: $color;
+}
+
 @mixin caption2($color) {
   font-size: 16px;
   line-height: 24px;
@@ -49,6 +58,14 @@
 }
 
 // Body Copy
+@mixin copyMain($color) {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  font-family: $circular-std-regular;
+  color: $color;
+}
+
 @mixin copyLarge($color) {
   font-size: 24px;
   line-height: 32px;
@@ -64,9 +81,9 @@
   color: $color;
 }
 
-@mixin copyMain($color) {
-  font-size: 16px;
-  line-height: 24px;
+@mixin copyMicro($color) {
+  font-size: 14px;
+  line-height: 20px;
   letter-spacing: 0.02em;
   font-family: $circular-std-regular;
   color: $color;
