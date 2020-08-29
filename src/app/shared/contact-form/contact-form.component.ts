@@ -7,10 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ContactFormComponent implements OnInit {
   @Input() contactForm: ContactFormFields;
+  isDarkBackground = true;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isDarkBackground = this.contactForm.type !== 'contact';
+  }
 }
 
 export type ContactFormFields = {

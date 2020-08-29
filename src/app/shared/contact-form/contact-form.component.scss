@@ -2,8 +2,9 @@
 @import 'src/styles/base/_typography';
 
 .contact-form {
-  background: $earth-maroon;
-  color: $mono-white;
+  &__dark-background {
+    background: $earth-maroon;
+  }
 
   &__content-container {
     padding-top: 93px;
@@ -12,19 +13,37 @@
 
   &__header {
     margin-bottom: 40px;
+  }
+
+  &__header--light {
     @include subhead1($mono-white);
   }
 
-  &__subheader {
+  &__header--dark {
+    @include subhead1($earth-maroon);
+  }
+
+  &__subheader--light {
     @include copyLarge($mono-white);
+  }
+
+  &__subheader--dark {
+    @include copyLarge($mono-grey1);
   }
 
   &__input-text {
     padding: 10px;
-    background: $earth-maroon;
-    border: 1px solid $mono-white;
     width: 100%;
     margin-bottom: 15px;
+  }
+
+  &__input-text--light {
+    border: 1px solid $mono-grey1;
+  }
+
+  &__input-text--dark {
+    background: $earth-maroon;
+    border: 1px solid $mono-white;
     color: $mono-white;
     &::placeholder {
       color: $mono-white;
