@@ -1,71 +1,147 @@
-<div class="footer">
+<div class="footer footer__background">
+  <!-- <div class="footer__background"></div> -->
   <div class="container">
     <div class="footer__section1 row">
-      <div class="col-12 col-md-7">
+      <div class="col-12 col-lg-7">
         <h3 class="footer__header">{{ isPrimaryContent ? header1 : header2 }}</h3>
         <p class="footer__subheader">{{ isPrimaryContent ? subheader1 : subheader2 }}</p>
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-lg-5">
         <div class="row">
-          <div class="col-6">
-            <button class="button__primary">Request access</button>
+          <div class="col-12 col-sm-10 col-md-7 mt-4 mt-lg-0">
+            <button class="button__primary d-flex justify-content-between">
+              Request access <img src="assets/icons/arrow-diagonal-black.png" />
+            </button>
           </div>
-          <div class="col-6">
-            <button class="button__secondary">FAQ</button>
+          <div class="col-10 col-sm-8 col-md-5 mt-3 mt-md-4 mt-lg-0">
+            <button class="button__secondary d-flex justify-content-between">
+              FAQ <img src="assets/icons/arrow-diagonal-maroon.png" />
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <label class="footer__label">Follow us</label>
-        <div class="mb-5">
-          <img src="assets/icons/youtube.png" />
-          <img class="ml-3 mr-3" src="assets/icons/linkedin.png" />
-          <img src="assets/icons/github.png" />
-        </div>
-        <img class="mb-2" src="assets/icons/logo-primary.png" />
-        <p>506 Mcgill St. Suite 500 Montreal (QC) H2Y 2H6 Canada</p>
-        <p>+1 (844) 657-3228 <a>info@mantleblockchain.com</a></p>
-      </div>
+    <!-- Desktop view -->
+    <div class="d-none d-md-block">
+      <div class="row">
+        <div class="col-5">
+          <div>
+            <label class="footer__label">Follow us</label>
+            <img src="assets/icons/youtube.png" />
+            <img class="ml-3 mr-3" src="assets/icons/linkedin.png" />
+            <img src="assets/icons/github.png" />
+          </div>
 
-      <div class="col-12 col-md-6 d-flex justify-content-between">
-        <div>
-          <label class="footer__section-title" [routerLink]="'/platform'">Platform</label>
-          <ul>
-            <li class="mb-4" [routerLink]="">What is Mantle?</li>
-            <li class="mb-4" [routerLink]="">What Makes Us Different</li>
-            <li class="mb-4" [routerLink]="">Privacy</li>
-            <li class="mb-4" [routerLink]="">Auditing</li>
-            <li class="mb-4" [routerLink]="">Case Studies</li>
-            <li class="mb-4" [routerLink]="'/platform/pricing'">Pricing</li>
-          </ul>
+          <div class="footer__logo-container">
+            <img src="assets/icons/logo-primary.png" />
+            <p>506 Mcgill St. Suite 500 Montreal (QC) H2Y 2H6 Canada</p>
+            <p>+1 (844) 657-3228 <a>info@mantleblockchain.com</a></p>
+          </div>
         </div>
-        <div>
-          <label class="footer__section-title" [routerLink]="'/developers'">Developers</label>
-          <ul>
-            <li class="mb-4" [routerLink]="'/developers/developer-program'">Developer Program</li>
-            <li class="mb-4" [routerLink]="'/developers/partner-program'">Partner Program</li>
-            <li class="mb-4">Quickstart</li>
-            <li class="mb-4" [routerLink]="'/developers/insights'">Insights</li>
-            <li class="mb-4">Documentation</li>
-            <li class="mb-4" [routerLink]="'/developers/supported-networks'">Supported Networks</li>
-          </ul>
-        </div>
-        <div>
-          <label class="footer__section-title" [routerLink]="'/company'">Company</label>
-          <ul>
-            <li class="mb-4" [routerLink]="'/company/about'">About</li>
-            <li class="mb-4" [routerLink]="'/company/careers'">Careers</li>
-            <li class="mb-4" [routerLink]="'/company/faq'">FAQ</li>
-            <li class="mb-4" [routerLink]="'/company/contact-us'">Contact Us</li>
-          </ul>
+
+        <div class="col-7 d-flex justify-content-between">
+          <div>
+            <label class="footer__label" [routerLink]="'/platform'">Platform</label>
+            <ul>
+              <li class="mb-4" [routerLink]="">What is Mantle?</li>
+              <li class="mb-4" [routerLink]="">What Makes Us Different</li>
+              <li class="mb-4" [routerLink]="">Privacy</li>
+              <li class="mb-4" [routerLink]="">Auditing</li>
+              <li class="mb-4" [routerLink]="">Case Studies</li>
+              <li class="mb-4" [routerLink]="'/platform/pricing'">Pricing</li>
+            </ul>
+          </div>
+          <div>
+            <label class="footer__label" [routerLink]="'/developers'">Developers</label>
+            <ul>
+              <li class="mb-4" [routerLink]="'/developers/developer-program'">Developer Program</li>
+              <li class="mb-4" [routerLink]="'/developers/partner-program'">Partner Program</li>
+              <li class="mb-4">Quickstart</li>
+              <li class="mb-4" [routerLink]="'/developers/insights'">Insights</li>
+              <li class="mb-4">Documentation</li>
+              <li class="mb-4" [routerLink]="'/developers/supported-networks'">Supported Networks</li>
+            </ul>
+          </div>
+          <div>
+            <label class="footer__label" [routerLink]="'/company'">Company</label>
+            <ul>
+              <li class="mb-4" [routerLink]="'/company/about'">About</li>
+              <li class="mb-4" [routerLink]="'/company/careers'">Careers</li>
+              <li class="mb-4" [routerLink]="'/company/faq'">FAQ</li>
+              <li class="mb-4" [routerLink]="'/company/contact-us'">Contact Us</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="footer__footnote">
+  <!-- Mobile view -->
+  <div class="d-block d-md-none">
+    <ngb-accordion #footerAccordion closeOthers="true">
+      <ngb-panel disabled="true">
+        <ng-template ngbPanelTitle>
+          <span class="acc-title">Follow us</span>
+          <div>
+            <img src="assets/icons/youtube.png" />
+            <img class="ml-3 mr-3" src="assets/icons/linkedin.png" />
+            <img src="assets/icons/github.png" />
+          </div>
+        </ng-template>
+      </ngb-panel>
+
+      <ngb-panel>
+        <ng-template ngbPanelTitle><span class="acc-title">Platform</span><img src="assets/icons/arrow-down.png" /></ng-template>
+        <ng-template ngbPanelContent>
+          <ul>
+            <li class="mb-2" (click)="onClick('')">What is Mantle?</li>
+            <li class="mb-2" (click)="onClick('')">What Makes Us Different</li>
+            <li class="mb-2" (click)="onClick('')">Privacy</li>
+            <li class="mb-2" (click)="onClick('')">Auditing</li>
+            <li class="mb-2" (click)="onClick('')">Case Studies</li>
+            <li (click)="onClick('/platform/pricing')">Pricing</li>
+          </ul>
+        </ng-template>
+      </ngb-panel>
+
+      <ngb-panel>
+        <ng-template ngbPanelTitle
+          ><span class="acc-title">Developers</span><img src="assets/icons/arrow-down.png"
+        /></ng-template>
+        <ng-template ngbPanelContent>
+          <ul>
+            <li class="mb-2" (click)="onClick('/developers/developer-program')">Developer Program</li>
+            <li class="mb-2" (click)="onClick('/developers/partner-program')">Partner Program</li>
+            <li class="mb-2" (click)="onClick('')">Quickstart</li>
+            <li class="mb-2" (click)="onClick('/developers/insights')">Insights</li>
+            <li class="mb-2" (click)="onClick('')">Documentation</li>
+            <li (click)="onClick('/developers/supported-networks')">Supported Networks</li>
+          </ul>
+        </ng-template>
+      </ngb-panel>
+
+      <ngb-panel>
+        <ng-template ngbPanelTitle><span class="acc-title">Company</span><img src="assets/icons/arrow-down.png" /></ng-template>
+        <ng-template ngbPanelContent>
+          <ul>
+            <li class="mb-2" (click)="onClick('/company/about')">About</li>
+            <li class="mb-2" (click)="onClick('/company/careers')">Careers</li>
+            <li class="mb-2" (click)="onClick('/company/faq')">FAQ</li>
+            <li (click)="onClick('/company/contact-us')">Contact Us</li>
+          </ul>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+    <div class="footer__logo-container container">
+      <img src="assets/icons/logo-primary.png" />
+      <p>506 Mcgill St. Suite 500 Montreal (QC) H2Y 2H6 Canada</p>
+      <p>+1 (844) 657-3228 <a>info@mantleblockchain.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer__footnote">
+    <div class="container">
       <p>Mantle Technology. All Rights Reserved. | Privacy | Terms & Conditions</p>
     </div>
   </div>

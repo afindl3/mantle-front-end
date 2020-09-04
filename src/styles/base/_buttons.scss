@@ -6,6 +6,8 @@
   width: 100%;
   background-color: $background;
   border: 2px solid $border;
+  // display: flex;
+  // justify-content: space-between;
 }
 
 @mixin button {

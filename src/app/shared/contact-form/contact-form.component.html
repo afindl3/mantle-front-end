@@ -20,8 +20,8 @@
         <ng-container *ngSwitchCase="'partner'">
           <ng-container *ngTemplateOutlet="partner"></ng-container>
         </ng-container>
-        <ng-container *ngSwitchCase="'network'">
-          <ng-container *ngTemplateOutlet="network"></ng-container>
+        <ng-container *ngSwitchCase="'newsletter'">
+          <ng-container *ngTemplateOutlet="newsletter"></ng-container>
         </ng-container>
         <ng-container *ngSwitchCase="'contact'">
           <ng-container *ngTemplateOutlet="contact"></ng-container>
@@ -33,10 +33,10 @@
 
 <ng-template #account>
   <div class="row">
-    <div class="col-6">
+    <div class="col-12 col-sm-6">
       <input class="contact-form__input-text contact-form__input-text--dark" type="text" placeholder="First Name" />
     </div>
-    <div class="col-6">
+    <div class="col-12 col-sm-6">
       <input class="contact-form__input-text contact-form__input-text--dark" type="text" placeholder="Last Name" />
     </div>
   </div>
@@ -88,10 +88,10 @@
 
 <ng-template #partner>
   <div class="row">
-    <div class="col-6">
+    <div class="col-12 col-sm-6">
       <input class="contact-form__input-text contact-form__input-text--dark" type="text" placeholder="First Name" />
     </div>
-    <div class="col-6">
+    <div class="col-12 col-sm-6">
       <input class="contact-form__input-text contact-form__input-text--dark" type="text" placeholder="Last Name" />
     </div>
   </div>
@@ -101,18 +101,18 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-8">
+    <div class="col-12 col-sm-8">
       <input class="contact-form__input-text contact-form__input-text--dark" type="email" placeholder="Job title" />
     </div>
-    <div class="col-4">
+    <div class="col-12 col-sm-4">
       <input class="contact-form__input-text contact-form__input-text--dark" type="email" placeholder="Company" />
     </div>
   </div>
   <div class="row">
-    <div class="col-10">
+    <div class="col-12 col-sm-9">
       <input class="contact-form__input-text contact-form__input-text--dark" type="tel" placeholder="Phone number (optional)" />
     </div>
-    <div class="col-2">
+    <div class="col-12 col-sm-3">
       <input class="contact-form__input-text contact-form__input-text--dark" type="text" placeholder="Country" />
     </div>
   </div>
@@ -132,12 +132,12 @@
   </div>
 </ng-template>
 
-<ng-template #network>
+<ng-template #newsletter>
   <div class="row">
-    <div class="col-6">
+    <div class="col-12 col-sm-6">
       <input class="contact-form__input-text contact-form__input-text--dark" type="text" placeholder="First Name" />
     </div>
-    <div class="col-6">
+    <div class="col-12 col-sm-6">
       <input class="contact-form__input-text contact-form__input-text--dark" type="text" placeholder="Last Name" />
     </div>
   </div>
@@ -155,10 +155,10 @@
 
 <ng-template #contact>
   <div class="row">
-    <div class="col-6">
+    <div class="col-12 col-sm-6">
       <input class="contact-form__input-text contact-form__input-text--light" type="text" placeholder="First Name" />
     </div>
-    <div class="col-6">
+    <div class="col-12 col-sm-6">
       <input class="contact-form__input-text contact-form__input-text--light" type="text" placeholder="Last Name" />
     </div>
   </div>

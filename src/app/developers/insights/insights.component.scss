@@ -2,37 +2,35 @@
 @import 'src/styles/base/_typography';
 
 .insights {
-  padding-top: 246px;
-
   // Section 1 - All insights
   &__section1 {
-    margin-bottom: 146px;
-  }
-
-  &__section1--left {
-    z-index: 1;
-  }
-
-  &__section1--right {
-    margin-left: -200px;
-  }
-
-  &__link {
-    @include captionSubNav($earth-brown);
-    margin-top: 200px;
-    span {
-      @include captionSubNav($mono-grey3);
+    padding-top: 246px;
+    padding-bottom: 194px;
+    margin-bottom: 85px;
+    background: $earth-maroon;
+    background-image: url('/assets/backgrounds/mesh-developers.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    @include media-breakpoint-down(sm) {
+      padding-top: 0px;
     }
-  }
-
-  &__header1 {
-    margin-bottom: 16px;
-    @include header1($earth-maroon);
   }
 
   &__heading-label {
     margin-bottom: 20px;
     @include caption2($earth-yellow);
+  }
+
+  &__header1 {
+    @include header1($mono-white);
+  }
+
+  &__link {
+    margin-bottom: 66px;
+    @include captionSubNav($earth-brown);
+    span {
+      @include captionSubNav($mono-grey3);
+    }
   }
 
   // Section 2 - Blog

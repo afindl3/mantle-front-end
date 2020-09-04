@@ -3,6 +3,9 @@
 
 .developer-program {
   padding-top: 246px;
+  @include media-breakpoint-down(sm) {
+    padding-top: 0px;
+  }
 
   // Section 1 - Make your next product
   &__section1 {
@@ -49,6 +52,9 @@
   &__subheader2 {
     margin-bottom: 126px;
     @include copyLarge($mono-grey1);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+    }
   }
 
   &__label2 {
@@ -58,13 +64,17 @@
   }
 
   // Section 3 - A world of possibilities
-  &__section3 {
-    margin-left: 40%;
-  }
-
   &__header3 {
     max-width: 646px;
+    margin-bottom: 36px;
     @include header3($earth-maroon);
+  }
+
+  &__body3 {
+    margin-left: 35%;
+    @include media-breakpoint-down(sm) {
+      margin-left: 0px;
+    }
   }
 
   &__label3 {

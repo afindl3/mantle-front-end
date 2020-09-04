@@ -1,6 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
-@import "./base/_reset";
+@import './base/_reset';
+
+// Override bootstrap classes
+// Modal
+.modal-dialog {
+  max-width: 85%;
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.modal-backdrop {
+  opacity: 0 !important;
+}
+
+// Accordion
+.btn.btn:disabled {
+  opacity: 1;
+}
+
+.btn.btn-link {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-header {
+  background: $mono-grey4;
+}
+
+.card-body {
+  background: $mono-grey4;
+}

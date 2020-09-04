@@ -3,6 +3,9 @@
 
 .careers {
   padding-top: 246px;
+  @include media-breakpoint-down(sm) {
+    padding-top: 0px;
+  }
 
   // Section 1 - Delivering trust
   &__section1 {

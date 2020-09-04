@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { NavExtendedComponent } from '../nav-extended/nav-extended.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,17 +12,35 @@ import { filter } from 'rxjs/operators';
 })
 export class NavBarComponent implements OnInit {
   routeSubscription: Subscription;
-  active = 1;
   isPrimaryHeader = true;
+  showMobileMenu = false;
 
-  constructor(private router: Router) {}
+  constructor(private modalService: NgbModal, private router: Router) {}
 
   ngOnInit(): void {
-    this.routeSubscription = this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        const splitURL = this.router.url.split('?')[0];
-        this.isPrimaryHeader = splitURL !== '/developers/insights' && splitURL !== '/developers/supported-networks';
+    this.routeSubscription = this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      const splitURL = this.router.url.split('?')[0];
+      this.isPrimaryHeader = splitURL !== '/developers/insights' && splitURL !== '/developers/supported-networks';
+    });
+  }
+
+  toggleMobileMenu() {
+    this.showMobileMenu = !this.showMobileMenu;
+  }
+
+  open(section: string): void {
+    const modalRef = this.modalService.open(NavExtendedComponent, {
+      // centered: true,
+    });
+    modalRef.componentInstance.extendedMenuType = section;
+    modalRef.result
+      .then((result) => {
+        if (result === 'close') {
+          this.showMobileMenu = false;
+        }
+      })
+      .catch((dismissed) => {
+        this.showMobileMenu = false;
       });
   }
 }
