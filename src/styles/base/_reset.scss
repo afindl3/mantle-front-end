@@ -134,21 +134,7 @@ table {
 body {
   @include copyMain($mono-grey1);
 }
+
 .button {
   @include button;
 }
-// .h1 {
-//   @include heading1;
-// }
-// .h2 {
-//   @include heading2;
-// }
-// .h3 {
-//   @include heading3;
-// }
-// .button {
-//   @include button;
-// }
-// .label {
-//   @include label;
-// }

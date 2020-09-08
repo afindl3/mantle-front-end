@@ -20,11 +20,18 @@ const routes: Routes = [
     loadChildren: () => import('./company/company.module').then((m) => m.CompanyModule),
   },
   {
+    path: 'legal',
+    loadChildren: () => import('./legal/legal.module').then((m) => m.LegalModule),
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then((m) => m.LoginModule),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
 ];
 
 @NgModule({

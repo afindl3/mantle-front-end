@@ -2,43 +2,7 @@
 @import 'src/styles/base/_typography';
 
 .networks {
-  // Section 1 - Supported networks
-  &__section1 {
-    padding-top: 246px;
-    padding-bottom: 194px;
-    margin-bottom: 85px;
-    background: $earth-maroon;
-    background-image: url('/assets/backgrounds/mesh-developers.png');
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    @include media-breakpoint-down(sm) {
-      padding-top: 0px;
-    }
-  }
-
-  &__heading-label {
-    margin-bottom: 20px;
-    @include caption2($earth-yellow);
-  }
-
-  &__header1 {
-    @include header1($mono-white);
-  }
-
-  &__link {
-    margin-bottom: 66px;
-    @include captionSubNav($earth-brown);
-    span {
-      @include captionSubNav($mono-grey3);
-    }
-  }
-
   // Section 2 - Blog
-  &__section2 {
-    margin-bottom: 136px;
-    display: flex;
-  }
-
   &__blog-image {
     width: 100%;
   }
@@ -62,7 +26,6 @@
   }
 
   &__index {
-    margin-left: 38px;
     text-align: right;
   }
 

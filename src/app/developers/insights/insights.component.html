@@ -1,82 +1,37 @@
-<div class="insights__section1">
-  <div class="container">
-    <label class="insights__heading-label">DEVELOPERS</label>
-    <h1 class="insights__header1">All Insights</h1>
-  </div>
-</div>
+<app-mesh-header-dark
+  [headingLabel]="'DEVELOPERS'"
+  [heading]="'All Insights'"
+  [breadcrumb1]="'Developers'"
+  [breadcrumb2]="'Insights'"
+></app-mesh-header-dark>
 
 <div class="container">
-  <p class="insights__link">Developers <span>/ Insights</span></p>
+  <div class="section">
+    <div class="row">
+      <div class="col-12 col-md-10">
+        <div class="row">
+          <div *ngFor="let article of contentfulService.blog$ | async" class="col-12 col-md-6">
+            <img class="insights__blog-image" [src]="article.image.fields.file.url" />
+            <div class="ml-4">
+              <label class="insights__blog-label">{{ article.title }}</label>
+              <div class="insights__blog-footnote-container">
+                <span class="insights__blog-footnote">{{ article.category }}</span
+                ><span>{{ article.date.split('T')[0] }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="insights__section2">
-    <div class="insights__blog">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <img class="insights__blog-image" src="assets/images/blog-tile.png" />
-          <div class="ml-4">
-            <label class="insights__blog-label">Automating Carrier Fulfillment & Quoting for Brokers</label>
-            <div class="insights__blog-footnote-container">
-              <span class="insights__blog-footnote">BLOCKCHAIN</span><span>12/30/2019</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <img class="insights__blog-image" src="assets/images/blog-tile.png" />
-          <div class="ml-4">
-            <label class="insights__blog-label">Automating Carrier Fulfillment & Quoting for Brokers</label>
-            <div class="insights__blog-footnote-container">
-              <span class="insights__blog-footnote">BLOCKCHAIN</span><span>12/30/2019</span>
-            </div>
-          </div>
+      <div class="col-12 col-md-2 mt-5 mt-md-0">
+        <div class="insights__index">
+          <label class="insights__index-label">CATEGORIES</label>
+          <ol>
+            <li class="insights__index-item"><span>1</span><span>Ethereum</span></li>
+            <li class="insights__index-item"><span>2</span><span>Corda</span></li>
+          </ol>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <img class="insights__blog-image" src="assets/images/blog-tile.png" />
-          <div class="ml-4">
-            <label class="insights__blog-label">Automating Carrier Fulfillment & Quoting for Brokers</label>
-            <div class="insights__blog-footnote-container">
-              <span class="insights__blog-footnote">BLOCKCHAIN</span><span>12/30/2019</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <img class="insights__blog-image" src="assets/images/blog-tile.png" />
-          <div class="ml-4">
-            <label class="insights__blog-label">Automating Carrier Fulfillment & Quoting for Brokers</label>
-            <div class="insights__blog-footnote-container">
-              <span class="insights__blog-footnote">BLOCKCHAIN</span><span>12/30/2019</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <img class="insights__blog-image" src="assets/images/blog-tile.png" />
-          <div class="ml-4">
-            <label class="insights__blog-label">Automating Carrier Fulfillment & Quoting for Brokers</label>
-            <div class="insights__blog-footnote-container">
-              <span class="insights__blog-footnote">BLOCKCHAIN</span><span>12/30/2019</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <img class="insights__blog-image" src="assets/images/blog-tile.png" />
-          <div class="ml-4">
-            <label class="insights__blog-label">Automating Carrier Fulfillment & Quoting for Brokers</label>
-            <div class="insights__blog-footnote-container">
-              <span class="insights__blog-footnote">BLOCKCHAIN</span><span>12/30/2019</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="insights__index">
-      <label class="insights__index-label">CATEGORIES</label>
-      <ol>
-        <li class="insights__index-item"><span>1</span><span>Ethereum</span></li>
-        <li class="insights__index-item"><span>2</span><span>Corda</span></li>
-      </ol>
     </div>
   </div>
 </div>

@@ -5,6 +5,22 @@
 
 @import './base/_reset';
 
+.section {
+  margin-bottom: 130px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 90px;
+  }
+}
+
+.inset-section {
+  margin-left: 70px;
+  margin-bottom: 130px;
+  @include media-breakpoint-down(sm) {
+    margin-left: 0px;
+    margin-bottom: 90px;
+  }
+}
+
 // Override bootstrap classes
 // Modal
 .modal-dialog {

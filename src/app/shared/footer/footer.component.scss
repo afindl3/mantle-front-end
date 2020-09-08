@@ -6,7 +6,6 @@
     padding-top: 101px;
     background: $mono-grey4;
     position: relative;
-    // z-index: 1;
 
     &:before {
       background: inherit;
@@ -40,7 +39,7 @@
     @include copyLarge($mono-grey1);
   }
 
-  // Section 2 - Contact Info
+  // Section 2 - Links
   &__label {
     display: block;
     color: $earth-maroon;

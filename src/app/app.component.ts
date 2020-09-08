@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentfulService } from './services/contentful/contentful.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +8,9 @@ import { ContentfulService } from './services/contentful/contentful.service';
 export class AppComponent implements OnInit {
   title = 'mantle-front-end';
 
-  constructor(private contentfulService: ContentfulService) {}
+  constructor() {}
 
-  async ngOnInit() {
-    const data = await this.contentfulService.getProducts();
-  }
+  ngOnInit() {}
 
   onActivate() {
     // Scroll to top of page on every route change

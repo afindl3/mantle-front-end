@@ -1,0 +1,67 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.header {
+  &__backdrop1 {
+    background-image: url('/assets/backgrounds/multi-shape.png');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center top;
+    padding-top: 130px;
+    margin-bottom: 100px;
+    @include media-breakpoint-down(md) {
+      padding-top: 75px;
+    }
+    @include media-breakpoint-down(sm) {
+      background-size: 100%;
+      background-position: 160px top;
+      padding-top: 0px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__backdrop2 {
+    background-image: url('/assets/images/learning.png');
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: right center;
+    @include media-breakpoint-down(sm) {
+      background-image: none;
+    }
+  }
+
+  // Block image only displays on mobile
+  &__heading-image {
+    width: 100%;
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  &__heading-label {
+    padding-top: 150px;
+    margin-bottom: 20px;
+    max-width: 636px;
+    @include caption2($earth-red);
+    @include media-breakpoint-down(md) {
+      padding-top: 100px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+    max-width: 636px;
+    @include header1($earth-maroon);
+  }
+
+  &__breadcrumb {
+    @include captionSubNav($earth-brown);
+    span {
+      @include captionSubNav($mono-grey3);
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 47px;
+    }
+  }
+}

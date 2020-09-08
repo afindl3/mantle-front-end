@@ -1,113 +1,96 @@
-<div class="about__section1">
-  <div class="container">
-    <label class="about__heading-label">ABOUT US</label>
-    <h1 class="about__header1">Delivering Trust-as-a Service</h1>
-  </div>
-</div>
+<app-mesh-header-light
+  [headingLabel]="'ABOUT US'"
+  [heading]="'Delivering Trust-as-a Service'"
+  [breadcrumb1]="'Developers'"
+  [breadcrumb2]="'About'"
+></app-mesh-header-light>
 
 <div class="container">
-  <p class="about__link">Developers <span>/ About</span></p>
-
-  <div class="about__section2">
-    <div class="about__blog">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="about__header2">Work with the Mantle Team</h2>
-          <p class="about__paragraph2">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
-            aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
-            magna aliqua.
-          </p>
-          <br />
-          <p class="about__paragraph2">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
-            aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
-            magna aliqua.
-          </p>
-        </div>
-      </div>
-      <div class="about__people-container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="about__person-container">
-              <img class="about__headshot" src="assets/images/pascal.png" />
-              <label class="about__name">Pascal Leblanc</label>
-              <label class="about__position">CEO & CTO</label>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 mt-5">
-            <div class="about__person-container">
-              <img class="about__headshot" src="assets/images/audry.png" />
-              <label class="about__name">Audry Larocque</label>
-              <label class="about__position">EXECUTIVE CHAIRMAN</label>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="about__person-container">
-              <img class="about__headshot" src="assets/images/kerem.png" />
-              <label class="about__name">Kerem Kolcuoglu</label>
-              <label class="about__position">CMO</label>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 mt-5">
-            <div class="about__person-container">
-              <img class="about__headshot" src="assets/images/sean.png" />
-              <label class="about__name">Sean Stapley</label>
-              <label class="about__position">VP OF BUSINESS DEVELOPMENT</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <p class="about__paragraph2">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
-            aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
-            magna aliqua.
-          </p>
-          <br />
-          <p class="about__paragraph2">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
-            aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
-            magna aliqua.
-          </p>
-          <br />
-          <p class="about__paragraph2">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
-            aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
-            magna aliqua.
-          </p>
-          <br />
-          <p class="about__paragraph2">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
-            aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
-            magna aliqua.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="about__index">
-      <label class="about__index-label">BENEFITS</label>
-      <ul>
-        <li *ngFor="let milestone of milestones; let i = index" class="about__index-item" (click)="onClick(i)">
+  <div class="inset-section">
+    <div class="row">
+      <div class="col-12 col-md-8 col-xl-9">
+        <div class="about__blog">
           <div>
-            <div [ngClass]="selectedMilestone === i ? 'about__circle--filled' : 'about__circle--empty'"></div>
+            <h2 class="about__header2">Work with the Mantle Team</h2>
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
+              magna aliqua.
+            </p>
+            <br />
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
+              magna aliqua.
+            </p>
+          </div>
+          <div class="about__people-container">
+            <div class="row">
+              <div
+                *ngFor="let member of contentfulService.team$ | async; let i = index"
+                class="col-12 col-md-6"
+                [ngClass]="{ 'mt-md-5': i % 2 === 1 }"
+              >
+                <div class="about__person-container">
+                  <img class="about__headshot" [src]="member.headshot.fields.file.url" />
+                  <label class="about__name">{{ member.name }}</label>
+                  <label class="about__position">{{ member.position }}</label>
+                </div>
+              </div>
+            </div>
           </div>
           <div>
-            <p class="about__index-year">{{ milestone.year }}</p>
-            <p class="about__index-title">{{ milestone.title }}</p>
-            <p *ngIf="selectedMilestone === i">{{ milestone.description }}</p>
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
+              magna aliqua.
+            </p>
+            <br />
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
+              magna aliqua.
+            </p>
+            <br />
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
+              magna aliqua.
+            </p>
+            <br />
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore
+              magna aliqua.
+            </p>
           </div>
-        </li>
-      </ul>
-      <label class="about__index-label">AWARDRS</label>
-      <ol>
-        <li class="about__index-item"><img src="assets/images/globalive-logo.png" /></li>
-        <li class="about__index-item"><img src="assets/images/creative-logo.png" /></li>
-      </ol>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-xl-3 mt-5 mt-md-0">
+        <label class="about__index-label">BENEFITS</label>
+        <ul>
+          <li
+            *ngFor="let milestone of contentfulService.milestones$ | async; let i = index"
+            class="about__index-item"
+            (click)="onClick(i)"
+          >
+            <div>
+              <div [ngClass]="selectedMilestone === i ? 'about__circle--filled' : 'about__circle--empty'"></div>
+            </div>
+            <div>
+              <p class="about__index-year">{{ milestone.year }}</p>
+              <p class="about__index-title">{{ milestone.title }}</p>
+              <p *ngIf="selectedMilestone === i">{{ milestone.description }}</p>
+            </div>
+          </li>
+        </ul>
+        <label class="about__index-label">AWARDRS</label>
+        <ol>
+          <li><img class="about__index-logo" src="assets/images/globalive-logo.png" /></li>
+          <li><img class="about__index-logo" src="assets/images/creative-logo.png" /></li>
+        </ol>
+      </div>
     </div>
   </div>
 </div>

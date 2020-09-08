@@ -2,32 +2,7 @@
 @import 'src/styles/base/_typography';
 
 .pricing {
-  // Section 1 - Pay per use
-  &__section1 {
-    padding-top: 246px;
-    margin-bottom: 146px;
-    background-image: url('/assets/backgrounds/mesh-pricing.png');
-    background-repeat: no-repeat;
-    background-position: right top;
-  }
-
-  &__heading-label {
-    margin-bottom: 20px;
-    max-width: 549px;
-    @include caption2($earth-red);
-  }
-
-  &__header1 {
-    margin-bottom: 16px;
-    max-width: 549px;
-    @include header1($earth-maroon);
-  }
-
   // Section 2 - Exploration
-  &__section2 {
-    margin-bottom: 200px;
-  }
-
   &__section-label {
     margin-top: 27px;
     margin-left: -27px;

@@ -2,42 +2,7 @@
 @import 'src/styles/base/_typography';
 
 .about {
-  // Section 1 - Delivering trust
-  &__section1 {
-    padding-top: 246px;
-    margin-bottom: 62px;
-    background-image: url('/assets/backgrounds/mesh-pricing.png');
-    background-repeat: no-repeat;
-    background-position: right top;
-  }
-
-  &__heading-label {
-    margin-bottom: 20px;
-    max-width: 636px;
-    @include caption2($earth-red);
-  }
-
-  &__header1 {
-    margin-bottom: 16px;
-    max-width: 636px;
-    @include header1($earth-maroon);
-  }
-
-  &__link {
-    margin-bottom: 70px;
-    @include captionSubNav($earth-brown);
-    span {
-      @include captionSubNav($mono-grey3);
-    }
-  }
-
   // Section 2 - Work with the Mantle team
-  &__section2 {
-    margin-left: 70px;
-    margin-bottom: 136px;
-    display: flex;
-  }
-
   &__header2 {
     margin-bottom: 21px;
     @include subhead2($earth-maroon);
@@ -76,11 +41,6 @@
   }
 
   // Index Column - Milestones
-  &__index {
-    margin-left: 45px;
-    width: 255px;
-  }
-
   &__index-label {
     margin-bottom: 28px;
     @include caption2($earth-red);
@@ -114,5 +74,11 @@
   &__index-title {
     margin-bottom: 16px;
     @include subhead1($earth-maroon);
+  }
+
+  &__index-logo {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    height: 35px;
   }
 }

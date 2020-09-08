@@ -22,7 +22,6 @@
 
   &__link {
     @include captionSubNav($earth-brown);
-    margin-top: 200px;
     span {
       @include captionSubNav($mono-grey3);
     }

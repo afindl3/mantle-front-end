@@ -6,8 +6,6 @@
   width: 100%;
   background-color: $background;
   border: 2px solid $border;
-  // display: flex;
-  // justify-content: space-between;
 }
 
 @mixin button {
@@ -48,6 +46,26 @@
   }
 
   &__secondary:disabled {
+    @include buttonBase($mono-grey1, $mono-grey4, $mono-grey4);
+  }
+
+  &__tertiary {
+    @include buttonBase($mono-white, $earth-brown, $earth-brown);
+  }
+
+  &__tertiary:hover {
+    @include buttonBase($mono-white, $earth-brown, $earth-brown);
+  }
+
+  &__tertiary:focus {
+    @include buttonBase($mono-white, $earth-brown, $earth-brown);
+  }
+
+  &__tertiary:active {
+    @include buttonBase($mono-white, $earth-brown, $earth-brown);
+  }
+
+  &__tertiary:disabled {
     @include buttonBase($mono-grey1, $mono-grey4, $mono-grey4);
   }
 }

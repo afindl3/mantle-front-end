@@ -1,14 +1,10 @@
-<div class="contact-us container">
-  <div class="contact-us__section1">
-    <div class="d-flex">
-      <div class="contact-us__section1--left">
-        <label class="contact-us__heading-label">COMPANY</label>
-        <h1 class="contact-us__header1">Contact us</h1>
-      </div>
-      <img class="contact-us__section1--right" src="assets/images/learning.png" />
-    </div>
-    <p class="contact-us__link">Developers <span>/ Contact-us</span></p>
-  </div>
-</div>
+<app-overlay-header
+  [headingLabel]="'COMPANY'"
+  [heading]="'Contact us'"
+  [breadcrumb1]="'Developers'"
+  [breadcrumb2]="'Contact-us'"
+></app-overlay-header>
 
-<app-contact-form [contactForm]="contactForm"></app-contact-form>
+<div class="container">
+  <app-contact-form [contactForm]="contactForm"></app-contact-form>
+</div>

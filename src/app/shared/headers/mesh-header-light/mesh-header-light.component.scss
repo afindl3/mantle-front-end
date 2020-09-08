@@ -1,0 +1,40 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.header {
+  &__container {
+    margin-bottom: 80px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__backdrop {
+    background-image: url('/assets/backgrounds/mesh-light.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding-top: 246px;
+    @include media-breakpoint-down(sm) {
+      padding-top: 110px;
+    }
+  }
+
+  &__heading-label {
+    margin-bottom: 20px;
+    max-width: 636px;
+    @include caption2($earth-red);
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+    max-width: 636px;
+    @include header1($earth-maroon);
+  }
+
+  &__breadcrumb {
+    @include captionSubNav($earth-brown);
+    span {
+      @include captionSubNav($mono-grey3);
+    }
+  }
+}

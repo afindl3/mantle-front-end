@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactFormFields, ContactFormType } from '../../shared/contact-form/contact-form.component';
+import { ContentfulService } from '../../services/contentful/contentful.service';
 
 @Component({
   selector: 'app-insights',
@@ -14,7 +15,9 @@ export class InsightsComponent implements OnInit {
     type: ContactFormType.Newsletter,
   };
 
-  constructor() {}
+  constructor(public contentfulService: ContentfulService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.contentfulService.fetchBlog();
+  }
 }
