@@ -1,0 +1,77 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.home {
+  // Section 3 - How mantle empowers
+  &__section3 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__section3--left {
+    width: 70%;
+  }
+  &__industry-tile {
+    width: 30%;
+  }
+
+  &__header3 {
+    @include header3($earth-maroon);
+  }
+
+  // Section 4 - Make every developer
+  &__background4 {
+    background: $earth-maroon;
+  }
+
+  &__header4 {
+    padding-top: 78px;
+    margin-bottom: 24px;
+    @include header3($mono-white);
+  }
+
+  &__paragraph4 {
+    @include copyLarge($mono-white);
+  }
+
+  // Section 5 - Future proof
+  &__background5 {
+    background: $mono-white;
+  }
+
+  &__header5 {
+    margin-bottom: 20px;
+    @include header3($earth-maroon);
+  }
+
+  &__paragraph5 {
+    @include copyLarge($mono-grey1);
+  }
+
+  // Section 6 - Blog
+  &__link {
+    @include caption2($earth-red);
+  }
+
+  &__blog-image {
+    width: 100%;
+  }
+
+  &__blog-label {
+    margin-top: 32px;
+    margin-bottom: 28px;
+    @include subhead2($earth-maroon);
+  }
+
+  &__blog-footnote-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    margin-bottom: 60px;
+    border-top: 1px solid $earth-orange;
+  }
+
+  &__blog-footnote {
+    @include caption2($mono-grey1);
+  }
+}

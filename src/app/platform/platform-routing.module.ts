@@ -14,6 +14,19 @@ const routes: Routes = [
         component: WhatIsMantleComponent,
       },
       {
+        path: 'what-makes-us-different',
+        loadChildren: () =>
+          import('./what-makes-us-different/what-makes-us-different.module').then((m) => m.WhatMakesUsDifferentModule),
+      },
+      {
+        path: 'privacy',
+        loadChildren: () => import('./privacy/privacy.module').then((m) => m.PrivacyModule),
+      },
+      {
+        path: 'auditing',
+        loadChildren: () => import('./auditing/auditing.module').then((m) => m.AuditingModule),
+      },
+      {
         path: 'pricing',
         loadChildren: () => import('./pricing/pricing.module').then((m) => m.PricingModule),
       },

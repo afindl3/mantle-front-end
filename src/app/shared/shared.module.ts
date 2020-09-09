@@ -11,6 +11,8 @@ import { MeshHeaderLightComponent } from './headers/mesh-header-light/mesh-heade
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavExtendedComponent } from './nav-extended/nav-extended.component';
 import { OverlayHeaderComponent } from './headers/overlay-header/overlay-header.component';
+import { TrustedCompaniesComponent } from './trusted-companies/trusted-companies.component';
+import { PosterComponent } from './poster/poster.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,11 @@ import { OverlayHeaderComponent } from './headers/overlay-header/overlay-header.
     ImageHeaderComponent,
     MeshHeaderDarkComponent,
     MeshHeaderLightComponent,
-    OverlayHeaderComponent,
     NavBarComponent,
     NavExtendedComponent,
+    OverlayHeaderComponent,
+    PosterComponent,
+    TrustedCompaniesComponent,
   ],
   imports: [CommonModule, NgbModule, RouterModule],
   exports: [
@@ -32,6 +36,8 @@ import { OverlayHeaderComponent } from './headers/overlay-header/overlay-header.
     MeshHeaderLightComponent,
     NavBarComponent,
     OverlayHeaderComponent,
+    PosterComponent,
+    TrustedCompaniesComponent,
   ],
 })
 export class SharedModule {}

@@ -10,88 +10,14 @@
     <div class="row">
       <div class="col-12 col-md-10">
         <div class="row">
-          <div class="col-12 col-md-4">
-            <img class="networks__blog-image" src="assets/images/network-tile.png" />
-            <div class="ml-4">
-              <label class="networks__blog-label">PegaSys Plus</label>
-              <div class="networks__blog-footnote-container">
-                <p>Builds on Hyperledger Besu, PegaSys Plus deliverrs features</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <img class="networks__blog-image" src="assets/images/network-tile.png" />
-            <div class="ml-4">
-              <label class="networks__blog-label">PegaSys Plus</label>
-              <div class="networks__blog-footnote-container">
-                <p>Builds on Hyperledger Besu, PegaSys Plus deliverrs features</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <img class="networks__blog-image" src="assets/images/network-tile.png" />
-            <div class="ml-4">
-              <label class="networks__blog-label">PegaSys Plus</label>
-              <div class="networks__blog-footnote-container">
-                <p>Builds on Hyperledger Besu, PegaSys Plus deliverrs features</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <img class="networks__blog-image" src="assets/images/network-tile.png" />
-            <div class="ml-4">
-              <label class="networks__blog-label">PegaSys Plus</label>
-              <div class="networks__blog-footnote-container">
-                <p>Builds on Hyperledger Besu, PegaSys Plus deliverrs features</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <img class="networks__blog-image" src="assets/images/network-tile.png" />
-            <div class="ml-4">
-              <label class="networks__blog-label">PegaSys Plus</label>
-              <div class="networks__blog-footnote-container">
-                <p>Builds on Hyperledger Besu, PegaSys Plus deliverrs features</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <img class="networks__blog-image" src="assets/images/network-tile.png" />
-            <div class="ml-4">
-              <label class="networks__blog-label">PegaSys Plus</label>
-              <div class="networks__blog-footnote-container">
-                <p>Builds on Hyperledger Besu, PegaSys Plus deliverrs features</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <img class="networks__blog-image" src="assets/images/network-tile.png" />
-            <div class="ml-4">
-              <label class="networks__blog-label">PegaSys Plus</label>
-              <div class="networks__blog-footnote-container">
-                <p>Builds on Hyperledger Besu, PegaSys Plus deliverrs features</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <img class="networks__blog-image" src="assets/images/network-tile.png" />
-            <div class="ml-4">
-              <label class="networks__blog-label">PegaSys Plus</label>
-              <div class="networks__blog-footnote-container">
-                <p>Builds on Hyperledger Besu, PegaSys Plus deliverrs features</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <img class="networks__blog-image" src="assets/images/network-tile.png" />
-            <div class="ml-4">
-              <label class="networks__blog-label">PegaSys Plus</label>
-              <div class="networks__blog-footnote-container">
-                <p>Builds on Hyperledger Besu, PegaSys Plus deliverrs features</p>
+          <div *ngFor="let supportedNetwork of supportedNetworks" class="col-12 col-md-4 mb-3">
+            <div class="networks__blog-tile-container">
+              <img class="networks__blog-image" [src]="supportedNetwork.image" />
+              <div>
+                <label class="networks__blog-label">{{ supportedNetwork.title }}</label>
+                <div class="networks__blog-footnote-container">
+                  <p class="networks__blog-footnote">{{ supportedNetwork.description }}</p>
+                </div>
               </div>
             </div>
           </div>

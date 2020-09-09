@@ -1,0 +1,67 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.poster {
+  &__container {
+    padding: 30px 28px;
+    width: 100%;
+    max-width: 355px;
+  }
+
+  &__background--1 {
+    background: $earth-maroon;
+  }
+
+  &__background--2 {
+    background: $sea-teal;
+  }
+
+  &__background--3 {
+    background: $earth-brown;
+  }
+
+  &__header {
+    margin-bottom: 8px;
+    @include header3($mono-white);
+  }
+
+  &__category {
+    margin-bottom: 10px;
+    @include caption2($earth-orange);
+  }
+
+  &__category--1 {
+    color: $earth-orange;
+  }
+
+  &__category--2 {
+    color: $earth-yellow;
+  }
+
+  &__category--3 {
+    color: $earth-orange;
+  }
+
+  &__description {
+    margin-top: 31px;
+    padding-bottom: 25px;
+    margin-bottom: 27px;
+    @include copyMicro($mono-white);
+  }
+
+  &__description--1 {
+    border-bottom: 1px solid $earth-orange;
+  }
+
+  &__description--2 {
+    border-bottom: 1px solid $earth-yellow;
+  }
+
+  &__description--3 {
+    border-bottom: 1px solid $earth-orange;
+  }
+
+  &__link {
+    @include copyMicro($mono-white);
+  }
+}

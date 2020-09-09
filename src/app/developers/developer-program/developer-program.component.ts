@@ -10,7 +10,7 @@ export class DeveloperProgramComponent implements OnInit {
   contactForm: ContactFormFields = {
     title: 'Get a $250 Mantle account now.',
     subtitle:
-      'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt ut labore et ddolore magna aliqua.',
+      'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     type: ContactFormType.Account,
   };
 

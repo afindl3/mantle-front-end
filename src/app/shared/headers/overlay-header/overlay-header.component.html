@@ -7,10 +7,10 @@
 
     <!-- Block image only displays on mobile -->
     <div>
-      <img class="header__heading-image" src="assets/images/learning.png" />
+      <img class="header__heading-image" src="assets/backgrounds/learning.png" />
     </div>
 
-    <div class="container">
+    <div class="container" *ngIf="breadcrumb1 && breadcrumb2">
       <p class="header__breadcrumb">
         {{ breadcrumb1 }} <span>/ {{ breadcrumb2 }}</span>
       </p>

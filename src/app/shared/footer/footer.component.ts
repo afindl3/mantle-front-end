@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   @ViewChild('footerAccordion', { static: true }) accordion: NgbAccordion;
   routeSubscription: Subscription;
   header1 = 'Ready for Mantle?';
-  subheader1 = 'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do aiusmod tempr incididunt';
+  subheader1 = 'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt';
   header2 = "Don't see your preferred network?";
   subheader2 = 'Get in touch with us and request the blockchain network you have in mind';
   isPrimaryContent = true;

@@ -1,0 +1,34 @@
+<div
+  class="poster__container"
+  [ngClass]="{
+    'poster__background--1': style === 1,
+    'poster__background--2': style === 2,
+    'poster__background--3': style === 3
+  }"
+>
+  <h2 class="poster__header">{{ title }}</h2>
+  <p
+    class="poster__category"
+    [ngClass]="{
+      'poster__category--1': style === 1,
+      'poster__category--2': style === 2,
+      'poster__category--3': style === 3
+    }"
+  >
+    {{ category }}
+  </p>
+  <img *ngIf="style === 1" src="assets/images/shape-1.png" />
+  <img *ngIf="style === 2" src="assets/images/shape-2.png" />
+  <img *ngIf="style === 3" src="assets/images/shape-3.png" />
+  <p
+    class="poster__description"
+    [ngClass]="{
+      'poster__description--1': style === 1,
+      'poster__description--2': style === 2,
+      'poster__description--3': style === 3
+    }"
+  >
+    {{ description }}
+  </p>
+  <a class="poster__link" [routerLink]="link">See more ></a>
+</div>

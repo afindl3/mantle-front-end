@@ -1,29 +1,97 @@
-<div class="pricing">
-  <div>
-    <label>PLATFORM</label>
-    <h1>What is Mantle?</h1>
+<app-overlay-header [headingLabel]="'PLATFORM'" [heading]="'What is Mantle?'"></app-overlay-header>
+
+<!-- Section 2 -->
+<div class="container">
+  <div class="section">
+    <label class="mantle__label2">MANTLE'S TECHNOLOGY OFFERING</label>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h2 class="mantle__header2">Audit</h2>
+        <p>Digital identity & data audit trail</p>
+        <div class="row">
+          <div class="col-6 mt-5">
+            <img src="assets/icons/network.png" />
+            <p class="mt-4">Removes redundant data duplication</p>
+          </div>
+          <div class="col-6 mt-5">
+            <img src="assets/icons/network.png" />
+            <p class="mt-4">Provides a single source of truth for dispute resolution</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 mt-5 mt-md-0">
+        <h2 class="mantle__header2">Privacy</h2>
+        <p>Data privacy & governance to enhance cybersecurity</p>
+        <div class="row">
+          <div class="col-6 mt-5">
+            <img src="assets/icons/network.png" />
+            <p class="mt-4">Reduces risks and complexities of hosting & securing data locally</p>
+          </div>
+          <div class="col-6 mt-5">
+            <img src="assets/icons/network.png" />
+            <p class="mt-4">No longer dependent on a single cloud provider with multi-cloud hosting</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <img src="assets/learning.png" />
 </div>
 
-<div>
-  <label>MANTLE'S TECHNOLOGY OFFERING</label>
-  <div class="d-flex justify-content-between">
-    <div>
-      <h2>Audit</h2>
-      <p>Digital identity & data audit trail</p>
-      <ul>
-        <li>Removes redundant data duplication</li>
-        <li>Provides a single source of truth for dispute resolution</li>
-      </ul>
-    </div>
-    <div>
-      <h2>Privacy</h2>
-      <p>Data privacy & governance to enhance cybersecurity</p>
-      <ul>
-        <li>Reduces risks and complexities of hosting & securing data locally</li>
-        <li>No longer dependent on a single cloud provider with multi-cloud hosting</li>
-      </ul>
+<div class="section">
+  <img src="assets/videos/use-case-video.png" width="100%" />
+</div>
+
+<!-- Section 3 -->
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h3 class="mantle__header3">Intellectual Property Edge</h3>
+        <p>Mantle holds significant value in it's novel innovation that include three trade secrets ready for patent.</p>
+        <button class="button__primary d-flex justify-content-between mt-3 mt-md-5">
+          Learn more <img src="assets/icons/arrow-diagonal-black.png" />
+        </button>
+      </div>
+      <div class="col-12 col-md-8 mt-5 mt-md-0">
+        <div class="row">
+          <div class="col-12 col-sm-4">
+            <div class="mantle__blog-tile-container">
+              <img class="mantle__blog-image" src="assets/images/blog-tile-zoomed.png" />
+              <div>
+                <label class="mantle__blog-label">SMARTHASH</label>
+                <div class="mantle__blog-footnote-container">
+                  <p class="mantle__blog-footnote">Breakthrough in cryptography to enhance privacy in file sharing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="mantle__blog-tile-container">
+              <img class="mantle__blog-image" src="assets/images/blog-tile-zoomed.png" />
+              <div>
+                <label class="mantle__blog-label">MATRICIAL SHARDING</label>
+                <div class="mantle__blog-footnote-container">
+                  <p class="mantle__blog-footnote">Distributed storage providing enhanced governance and privacy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="mantle__blog-tile-container">
+              <img class="mantle__blog-image" src="assets/images/blog-tile-zoomed.png" />
+              <div>
+                <label class="mantle__blog-label">BLOCKCHAIN VIRTUALIZATION</label>
+                <div class="mantle__blog-footnote-container">
+                  <p class="mantle__blog-footnote">Distributed storage providing enhanced governance and privacy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<app-trusted-companies></app-trusted-companies>

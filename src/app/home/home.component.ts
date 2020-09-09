@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentfulService } from '../services/contentful/contentful.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  constructor(public contentfulService: ContentfulService) {}
 
   ngOnInit(): void {
+    this.contentfulService.fetchBlog();
   }
-
 }
