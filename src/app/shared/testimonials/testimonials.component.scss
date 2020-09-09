@@ -1,0 +1,8 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.testimonials {
+  &__header {
+    @include header3($earth-maroon);
+  }
+}

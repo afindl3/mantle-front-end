@@ -3,6 +3,7 @@
 
 .privacy {
   &__paragraph2 {
+    max-width: 646px;
     @include copyMedium($mono-grey1);
   }
 

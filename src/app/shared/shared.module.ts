@@ -13,6 +13,9 @@ import { NavExtendedComponent } from './nav-extended/nav-extended.component';
 import { OverlayHeaderComponent } from './headers/overlay-header/overlay-header.component';
 import { TrustedCompaniesComponent } from './trusted-companies/trusted-companies.component';
 import { PosterComponent } from './poster/poster.component';
+import { StaggeredIconsComponent } from './staggered-icons/staggered-icons.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { SplitSubheaderComponent } from './split-subheader/split-subheader.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { PosterComponent } from './poster/poster.component';
     NavExtendedComponent,
     OverlayHeaderComponent,
     PosterComponent,
+    SplitSubheaderComponent,
+    StaggeredIconsComponent,
+    TestimonialsComponent,
     TrustedCompaniesComponent,
   ],
   imports: [CommonModule, NgbModule, RouterModule],
@@ -37,6 +43,9 @@ import { PosterComponent } from './poster/poster.component';
     NavBarComponent,
     OverlayHeaderComponent,
     PosterComponent,
+    SplitSubheaderComponent,
+    StaggeredIconsComponent,
+    TestimonialsComponent,
     TrustedCompaniesComponent,
   ],
 })

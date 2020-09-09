@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { createClient, Entry } from 'contentful';
+import { createClient } from 'contentful';
 import { BehaviorSubject } from 'rxjs';
 
 const CONFIG = {
@@ -16,6 +15,7 @@ export class ContentfulService {
     space: CONFIG.space,
     accessToken: CONFIG.accessToken,
   });
+
   private readonly _faqs = new BehaviorSubject<any[]>([]);
   private readonly _milestones = new BehaviorSubject<any[]>([]);
   private readonly _team = new BehaviorSubject<any[]>([]);

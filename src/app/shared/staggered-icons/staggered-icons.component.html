@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="section">
+    <div class="row mb-5">
+      <div class="col-12 col-md-8 col-xl-6">
+        <h3 class="staggered-icons__header">{{ data.heading }}</h3>
+        <p class="staggered-icons__subheader">
+          {{ data.subheading }}
+        </p>
+      </div>
+    </div>
+
+    <div class="staggered-icons__container">
+      <div class="row">
+        <div *ngFor="let reason of data.reasons; let i = index" class="col-12 col-md-6" [ngClass]="{ 'mt-md-5': i % 2 === 0 }">
+          <div>
+            <img [src]="reason.image" />
+          </div>
+          <label class="staggered-icons__header2">{{ reason.title }}</label>
+          <p>{{ reason.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

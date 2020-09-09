@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-import { WhatIsMantleComponent } from './what-is-mantle.component';
+import { AuditPortalComponent } from './audit-portal.component';
 
-const routes: Routes = [{ path: '', component: WhatIsMantleComponent }];
+const routes: Routes = [{ path: '', component: AuditPortalComponent }];
+
 @NgModule({
-  declarations: [WhatIsMantleComponent],
+  declarations: [AuditPortalComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
 })
-export class WhatIsMantleModule {}
+export class AuditPortalModule {}

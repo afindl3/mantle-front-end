@@ -1,1 +1,55 @@
-<p>auditing works!</p>
+<app-overlay-header
+  [headingLabel]="'PLATFORM'"
+  [heading]="'Auditing'"
+  [breadcrumb1]="'Platform'"
+  [breadcrumb2]="'Auditing'"
+></app-overlay-header>
+
+<div class="container">
+  <div class="inset-section">
+    <p class="audit__paragraph2">
+      Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <br />
+    <p class="audit__paragraph2">
+      Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2 class="audit__header3">FEATURES BEHIND THE PROPES</h2>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <app-poster
+          [title]="'Agreement Validation'"
+          [category]="'AUDITING'"
+          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
+          [style]="1"
+          [link]="'/platform/auditing/agreement-validation'"
+        ></app-poster>
+      </div>
+      <div class="col-12 col-md-4">
+        <app-poster
+          [title]="'Data Provenance'"
+          [category]="'PRAUDITINGIVACY'"
+          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
+          [style]="2"
+          [link]="'/platform/auditing/data-provenance'"
+        ></app-poster>
+      </div>
+      <div class="col-12 col-md-4">
+        <app-poster
+          [title]="'Audit Portal'"
+          [category]="'AUDITING'"
+          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
+          [style]="3"
+          [link]="'/platform/auditing/audit-portal'"
+        ></app-poster>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 
-import { WhatMakesUsDifferentRoutingModule } from './what-makes-us-different-routing.module';
 import { WhatMakesUsDifferentComponent } from './what-makes-us-different.component';
 import { SharedModule } from '../../shared/shared.module';
 
+const routes: Routes = [{ path: '', component: WhatMakesUsDifferentComponent }];
+
 @NgModule({
   declarations: [WhatMakesUsDifferentComponent],
-  imports: [CommonModule, WhatMakesUsDifferentRoutingModule, SharedModule],
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
 })
 export class WhatMakesUsDifferentModule {}

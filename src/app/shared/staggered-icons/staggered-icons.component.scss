@@ -1,0 +1,17 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.staggered-icons {
+  &__header {
+    @include header3($earth-maroon);
+  }
+
+  &__container {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  &__header2 {
+    @include subhead2($earth-brown);
+  }
+}

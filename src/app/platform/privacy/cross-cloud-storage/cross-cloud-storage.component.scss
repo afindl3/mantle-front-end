@@ -1,0 +1,13 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.storage {
+  // Section 4 - How it works
+  &__header4 {
+    @include header3($earth-maroon);
+  }
+
+  &__subheader4 {
+    @include subhead2($earth-maroon);
+  }
+}

@@ -1,18 +1,23 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { RoutingService } from '../../../services/routing/routing.service';
 
 @Component({
   selector: 'app-image-header',
   templateUrl: './image-header.component.html',
   styleUrls: ['./image-header.component.scss'],
 })
-export class ImageHeaderComponent implements OnInit {
+export class ImageHeaderComponent implements OnInit, OnDestroy {
   @Input() headingLabel: string;
   @Input() heading: string;
   @Input() subheading: string;
-  @Input() breadcrumb1: string;
-  @Input() breadcrumb2: string;
+  @Input() showBreadcrumb: boolean;
+  routeSegments: string[];
 
-  constructor() {}
+  constructor(private routingService: RoutingService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.routeSegments = this.routingService.getRouteSegments();
+  }
+
+  ngOnDestroy(): void {}
 }

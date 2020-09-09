@@ -21,7 +21,7 @@
   }
 
   &__backdrop2 {
-    background-image: url('/assets/backgrounds/athens.png.png');
+    background-image: url('/assets/backgrounds/athens.png');
     background-repeat: no-repeat;
     background-size: 55%;
     background-position: right center;
@@ -57,15 +57,18 @@
 
   &__subheading {
     max-width: 375px;
+    @include copyMedium($mono-grey1);
   }
 
-  &__breadcrumb {
-    @include captionSubNav($earth-brown);
-    span {
-      @include captionSubNav($mono-grey3);
-    }
+  &__breadcrumbs {
+    @include captionSubNav($mono-grey3);
+    margin-top: 118px;
     @include media-breakpoint-down(sm) {
       margin-top: 47px;
     }
+  }
+
+  &__breadcrumb--brown {
+    @include captionSubNav($earth-brown);
   }
 }
