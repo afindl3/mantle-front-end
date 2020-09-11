@@ -1,4 +1,4 @@
-<div class="contact-form" [ngClass]="{ 'contact-form__dark-background': isDarkBackground }">
+<div class="contact-form" [ngClass]="{ 'contact-form__background--dark': isDarkBackground }">
   <div class="contact-form__content-container container">
     <div class="row">
       <div class="col-12 col-md-6">
@@ -52,11 +52,10 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <input
-        class="contact-form__input-text contact-form__input-text--dark contact-form__input-textbox"
-        type="email"
+      <textarea
+        class="contact-form__input-text contact-form__input-text--dark contact-form__input-textarea"
         placeholder="Describe your project in max 5000 characters"
-      />
+      ></textarea>
     </div>
   </div>
   <div class="row">
@@ -174,11 +173,10 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <input
-        class="contact-form__input-text contact-form__input-text--light contact-form__input-textbox"
-        type="email"
+      <textarea
+        class="contact-form__input-text contact-form__input-text--dark contact-form__input-textarea"
         placeholder="Describe your project in max 5000 characters"
-      />
+      ></textarea>
     </div>
   </div>
   <div class="row">

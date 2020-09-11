@@ -2,7 +2,8 @@
 @import 'src/styles/base/_typography';
 
 .contact-form {
-  &__dark-background {
+  &__background--dark {
+    color: $mono-white;
     background: $earth-maroon;
   }
 
@@ -50,11 +51,8 @@
     }
   }
 
-  &__input-textbox {
+  &__input-textarea {
     height: 150px;
-    &::placeholder {
-      transform: translate3d(0, -50px, 0);
-    }
   }
 
   &__input-radio {

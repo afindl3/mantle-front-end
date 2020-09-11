@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -16,6 +18,7 @@ import { PosterComponent } from './poster/poster.component';
 import { StaggeredIconsComponent } from './staggered-icons/staggered-icons.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { SplitSubheaderComponent } from './split-subheader/split-subheader.component';
+import { RequestAccessComponent } from './request-access/request-access.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +35,9 @@ import { SplitSubheaderComponent } from './split-subheader/split-subheader.compo
     StaggeredIconsComponent,
     TestimonialsComponent,
     TrustedCompaniesComponent,
+    RequestAccessComponent,
   ],
-  imports: [CommonModule, NgbModule, RouterModule],
+  imports: [CommonModule, HttpClientModule, NgbModule, ReactiveFormsModule, RouterModule],
   exports: [
     ContactFormComponent,
     FooterComponent,

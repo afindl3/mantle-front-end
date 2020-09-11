@@ -4,10 +4,10 @@
     <li routerLink="/home">
       <img class="nav-bar__logo" [src]="isPrimaryHeader ? 'assets/icons/logo-primary.png' : 'assets/icons/logo-secondary.png'" />
     </li>
-    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="open('platform')">
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="openMenuModal('platform')">
       Platform
     </li>
-    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="open('developers')">
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="openMenuModal('developers')">
       Developers
     </li>
     <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/platform/pricing">
@@ -17,9 +17,11 @@
   </ul>
   <ul class="d-flex">
     <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/faq">FAQ</li>
-    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/login">Login</li>
-    <li class="nav-bar__button" routerLink="'/access'">
-      <button class="button__primary">Request Access</button>
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }">
+      <a href="https://app.mantleblockchain.com/login">Login</a>
+    </li>
+    <li class="nav-bar__button">
+      <button class="button__primary" (click)="openAccessModal()">Request Access</button>
     </li>
     <li class="nav-bar__menu-toggle" (click)="toggleMobileMenu()">
       <img *ngIf="showMobileMenu" src="assets/icons/close.png" />
@@ -30,11 +32,15 @@
 
 <!-- Mobile dropdown menu -->
 <ul *ngIf="showMobileMenu" class="nav-bar__menu">
-  <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="open('platform')">
+  <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="openMenuModal('platform')">
     Platform
     <img src="assets/icons/arrow-right.png" />
   </li>
-  <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="open('developers')">
+  <li
+    class="nav-bar__menu-item"
+    [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
+    (click)="openMenuModal('developers')"
+  >
     Developers
     <img src="assets/icons/arrow-right.png" />
   </li>
@@ -44,7 +50,7 @@
   <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/about">
     About
   </li>
-  <li class="nav-bar__menu-button" routerLink="'/access'">
-    <button class="button__primary">Request Access</button>
+  <li class="nav-bar__menu-button">
+    <button class="button__primary" (click)="openAccessModal()">Request Access</button>
   </li>
 </ul>

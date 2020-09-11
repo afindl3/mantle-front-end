@@ -1,0 +1,23 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.access {
+  &__container {
+    padding: 60px;
+    @include media-breakpoint-down(sm) {
+      padding-left: 30px;
+    }
+  }
+
+  &__input-text {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__input-textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

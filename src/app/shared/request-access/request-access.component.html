@@ -1,0 +1,93 @@
+<!-- <div class="access__container">
+  <form [formGroup]='contactForm' name="contact" data-netlify="true">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input class="access__input-text" type="text" name="firstName" placeholder="First Name" />
+      </div>
+      <div class="col-12 col-sm-6">
+        <input class="access__input-text" type="text" name="lastName" placeholder="Last Name" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <input class="access__input-text" type="text" name="companyName" placeholder="Company Name" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input class="access__input-text" type="text" name="title" placeholder="Title" />
+      </div>
+      <div class="col-12 col-sm-6">
+        <select name="role[]" multiple>
+          <option value="leader">Leader</option>
+          <option value="follower">Follower</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input class="access__input-text" type="text" name="title" placeholder="Title" />
+      </div>
+      <div class="col-12 col-sm-6">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Role</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Developer</button>
+            <button ngbDropdownItem>Analyst</button>
+            <button ngbDropdownItem>Owner</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <input class="access__input-text" type="email" name="email" placeholder="you@example.com" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <textarea
+          class="access__input-textarea"
+          name="message"
+          placeholder="To accelerate access, provide some details on your intended use of Mantle BAAS."
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-6 m-auto">
+        <button class="button__primary" type="submit">Request access</button>
+      </div>
+    </div>
+  </form>
+</div> -->
+
+<div id="container">
+  <div id="form-wrapper">
+    <form [formGroup]="contactForm" name="contact" id="contact-form" method="post" (ngSubmit)="onSubmit()">
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display: none">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      <h2>Contact Me!</h2>
+      <div id="form-row-wrapper">
+        <div class="form-row"><label>Your Name: </label><input type="text" name="name" formControlName="name" required /></div>
+        <div class="form-row">
+          <label>Email Address: </label><input type="email" name="email" formControlName="email" required />
+        </div>
+        <div class="form-row"><label>A Favorite Work of Art: </label><input type="text" name="art" formControlName="art" /></div>
+        <div class="form-row">
+          <label>Your Message:</label><textarea id="message" name="message" formControlName="message" required></textarea>
+        </div>
+        <div id="button-row">
+          <button id="submit-button" type="submit">Send!</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { NavExtendedComponent } from '../nav-extended/nav-extended.component';
+import { RequestAccessComponent } from '../request-access/request-access.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -28,13 +29,26 @@ export class NavBarComponent implements OnInit {
     this.showMobileMenu = !this.showMobileMenu;
   }
 
-  open(section: string): void {
-    const modalRef = this.modalService.open(NavExtendedComponent, {
-      // centered: true,
-    });
+  openMenuModal(section: string): void {
+    const modalRef = this.modalService.open(NavExtendedComponent);
     modalRef.componentInstance.extendedMenuType = section;
     modalRef.result
       .then((result) => {
+        // Result is either 'close' or 'back'
+        if (result === 'close') {
+          this.showMobileMenu = false;
+        }
+      })
+      .catch((dismissed) => {
+        this.showMobileMenu = false;
+      });
+  }
+
+  openAccessModal() {
+    const modalRef = this.modalService.open(RequestAccessComponent);
+    modalRef.result
+      .then((result) => {
+        // Result is either 'close' or 'back'
         if (result === 'close') {
           this.showMobileMenu = false;
         }
