@@ -3,25 +3,13 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
+@import './base/_typography';
 @import './base/_reset';
+@import './base/_buttons';
+@import './base/_variables';
+@import './base/_fonts';
 
-.section {
-  margin-bottom: 130px;
-  @include media-breakpoint-down(sm) {
-    margin-bottom: 90px;
-  }
-}
-
-.inset-section {
-  margin-left: 70px;
-  margin-bottom: 130px;
-  @include media-breakpoint-down(sm) {
-    margin-left: 0px;
-    margin-bottom: 90px;
-  }
-}
-
-// Override bootstrap classes
+// SECTION 1 - Override bootstrap
 // Modal
 .modal-dialog {
   max-width: 85%;
@@ -53,4 +41,29 @@
 
 .card-body {
   background: $mono-grey4;
+}
+
+// SECTION 2 - Global custom containers/sections
+body {
+  @include copyMain($mono-grey1);
+}
+
+.section {
+  margin-bottom: 130px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 90px;
+  }
+}
+
+.inset-section {
+  margin-left: 70px;
+  margin-bottom: 130px;
+  @include media-breakpoint-down(sm) {
+    margin-left: 0px;
+    margin-bottom: 90px;
+  }
+}
+
+.button {
+  @include button;
 }
