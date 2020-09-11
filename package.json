@@ -23,7 +23,6 @@
     "@ng-bootstrap/ng-bootstrap": "^6.2.0",
     "bootstrap": "^4.4.0",
     "contentful": "^7.14.6",
-    "netlify-schematics": "^1.1.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

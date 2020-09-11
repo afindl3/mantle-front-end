@@ -72,10 +72,6 @@
     <form [formGroup]="contactForm" name="contact" id="contact-form" method="post" (ngSubmit)="onSubmit()">
       <input type="hidden" name="form-name" value="contact" />
 
-      <p style="display: none">
-        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-      </p>
-
       <h2>Contact Me!</h2>
       <div id="form-row-wrapper">
         <div class="form-row"><label>Your Name: </label><input type="text" name="name" formControlName="name" required /></div>
