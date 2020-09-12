@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-request-access',
@@ -18,10 +19,10 @@ export class RequestAccessComponent implements OnInit {
     message: new FormControl(''),
   });
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, public activeModal: NgbActiveModal) {}
 
   ngOnInit() {
-    console.log('request accesss componnent init');
+    console.log('Request accesss componnent init');
   }
 
   onSubmit() {
@@ -39,19 +40,22 @@ export class RequestAccessComponent implements OnInit {
       (res) => {},
       (err) => {
         if (err instanceof ErrorEvent) {
-          //client side error
+          // Client side error
           alert('Something went wrong when sending your message.');
           console.log(err.error.message);
+          this.activeModal.close('error');
         } else {
-          //backend error. If status is 200, then the message successfully sent
+          // Backend error
           if (err.status === 200) {
             alert('Your message has been sent!');
+            this.activeModal.close('success');
           } else {
             alert('Something went wrong when sending your message.');
             console.log('Error status:');
             console.log(err.status);
             console.log('Error body:');
             console.log(err.error);
+            this.activeModal.close('error');
           }
         }
       }

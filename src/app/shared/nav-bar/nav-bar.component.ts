@@ -48,13 +48,13 @@ export class NavBarComponent implements OnInit {
     const modalRef = this.modalService.open(RequestAccessComponent);
     modalRef.result
       .then((result) => {
-        // Result is either 'close' or 'back'
-        if (result === 'close') {
-          this.showMobileMenu = false;
+        // Result is either 'success' or 'error'
+        if (result === 'error') {
+          console.log('TODO: ROUTE TO ERROR PAGE');
         }
       })
       .catch((dismissed) => {
-        this.showMobileMenu = false;
+        console.log('Request access form escaped');
       });
   }
 }

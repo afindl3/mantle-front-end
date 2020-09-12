@@ -20,10 +20,12 @@ export class NavExtendedComponent implements OnInit {
   }
 
   onBack() {
+    // Back to mobile dropdown menu
     this.activeModal.close('back');
   }
 
   onRoute(route: string) {
+    // Also need to close mobile nav
     this.activeModal.close('close');
     console.log('route to: ', route);
     this.router.navigate([route], { queryParamsHandling: 'merge' });
