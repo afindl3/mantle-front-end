@@ -4,9 +4,16 @@
 .split-subheader {
   &__header {
     @include header3($earth-maroon);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 48px;
+    }
   }
 
   &__paragraph {
     @include copyMedium($mono-grey1);
+  }
+
+  &__list {
+    column-count: 2;
   }
 }

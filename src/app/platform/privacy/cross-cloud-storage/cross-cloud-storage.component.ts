@@ -11,7 +11,7 @@ export class CrossCloudStorageComponent implements OnInit {
     heading: 'Why use Mantles cross cloud storage?',
     subheading:
       'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    reasons: [
+    items: [
       {
         title: 'Insert reason',
         description:

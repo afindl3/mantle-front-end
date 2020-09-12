@@ -1,1 +1,55 @@
-<p>data-provenance works!</p>
+<app-image-header
+  [headingLabel]="'AUDITING'"
+  [heading]="'Data Provenance'"
+  [subheading]="
+    'Insert metaphor or analogy to illustrate cross cloud storage. Insert real-life examples that shows cross cloud storage is better than centralized computing.'
+  "
+  [showBreadcrumb]="true"
+></app-image-header>
+
+<app-split-subheader
+  [heading]="'Where data becomes the world\'s most essential ingredient'"
+  [subheading]="
+    'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+  "
+  [listItems]="dataProvenanceListItems"
+></app-split-subheader>
+
+<app-trusted-companies></app-trusted-companies>
+
+<div class="section provenance__section4">
+  <div class="provenance__container4">
+    <h3 class="provenance__header4">
+      Insert testimonial here. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod.
+    </h3>
+    <p class="provenance__subheader4">BUZZ WORD</p>
+  </div>
+</div>
+
+<app-staggered-icons [data]="dataProvenanceIcons"></app-staggered-icons>
+
+<div class="container">
+  <div class="section">
+    <h2 class="provenance__header6">FEATURES BEHIND THE PROPS</h2>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <app-poster
+          [title]="'Cross Cloud Storage'"
+          [category]="'PRIVACY'"
+          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
+          [style]="1"
+          [link]="'/platform/privacy/cross-cloud-storage'"
+        ></app-poster>
+      </div>
+      <div class="col-12 col-md-4">
+        <app-poster
+          [title]="'Distributed Identity'"
+          [category]="'PRIVACY'"
+          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
+          [style]="2"
+          [link]="'/platform/privacy/distributed-identity'"
+        ></app-poster>
+      </div>
+    </div>
+  </div>
+</div>

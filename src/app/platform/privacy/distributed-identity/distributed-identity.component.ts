@@ -11,7 +11,7 @@ export class DistributedIdentityComponent implements OnInit {
     heading: 'Why distributed identity with us?',
     subheading:
       'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    reasons: [
+    items: [
       {
         title: 'Insert reason',
         description:

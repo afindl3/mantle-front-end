@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="section">
+    <div class="row mb-5">
+      <div class="col-12 col-md-8 col-xl-6">
+        <h3 class="staggered-columns__header">{{ data.heading }}</h3>
+        <p class="staggered-columns__subheader">
+          {{ data.subheading }}
+        </p>
+      </div>
+    </div>
+
+    <div class="staggered-columns__items-container">
+      <div class="row">
+        <div
+          *ngFor="let item of data.items; let i = index"
+          class="col-12 col-md-4"
+          [ngClass]="{ 'staggered-columns__col1': i === 0, 'staggered-columns__col2': i === 1 }"
+        >
+          <div class="staggered-columns__item-container">
+            <label [ngClass]="style === 1 ? 'staggered-columns__item-title1' : 'staggered-columns__item-title2'">{{
+              item.title
+            }}</label>
+            <p class="staggered-columns__item-body">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

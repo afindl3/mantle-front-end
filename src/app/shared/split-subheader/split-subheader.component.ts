@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SplitSubheaderComponent implements OnInit {
   @Input() heading: string;
   @Input() subheading: string;
+  @Input() listItems?: string;
 
   constructor() {}
 

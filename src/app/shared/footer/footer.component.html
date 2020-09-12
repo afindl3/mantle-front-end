@@ -43,32 +43,34 @@
           <div>
             <label class="footer__label">Platform</label>
             <ul>
-              <li class="mb-4" routerLink="/platform/what-is-mantle">What is Mantle?</li>
-              <li class="mb-4" routerLink="/platform/what-makes-us-different">What Makes Us Different</li>
-              <li class="mb-4" routerLink="/platform/privacy">Privacy</li>
-              <li class="mb-4" routerLink="/platform/auditing">Auditing</li>
-              <li class="mb-4" routerLink="/platform/case-sttudies">Case Studies</li>
-              <li class="mb-4" routerLink="/platform/pricing">Pricing</li>
+              <li class="footer__item mb-4" routerLink="/platform/what-is-mantle">What is Mantle?</li>
+              <li class="footer__item mb-4" routerLink="/platform/what-makes-us-different">What Makes Us Different</li>
+              <li class="footer__item mb-4" routerLink="/platform/privacy">Privacy</li>
+              <li class="footer__item mb-4" routerLink="/platform/auditing">Auditing</li>
+              <li class="footer__item mb-4" routerLink="/platform/case-sttudies">Case Studies</li>
+              <li class="footer__item" routerLink="/platform/pricing">Pricing</li>
             </ul>
           </div>
           <div>
-            <label class="footer__label" routerLink="'/developers'">Developers</label>
+            <label class="footer__label">Developers</label>
             <ul>
-              <li class="mb-4" routerLink="/developers/developer-program">Developer Program</li>
-              <li class="mb-4" routerLink="/developers/partner-program">Partner Program</li>
-              <li class="mb-4">Quickstart</li>
-              <li class="mb-4" routerLink="/developers/insights">Insights</li>
-              <li class="mb-4">Documentation</li>
-              <li class="mb-4" routerLink="/developers/supported-networks">Supported Networks</li>
+              <li class="footer__item mb-4" routerLink="/developers/developer-program">Developer Program</li>
+              <li class="footer__item mb-4" routerLink="/developers/partner-program">Partner Program</li>
+              <li class="mb-4">
+                <a class="footer__link" href="https://developer.mantleblockchain.com/docs/keeper-quickstart">Quickstart</a>
+              </li>
+              <li class="footer__item mb-4" routerLink="/developers/insights">Insights</li>
+              <li class="mb-4"><a class="footer__link" href="https://developer.mantleblockchain.com/docs">Documentation</a></li>
+              <li class="footer__item" routerLink="/developers/supported-networks">Supported Networks</li>
             </ul>
           </div>
           <div>
-            <label class="footer__label" routerLink="'/company'">Company</label>
+            <label class="footer__label">Company</label>
             <ul>
-              <li class="mb-4" routerLink="/company/about">About</li>
-              <li class="mb-4" routerLink="/company/careers">Careers</li>
-              <li class="mb-4" routerLink="/company/faq">FAQ</li>
-              <li class="mb-4" routerLink="/company/contact-us">Contact Us</li>
+              <li class="footer__item mb-4" routerLink="/company/about">About</li>
+              <li class="footer__item mb-4" routerLink="/company/careers">Careers</li>
+              <li class="footer__item mb-4" routerLink="/company/faq">FAQ</li>
+              <li class="footer__item" routerLink="/company/contact-us">Contact Us</li>
             </ul>
           </div>
         </div>
@@ -96,12 +98,12 @@
         /></ng-template>
         <ng-template ngbPanelContent>
           <ul>
-            <li class="mb-2" (click)="onClick('/platform/what-is-mantle')">What is Mantle?</li>
-            <li class="mb-2" (click)="onClick('/platform/what-makes-us-different')">What Makes Us Different</li>
-            <li class="mb-2" (click)="onClick('/platform/privacy')">Privacy</li>
-            <li class="mb-2" (click)="onClick('/platform/auditing')">Auditing</li>
-            <li class="mb-2" (click)="onClick('/platform/case-studies')">Case Studies</li>
-            <li (click)="onClick('/platform/pricing')">Pricing</li>
+            <li class="footer__item mb-2" (click)="onClick('/platform/what-is-mantle')">What is Mantle?</li>
+            <li class="footer__item mb-2" (click)="onClick('/platform/what-makes-us-different')">What Makes Us Different</li>
+            <li class="footer__item mb-2" (click)="onClick('/platform/privacy')">Privacy</li>
+            <li class="footer__item mb-2" (click)="onClick('/platform/auditing')">Auditing</li>
+            <li class="footer__item mb-2" (click)="onClick('/platform/case-studies')">Case Studies</li>
+            <li class="footer__item" (click)="onClick('/platform/pricing')">Pricing</li>
           </ul>
         </ng-template>
       </ngb-panel>
@@ -112,12 +114,14 @@
         /></ng-template>
         <ng-template ngbPanelContent>
           <ul>
-            <li class="mb-2" (click)="onClick('/developers/developer-program')">Developer Program</li>
-            <li class="mb-2" (click)="onClick('/developers/partner-program')">Partner Program</li>
-            <li class="mb-2" (click)="onClick('')">Quickstart</li>
-            <li class="mb-2" (click)="onClick('/developers/insights')">Insights</li>
-            <li class="mb-2" (click)="onClick('')">Documentation</li>
-            <li (click)="onClick('/developers/supported-networks')">Supported Networks</li>
+            <li class="footer__item mb-2" (click)="onClick('/developers/developer-program')">Developer Program</li>
+            <li class="footer__item mb-2" (click)="onClick('/developers/partner-program')">Partner Program</li>
+            <li class="mb-2">
+              <a class="footer__link" href="https://developer.mantleblockchain.com/docs/keeper-quickstart">Quickstart</a>
+            </li>
+            <li class="footer__item mb-2" (click)="onClick('/developers/insights')">Insights</li>
+            <li class="mb-2"><a class="footer__link" href="https://developer.mantleblockchain.com/docs">Documentation</a></li>
+            <li class="footer__item" (click)="onClick('/developers/supported-networks')">Supported Networks</li>
           </ul>
         </ng-template>
       </ngb-panel>
@@ -128,10 +132,10 @@
         /></ng-template>
         <ng-template ngbPanelContent>
           <ul>
-            <li class="mb-2" (click)="onClick('/company/about')">About</li>
-            <li class="mb-2" (click)="onClick('/company/careers')">Careers</li>
-            <li class="mb-2" (click)="onClick('/company/faq')">FAQ</li>
-            <li (click)="onClick('/company/contact-us')">Contact Us</li>
+            <li class="footer__item mb-2" (click)="onClick('/company/about')">About</li>
+            <li class="footer__item mb-2" (click)="onClick('/company/careers')">Careers</li>
+            <li class="footer__item mb-2" (click)="onClick('/company/faq')">FAQ</li>
+            <li class="footer__item" (click)="onClick('/company/contact-us')">Contact Us</li>
           </ul>
         </ng-template>
       </ngb-panel>

@@ -19,6 +19,7 @@ import { StaggeredIconsComponent } from './staggered-icons/staggered-icons.compo
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { SplitSubheaderComponent } from './split-subheader/split-subheader.component';
 import { RequestAccessComponent } from './request-access/request-access.component';
+import { StaggeredColumnsComponent } from './staggered-columns/staggered-columns.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +32,12 @@ import { RequestAccessComponent } from './request-access/request-access.componen
     NavExtendedComponent,
     OverlayHeaderComponent,
     PosterComponent,
+    RequestAccessComponent,
     SplitSubheaderComponent,
+    StaggeredColumnsComponent,
     StaggeredIconsComponent,
     TestimonialsComponent,
     TrustedCompaniesComponent,
-    RequestAccessComponent,
   ],
   imports: [CommonModule, HttpClientModule, NgbModule, ReactiveFormsModule, RouterModule],
   exports: [
@@ -48,6 +50,7 @@ import { RequestAccessComponent } from './request-access/request-access.componen
     OverlayHeaderComponent,
     PosterComponent,
     SplitSubheaderComponent,
+    StaggeredColumnsComponent,
     StaggeredIconsComponent,
     TestimonialsComponent,
     TrustedCompaniesComponent,

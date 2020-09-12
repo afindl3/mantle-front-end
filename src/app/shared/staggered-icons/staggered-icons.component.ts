@@ -16,10 +16,10 @@ export class StaggeredIconsComponent implements OnInit {
 export type StaggeredIconFields = {
   heading: string;
   subheading: string;
-  reasons: Reasons[];
+  items: Item[];
 };
 
-type Reasons = {
+type Item = {
   title: string;
   description: string;
   image: string;

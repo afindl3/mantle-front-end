@@ -23,7 +23,11 @@
   opacity: 0 !important;
 }
 
-// Accordion
+// Accordion - Footer
+.acc-title {
+  @include subhead3($earth-maroon);
+}
+
 .btn.btn:disabled {
   opacity: 1;
 }

@@ -9,14 +9,20 @@
       </div>
     </div>
 
-    <div class="staggered-icons__container">
+    <div class="staggered-icons__items-container">
       <div class="row">
-        <div *ngFor="let reason of data.reasons; let i = index" class="col-12 col-md-6" [ngClass]="{ 'mt-md-5': i % 2 === 0 }">
-          <div>
-            <img [src]="reason.image" />
+        <div
+          *ngFor="let item of data.items; let i = index"
+          class="col-12 col-md-6"
+          [ngClass]="{ 'staggered-icons__col1': i % 2 === 0, 'mb-5 mb-md-0': i !== data.items.length - 1 }"
+        >
+          <div class="staggered-icons__item-container">
+            <div>
+              <img [src]="item.image" />
+            </div>
+            <label class="staggered-icons__item-title">{{ item.title }}</label>
+            <p>{{ item.description }}</p>
           </div>
-          <label class="staggered-icons__header2">{{ reason.title }}</label>
-          <p>{{ reason.description }}</p>
         </div>
       </div>
     </div>

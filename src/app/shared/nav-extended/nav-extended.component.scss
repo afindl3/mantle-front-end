@@ -19,11 +19,15 @@
     }
   }
 
-  &__title {
+  &__heading {
     @include captionSubNav($earth-maroon);
   }
 
-  &__subheader {
+  &__heading-link {
+    cursor: pointer;
+  }
+
+  &__subheading {
     padding-bottom: 20px;
     margin-bottom: 45px;
     border-bottom: 1px solid $mono-grey4;
@@ -41,6 +45,7 @@
   }
 
   &__link {
+    cursor: pointer;
     @include copyMicro($mono-black);
   }
 }

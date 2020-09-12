@@ -46,6 +46,17 @@
     margin-bottom: 20px;
   }
 
+  &__item {
+    cursor: pointer;
+  }
+
+  &__link {
+    color: $mono-grey1;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   &__logo-container {
     margin-top: 88px;
     @include copyMicro($mono-black);
@@ -60,8 +71,4 @@
     padding: 30px 0;
     @include copyMicro($mono-grey1);
   }
-}
-
-.acc-title {
-  @include subhead3($earth-maroon);
 }
