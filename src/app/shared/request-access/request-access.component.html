@@ -1,21 +1,44 @@
-<!-- <div class="access__container">
-  <form [formGroup]='contactForm' name="contact" data-netlify="true">
+<div class="access__container">
+  <form [formGroup]="contactForm" name="contact" method="post" (ngSubmit)="onSubmit()">
+    <input type="hidden" name="form-name" value="contact" />
+
     <div class="row">
       <div class="col-12 col-sm-6">
-        <input class="access__input-text" type="text" name="firstName" placeholder="First Name" />
+        <input
+          class="access__input-text"
+          type="text"
+          name="firstName"
+          formControlName="firstName"
+          placeholder="First Name"
+          required
+        />
       </div>
       <div class="col-12 col-sm-6">
-        <input class="access__input-text" type="text" name="lastName" placeholder="Last Name" />
+        <input
+          class="access__input-text"
+          type="text"
+          name="lastName"
+          formControlName="lastName"
+          placeholder="Last Name"
+          required
+        />
       </div>
     </div>
 
     <div class="row">
       <div class="col-12">
-        <input class="access__input-text" type="text" name="companyName" placeholder="Company Name" />
+        <input
+          class="access__input-text"
+          type="text"
+          name="company"
+          formControlName="company"
+          placeholder="Company Name"
+          required
+        />
       </div>
     </div>
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-12 col-sm-6">
         <input class="access__input-text" type="text" name="title" placeholder="Title" />
       </div>
@@ -25,27 +48,36 @@
           <option value="follower">Follower</option>
         </select>
       </div>
-    </div>
+    </div> -->
 
     <div class="row">
       <div class="col-12 col-sm-6">
-        <input class="access__input-text" type="text" name="title" placeholder="Title" />
+        <input class="access__input-text" type="text" name="title" formControlName="title" placeholder="Title" required />
       </div>
-      <div class="col-12 col-sm-6">
+      <!-- <div class="col-12 col-sm-6">
         <div ngbDropdown class="d-inline-block">
           <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Role</button>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Architect</button>
             <button ngbDropdownItem>Developer</button>
-            <button ngbDropdownItem>Analyst</button>
-            <button ngbDropdownItem>Owner</button>
+            <button ngbDropdownItem>Executive</button>
+            <button ngbDropdownItem>Manager</button>
+            <button ngbDropdownItem>Other</button>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="row">
       <div class="col-12">
-        <input class="access__input-text" type="email" name="email" placeholder="you@example.com" />
+        <input
+          class="access__input-text"
+          type="email"
+          name="email"
+          formControlName="email"
+          placeholder="you@example.com"
+          required
+        />
       </div>
     </div>
 
@@ -54,7 +86,9 @@
         <textarea
           class="access__input-textarea"
           name="message"
+          formControlName="message"
           placeholder="To accelerate access, provide some details on your intended use of Mantle BAAS."
+          rrequirred
         ></textarea>
       </div>
     </div>
@@ -65,27 +99,18 @@
       </div>
     </div>
   </form>
-</div> -->
-
-<div id="container">
-  <div id="form-wrapper">
-    <form [formGroup]="contactForm" name="contact" id="contact-form" method="post" (ngSubmit)="onSubmit()">
-      <input type="hidden" name="form-name" value="contact" />
-
-      <h2>Contact Me!</h2>
-      <div id="form-row-wrapper">
-        <div class="form-row"><label>Your Name: </label><input type="text" name="name" formControlName="name" required /></div>
-        <div class="form-row">
-          <label>Email Address: </label><input type="email" name="email" formControlName="email" required />
-        </div>
-        <div class="form-row"><label>A Favorite Work of Art: </label><input type="text" name="art" formControlName="art" /></div>
-        <div class="form-row">
-          <label>Your Message:</label><textarea id="message" name="message" formControlName="message" required></textarea>
-        </div>
-        <div id="button-row">
-          <button id="submit-button" type="submit">Send!</button>
-        </div>
-      </div>
-    </form>
-  </div>
 </div>
+
+<!-- <form [formGroup]="contactForm" name="contact" id="contact-form" method="post" (ngSubmit)="onSubmit()">
+  <input type="hidden" name="form-name" value="contact" />
+
+  <div class="form-row"><label>Your Name: </label><input type="text" name="name" formControlName="name" required /></div>
+  <div class="form-row"><label>Email Address: </label><input type="email" name="email" formControlName="email" required /></div>
+  <div class="form-row"><label>A Favorite Work of Art: </label><input type="text" name="art" formControlName="art" /></div>
+  <div class="form-row">
+    <label>Your Message:</label><textarea id="message" name="message" formControlName="message" required></textarea>
+  </div>
+  <div id="button-row">
+    <button id="submit-button" type="submit">Send!</button>
+  </div>
+</form> -->

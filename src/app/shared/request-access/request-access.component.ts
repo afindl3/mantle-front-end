@@ -9,9 +9,12 @@ import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http'
 })
 export class RequestAccessComponent implements OnInit {
   contactForm = new FormGroup({
-    name: new FormControl(''),
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    company: new FormControl(''),
+    title: new FormControl(''),
+    // role: new FormControl(''),
     email: new FormControl(''),
-    art: new FormControl(''),
     message: new FormControl(''),
   });
 
@@ -22,11 +25,15 @@ export class RequestAccessComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.contactForm.value);
     const body = new HttpParams()
       .set('form-name', 'contact')
-      .append('name', this.contactForm.value.name)
+      .append('firstName', this.contactForm.value.firstName)
+      .append('lastName', this.contactForm.value.lastName)
+      .append('company', this.contactForm.value.company)
+      .append('title', this.contactForm.value.title)
+      // .append('role', this.contactForm.value.role)
       .append('email', this.contactForm.value.email)
-      .append('art', this.contactForm.value.art)
       .append('message', this.contactForm.value.message);
     this.http.post('/', body.toString(), { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).subscribe(
       (res) => {},
