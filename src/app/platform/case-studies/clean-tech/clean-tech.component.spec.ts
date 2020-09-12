@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OverlayHeaderComponent } from './overlay-header.component';
+import { CleanTechComponent } from './clean-tech.component';
 
-describe('OverlayHeaderComponent', () => {
-  let component: OverlayHeaderComponent;
-  let fixture: ComponentFixture<OverlayHeaderComponent>;
+describe('CleanTechComponent', () => {
+  let component: CleanTechComponent;
+  let fixture: ComponentFixture<CleanTechComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OverlayHeaderComponent ]
+      declarations: [ CleanTechComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OverlayHeaderComponent);
+    fixture = TestBed.createComponent(CleanTechComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

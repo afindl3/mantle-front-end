@@ -55,13 +55,14 @@
     @include header1($earth-maroon);
   }
 
-  &__breadcrumb {
-    @include captionSubNav($earth-brown);
-    span {
-      @include captionSubNav($mono-grey3);
-    }
+  &__breadcrumbs {
+    @include captionSubNav($mono-grey3);
     @include media-breakpoint-down(sm) {
       margin-top: 47px;
     }
+  }
+
+  &__breadcrumb--brown {
+    @include captionSubNav($earth-brown);
   }
 }

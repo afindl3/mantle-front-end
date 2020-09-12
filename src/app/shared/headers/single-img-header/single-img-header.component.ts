@@ -2,11 +2,11 @@ import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { RoutingService } from '../../../services/routing/routing.service';
 
 @Component({
-  selector: 'app-image-header',
-  templateUrl: './image-header.component.html',
-  styleUrls: ['./image-header.component.scss'],
+  selector: 'app-single-img-header',
+  templateUrl: './single-img-header.component.html',
+  styleUrls: ['./single-img-header.component.scss'],
 })
-export class ImageHeaderComponent implements OnInit, OnDestroy {
+export class SingleImgHeaderComponent implements OnInit, OnDestroy {
   @Input() headingLabel: string;
   @Input() heading: string;
   @Input() subheading: string;

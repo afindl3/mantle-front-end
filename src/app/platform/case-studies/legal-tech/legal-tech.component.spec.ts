@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageHeaderComponent } from './image-header.component';
+import { LegalTechComponent } from './legal-tech.component';
 
-describe('ImageHeaderComponent', () => {
-  let component: ImageHeaderComponent;
-  let fixture: ComponentFixture<ImageHeaderComponent>;
+describe('LegalTechComponent', () => {
+  let component: LegalTechComponent;
+  let fixture: ComponentFixture<LegalTechComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ImageHeaderComponent ]
+      declarations: [ LegalTechComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ImageHeaderComponent);
+    fixture = TestBed.createComponent(LegalTechComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

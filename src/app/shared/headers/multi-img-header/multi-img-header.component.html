@@ -3,7 +3,6 @@
     <div class="container">
       <label class="header__heading-label">{{ headingLabel }}</label>
       <h1 class="header__heading">{{ heading }}</h1>
-      <p class="header__subheading">{{ subheading }}</p>
     </div>
 
     <!-- Block image only displays on mobile -->
@@ -18,7 +17,7 @@
           <span> /</span>
           <span [ngClass]="{ 'header__breadcrumb--brown': routeSegments.length === 3 }"> {{ routeSegments[1] | titlecase }}</span>
         </span>
-        <span> / {{ routeSegments[2] | titlecase }}</span>
+        <span *ngIf="routeSegments.length > 2"> / {{ routeSegments[2] | titlecase }}</span>
       </p>
     </div>
   </div>

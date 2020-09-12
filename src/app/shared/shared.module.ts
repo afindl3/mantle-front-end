@@ -7,12 +7,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
-import { ImageHeaderComponent } from './headers/image-header/image-header.component';
+import { SingleImgHeaderComponent } from './headers/single-img-header/single-img-header.component';
 import { MeshHeaderDarkComponent } from './headers/mesh-header-dark/mesh-header-dark.component';
 import { MeshHeaderLightComponent } from './headers/mesh-header-light/mesh-header-light.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavExtendedComponent } from './nav-extended/nav-extended.component';
-import { OverlayHeaderComponent } from './headers/overlay-header/overlay-header.component';
+import { MultiImgHeaderComponent } from './headers/multi-img-header/multi-img-header.component';
 import { TrustedCompaniesComponent } from './trusted-companies/trusted-companies.component';
 import { PosterComponent } from './poster/poster.component';
 import { StaggeredIconsComponent } from './staggered-icons/staggered-icons.component';
@@ -20,17 +20,18 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { SplitSubheaderComponent } from './split-subheader/split-subheader.component';
 import { RequestAccessComponent } from './request-access/request-access.component';
 import { StaggeredColumnsComponent } from './staggered-columns/staggered-columns.component';
+import { BlogTileComponent } from './blog-tile/blog-tile.component';
 
 @NgModule({
   declarations: [
     ContactFormComponent,
     FooterComponent,
-    ImageHeaderComponent,
+    SingleImgHeaderComponent,
     MeshHeaderDarkComponent,
     MeshHeaderLightComponent,
     NavBarComponent,
     NavExtendedComponent,
-    OverlayHeaderComponent,
+    MultiImgHeaderComponent,
     PosterComponent,
     RequestAccessComponent,
     SplitSubheaderComponent,
@@ -38,16 +39,17 @@ import { StaggeredColumnsComponent } from './staggered-columns/staggered-columns
     StaggeredIconsComponent,
     TestimonialsComponent,
     TrustedCompaniesComponent,
+    BlogTileComponent,
   ],
   imports: [CommonModule, HttpClientModule, NgbModule, ReactiveFormsModule, RouterModule],
   exports: [
     ContactFormComponent,
     FooterComponent,
-    ImageHeaderComponent,
+    SingleImgHeaderComponent,
     MeshHeaderDarkComponent,
     MeshHeaderLightComponent,
     NavBarComponent,
-    OverlayHeaderComponent,
+    MultiImgHeaderComponent,
     PosterComponent,
     SplitSubheaderComponent,
     StaggeredColumnsComponent,
