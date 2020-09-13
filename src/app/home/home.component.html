@@ -78,14 +78,13 @@
     <a class="home__link" routerLink="/developers/insights">INSIGHTS FROM MANTLE ></a>
     <div class="row">
       <div *ngFor="let article of contentfulService.blog$ | async | slice: 0:2" class="col-12 col-md-6">
-        <img class="home__blog-image" [src]="article.image.fields.file.url" />
-        <div class="ml-4">
-          <label class="home__blog-label">{{ article.title }}</label>
-          <div class="home__blog-footnote-container">
-            <span class="home __blog-footnote">{{ article.category }}</span
-            ><span>{{ article.date.split('T')[0] }}</span>
-          </div>
-        </div>
+        <app-blog-tile
+          [image]="article.image.fields.file.url"
+          [heading]="article.title"
+          [footnote1]="article.category"
+          [footnote2]="article.date.split('T')[0]"
+          [offset]="true"
+        ></app-blog-tile>
       </div>
     </div>
   </div>

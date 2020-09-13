@@ -1,0 +1,18 @@
+<div class="blog-tile__container">
+  <img class="blog-tile__image" [src]="image" />
+
+  <div [ngClass]="{ 'blog-tile__offset-container': offset }">
+    <label
+      *ngIf="headingLabel"
+      [ngClass]="{ 'blog-tile__heading-label1': style === 1, 'blog-tile__heading-label2': style === 2, 'mb-3': !heading && body }"
+      >{{ headingLabel }}</label
+    >
+    <h4 *ngIf="heading" class="blog-tile__heading" [ngClass]="{ 'mb-3': body }">{{ heading }}</h4>
+    <p *ngIf="body" class="blog-tile__body">{{ body }}</p>
+
+    <div class="blog-tile__footnote-container">
+      <p class="blog-tile__footnote" [routerLink]="link">{{ footnote1 }}</p>
+      <p class="blog-tile__footnote">{{ footnote2 }}</p>
+    </div>
+  </div>
+</div>

@@ -11,14 +11,13 @@
       <div class="col-12 col-md-10">
         <div class="row">
           <div *ngFor="let article of contentfulService.blog$ | async" class="col-12 col-md-6">
-            <img class="insights__blog-image" [src]="article.image.fields.file.url" />
-            <div class="ml-4">
-              <label class="insights__blog-label">{{ article.title }}</label>
-              <div class="insights__blog-footnote-container">
-                <span class="insights__blog-footnote">{{ article.category }}</span
-                ><span>{{ article.date.split('T')[0] }}</span>
-              </div>
-            </div>
+            <app-blog-tile
+              [image]="article.image.fields.file.url"
+              [heading]="article.title"
+              [footnote1]="article.category"
+              [footnote2]="article.date.split('T')[0]"
+              [offset]="true"
+            ></app-blog-tile>
           </div>
         </div>
       </div>

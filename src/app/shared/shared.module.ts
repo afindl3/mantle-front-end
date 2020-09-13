@@ -21,36 +21,40 @@ import { SplitSubheaderComponent } from './split-subheader/split-subheader.compo
 import { RequestAccessComponent } from './request-access/request-access.component';
 import { StaggeredColumnsComponent } from './staggered-columns/staggered-columns.component';
 import { BlogTileComponent } from './blog-tile/blog-tile.component';
+import { CaseSectionComponent } from './case-section/case-section.component';
 
 @NgModule({
   declarations: [
+    BlogTileComponent,
+    CaseSectionComponent,
     ContactFormComponent,
     FooterComponent,
-    SingleImgHeaderComponent,
     MeshHeaderDarkComponent,
     MeshHeaderLightComponent,
+    MultiImgHeaderComponent,
     NavBarComponent,
     NavExtendedComponent,
-    MultiImgHeaderComponent,
     PosterComponent,
     RequestAccessComponent,
+    SingleImgHeaderComponent,
     SplitSubheaderComponent,
     StaggeredColumnsComponent,
     StaggeredIconsComponent,
     TestimonialsComponent,
     TrustedCompaniesComponent,
-    BlogTileComponent,
   ],
   imports: [CommonModule, HttpClientModule, NgbModule, ReactiveFormsModule, RouterModule],
   exports: [
+    BlogTileComponent,
+    CaseSectionComponent,
     ContactFormComponent,
     FooterComponent,
-    SingleImgHeaderComponent,
     MeshHeaderDarkComponent,
     MeshHeaderLightComponent,
-    NavBarComponent,
     MultiImgHeaderComponent,
+    NavBarComponent,
     PosterComponent,
+    SingleImgHeaderComponent,
     SplitSubheaderComponent,
     StaggeredColumnsComponent,
     StaggeredIconsComponent,

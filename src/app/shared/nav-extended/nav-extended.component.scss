@@ -68,7 +68,7 @@
     }
   }
 
-  &__title {
+  &__heading {
     padding-bottom: 20px;
     margin-bottom: 30px;
     border-bottom: 1px solid $mono-grey4;
@@ -80,7 +80,7 @@
     }
   }
 
-  &__subheader {
+  &__subheading {
     @include copyMicro($mono-grey3);
   }
 

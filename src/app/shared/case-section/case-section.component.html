@@ -1,0 +1,15 @@
+<div class="case-section__container">
+  <div class="row">
+    <div class="col-12 col-lg-7 col-xl-6">
+      <label *ngIf="headingLabel" class="case-section__heading-label">{{ headingLabel }}</label>
+      <h3 class="case-section__heading">{{ heading }}</h3>
+      <p *ngIf="subheading" class="case-section__subheading">
+        {{ subheading }}
+      </p>
+      <ul *ngIf="list" class="case-section__list">
+        <li *ngFor="let item of list" class="case-section__list-item">{{ item }}</li>
+      </ul>
+    </div>
+    <img class="case-section__image" [src]="image" />
+  </div>
+</div>

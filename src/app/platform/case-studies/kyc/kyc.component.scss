@@ -1,0 +1,28 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.kyc {
+  // Section 2 - In game
+  &__header2 {
+    margin-bottom: 21px;
+    @include subhead2($earth-maroon);
+  }
+
+  &__paragraph {
+    @include copyMedium($mono-grey1);
+  }
+
+  &__index-label {
+    margin-bottom: 28px;
+    @include caption2($earth-red);
+  }
+
+  &__index-list {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  &__index-item {
+    margin-bottom: 11px;
+  }
+}

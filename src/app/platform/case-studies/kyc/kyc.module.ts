@@ -3,13 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { KycRoutingModule } from './kyc-routing.module';
 import { KycComponent } from './kyc.component';
-
+import { SharedModule } from '../../../shared/shared.module';
 
 @NgModule({
   declarations: [KycComponent],
-  imports: [
-    CommonModule,
-    KycRoutingModule
-  ]
+  imports: [CommonModule, KycRoutingModule, SharedModule],
 })
-export class KycModule { }
+export class KycModule {}

@@ -1,0 +1,63 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.case-section {
+  &__container {
+    padding-top: 90px;
+    margin-bottom: 130px;
+    @include media-breakpoint-down(lg) {
+      padding-top: 0px;
+      margin-bottom: 110px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__heading-label {
+    margin-bottom: 16px;
+    @include caption2($earth-red);
+  }
+
+  &__heading {
+    margin-bottom: 16px;
+    @include header3($earth-maroon);
+  }
+
+  &__subheading {
+    @include copyLarge($mono-grey1);
+  }
+
+  &__list {
+    list-style-type: disc;
+    list-style-position: inside;
+    @include copyLarge($mono-grey1);
+  }
+
+  &__list-item {
+    margin-bottom: 11px;
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    margin-top: -210px;
+    max-width: 700px;
+    max-height: 500px;
+    @include media-breakpoint-down(lg) {
+      margin-top: -130px;
+      max-width: 500px;
+      max-height: 400px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-left: 15px;
+      margin-top: 0px;
+      position: relative;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 0px;
+      width: 100%;
+      position: relative;
+    }
+  }
+}

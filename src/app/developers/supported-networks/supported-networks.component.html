@@ -11,15 +11,13 @@
       <div class="col-12 col-md-10">
         <div class="row">
           <div *ngFor="let supportedNetwork of supportedNetworks" class="col-12 col-md-4 mb-3">
-            <div class="networks__blog-tile-container">
-              <img class="networks__blog-image" [src]="supportedNetwork.image" />
-              <div>
-                <label class="networks__blog-label">{{ supportedNetwork.title }}</label>
-                <div class="networks__blog-footnote-container">
-                  <p class="networks__blog-footnote">{{ supportedNetwork.description }}</p>
-                </div>
-              </div>
-            </div>
+            <app-blog-tile
+              [image]="supportedNetwork.image"
+              [heading]="supportedNetwork.title"
+              [body]="supportedNetwork.description"
+              [offset]="false"
+              [style]="1"
+            ></app-blog-tile>
           </div>
         </div>
       </div>
