@@ -8,53 +8,103 @@
 
 <app-trusted-companies></app-trusted-companies>
 
-<div class="home__section3">
-  <div class="d-flex justify-content-between">
-    <div class="home__section--left">
+<!-- Section 3 - How mantle empowers -->
+<div class="container">
+  <div class="row">
+    <div class="home__content-container col-12 col-lg-5 col-xl-4">
       <h2 class="home__header3">How Mantle Empowers other Industries</h2>
-      <p>
+      <p class="home__paragraph3">
         Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
-      <button class="button__primary d-flex justify-content-between">
+      <button class="button__primary d-flex justify-content-between" routerLink="/platform/what-is-mantle">
         Learn more <img src="assets/icons/arrow-diagonal-black.png" />
       </button>
     </div>
-    <div>
-      <app-poster
-        [title]="'Cross Cloud Storage'"
-        [category]="'PRIVACY'"
-        [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
-        [style]="1"
-      ></app-poster>
-      <app-poster
-        [title]="'Aagreement Validation'"
-        [category]="'AUDITING'"
-        [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
-        [style]="2"
-      ></app-poster>
-      <app-poster
-        [title]="'Distributed Identity'"
-        [category]="'PRIVACY'"
-        [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
-        [style]="3"
-      ></app-poster>
+    <div class="home__posters-container">
+      <div class="home__poster-container mb-3 mb-md-0">
+        <app-poster
+          [title]="'Cross Cloud Storage'"
+          [category]="'PRIVACY'"
+          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
+          [style]="1"
+          [link]="'/platform/privacy/cross-cloud-storage'"
+          [size]="1"
+        ></app-poster>
+      </div>
+      <div class="home__poster-container mb-3 mb-md-0">
+        <app-poster
+          [title]="'Agreement Validation'"
+          [category]="'AUDITING'"
+          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
+          [style]="2"
+          [link]="'/platform/auditing/agreement-validation'"
+          [size]="1"
+        ></app-poster>
+      </div>
+      <div class="home__poster-container">
+        <app-poster
+          [title]="'Distributed Identity'"
+          [category]="'PRIVACY'"
+          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
+          [style]="3"
+          [link]="'/platform/privacy/distributed-identity'"
+          [size]="1"
+        ></app-poster>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- Section 4 -->
+<!-- Section 4 - Make every developer-->
 <div class="home__background4">
   <div class="container">
-    <div class="section">
-      <h3 class="home__header4">Make every developer a blockchain developer</h3>
-      <p class="home__paragraph4">Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor</p>
+    <h3 class="home__header4">Make every developer a blockchain developer</h3>
+    <p class="home__paragraph4">Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor</p>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <p
+          class="home__label4"
+          [ngClass]="selectedSection === 1 ? 'home__label4--selected' : 'home__label4--unselected'"
+          (click)="selectedSection = 1"
+        >
+          LOREM IPSUM
+        </p>
+      </div>
+      <div class="col-12 col-md-4">
+        <p
+          class="home__label4"
+          [ngClass]="selectedSection === 2 ? 'home__label4--selected' : 'home__label4--unselected'"
+          (click)="selectedSection = 2"
+        >
+          LOREM IPSUM
+        </p>
+      </div>
+      <div class="col-12 col-md-4">
+        <p
+          class="home__label4"
+          [ngClass]="selectedSection === 3 ? 'home__label4--selected' : 'home__label4--unselected'"
+          (click)="selectedSection = 3"
+        >
+          LOREM IPSUM
+        </p>
+      </div>
+    </div>
+    <div class="home__image-container">
+      <img class="home__image" src="assets/images/code.png" />
+      <div class="d-flex">
+        <div class="home__image-footer--left"><p>Help</p></div>
+        <div class="home__image-footer--right">
+          <img src="assets/icons/play.png" />
+          <p>Run</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- Section 5 - Future proof -->
 <div class="home__background5">
   <div class="container">
-    <!-- Section 5 -->
     <div class="section">
       <div class="row">
         <div class="col-12 col-md-6">
@@ -72,7 +122,7 @@
   </div>
 </div>
 
-<!-- Section 6 -->
+<!-- Section 6 - Insights-->
 <div class="container">
   <div class="section">
     <a class="home__link" routerLink="/developers/insights">INSIGHTS FROM MANTLE ></a>

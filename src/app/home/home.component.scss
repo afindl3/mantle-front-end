@@ -3,20 +3,44 @@
 
 .home {
   // Section 3 - How mantle empowers
-  &__section3 {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__section3--left {
-    width: 70%;
-  }
-  &__industry-tile {
-    width: 30%;
-  }
-
   &__header3 {
     @include header3($earth-maroon);
+  }
+
+  &__paragraph3 {
+    margin: 32px 0;
+    @include copyMedium($mono-grey1);
+  }
+
+  &__content-container {
+    margin-bottom: 300px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__posters-container {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-down(lg) {
+      position: relative;
+      width: 100%;
+      padding: 0 15px;
+      margin-bottom: 130px;
+    }
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  &__poster-container {
+    @include media-breakpoint-down(sm) {
+      width: fit-content;
+      margin: 0 auto;
+    }
   }
 
   // Section 4 - Make every developer
@@ -31,21 +55,71 @@
   }
 
   &__paragraph4 {
+    margin-bottom: 35px;
     @include copyLarge($mono-white);
+  }
+
+  &__label4 {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+    @include caption2($mono-white);
+  }
+
+  &__label4--unselected {
+    opacity: 0.5;
+    border-bottom: 1px solid $mono-white;
+  }
+
+  &__label4--selected {
+    border-bottom: 1px solid $earth-yellow;
+  }
+
+  &__image-container {
+    margin-bottom: -50px;
+  }
+
+  &__image {
+    margin-bottom: -6px;
+    width: 100%;
+  }
+
+  &__image-footer--left {
+    width: 75%;
+    text-align: right;
+    padding: 10px 20px;
+    color: $mono-black;
+    background: #c4c4c4;
+  }
+
+  &__image-footer--right {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    color: $mono-white;
+    background: $mono-black;
   }
 
   // Section 5 - Future proof
   &__background5 {
+    padding-top: 130px;
     background: $mono-white;
   }
 
   &__header5 {
     margin-bottom: 20px;
     @include header3($earth-maroon);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 12px;
+    }
   }
 
   &__paragraph5 {
     @include copyLarge($mono-grey1);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+    }
   }
 
   // Section 6 - Blog

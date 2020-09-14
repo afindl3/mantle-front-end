@@ -1,12 +1,14 @@
 <div
   class="poster__container"
   [ngClass]="{
-    'poster__background--1': style === 1,
-    'poster__background--2': style === 2,
-    'poster__background--3': style === 3
+    poster__background1: style === 1,
+    poster__background2: style === 2,
+    poster__background3: style === 3,
+    poster__container1: size === 1,
+    poster__container2: size === 2
   }"
 >
-  <h2 class="poster__header">{{ title }}</h2>
+  <h2 [ngClass]="size === 1 ? 'poster__header1' : 'poster__header2'">{{ title }}</h2>
   <p
     class="poster__category"
     [ngClass]="{
@@ -17,9 +19,9 @@
   >
     {{ category }}
   </p>
-  <img *ngIf="style === 1" src="assets/images/shape-1.png" />
-  <img *ngIf="style === 2" src="assets/images/shape-2.png" />
-  <img *ngIf="style === 3" src="assets/images/shape-3.png" />
+  <img *ngIf="style === 1" class="poster__image" src="assets/images/shape-1.png" />
+  <img *ngIf="style === 2" class="poster__image" src="assets/images/shape-2.png" />
+  <img *ngIf="style === 3" class="poster__image" src="assets/images/shape-3.png" />
   <p
     class="poster__description"
     [ngClass]="{

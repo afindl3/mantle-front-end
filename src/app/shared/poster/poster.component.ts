@@ -11,6 +11,7 @@ export class PosterComponent implements OnInit {
   @Input() description: string;
   @Input() style: number;
   @Input() link: string;
+  @Input() size: number; // 1 - small, 2 - large
 
   constructor() {}
 

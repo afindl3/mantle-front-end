@@ -7,6 +7,8 @@ import { ContentfulService } from '../services/contentful/contentful.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  selectedSection = 1;
+
   constructor(public contentfulService: ContentfulService) {}
 
   ngOnInit(): void {
