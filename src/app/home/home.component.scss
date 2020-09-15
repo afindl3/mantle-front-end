@@ -107,6 +107,10 @@
     background: $mono-white;
   }
 
+  &__section-container5 {
+    padding-bottom: 115px;
+  }
+
   &__header5 {
     margin-bottom: 20px;
     @include header3($earth-maroon);
@@ -124,6 +128,7 @@
 
   // Section 6 - Blog
   &__link {
+    margin-bottom: 50px;
     @include caption2($earth-red);
   }
 }
