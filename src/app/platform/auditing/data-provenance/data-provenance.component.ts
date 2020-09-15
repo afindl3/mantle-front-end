@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StaggeredIconFields } from '../../../shared/staggered-icons/staggered-icons.component';
+import { StaggeredIconFields } from '../../../shared/body-sections/staggered-icons/staggered-icons.component';
 
 @Component({
   selector: 'app-data-provenance',

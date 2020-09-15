@@ -1,77 +1,43 @@
-<div class="developer-program">
-  <div class="container">
-    <div class="developer-program__section1">
-      <div class="d-flex">
-        <div class="developer-program__section1--left">
-          <label class="developer-program__heading-label">DEVELOPER PROGRAM</label>
-          <h1 class="developer-program__header1">Make your next product release blockchain enabled</h1>
-        </div>
-        <img class="developer-program__section1--right" src="assets/backgrounds/learning.png" />
-      </div>
-      <p class="developer-program__link">Developers <span>/ Developer Program</span></p>
-    </div>
+<app-multi-img-header
+  [headingLabel]="'DEVELOPER PROGRAM'"
+  [heading]="'Make your next product release blockchain enabled'"
+  [showBreadcrumb]="true"
+></app-multi-img-header>
 
-    <div class="developer-program__section2">
-      <h2 class="developer-program__header2">Bring your ideas to life with a free mantle acount</h2>
-      <p class="developer-program__subheader2">Get started with $250</p>
-      <div class="row ml-md-5">
-        <div class="col-12 col-sm-4">
-          <img src="assets/icons/network.png" />
-          <label class="developer-program__label2">Insert reason</label>
-          <p class="pricing__info">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.
-          </p>
-        </div>
-        <div class="col-12 col-sm-4">
-          <img src="assets/icons/network.png" />
-          <label class="developer-program__label2">Insert reason</label>
-          <p class="pricing__info">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.
-          </p>
-        </div>
-        <div class="col-12 col-sm-4">
-          <img src="assets/icons/network.png" />
-          <label class="developer-program__label2">Insert reason</label>
-          <p class="pricing__info">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.
-          </p>
-        </div>
+<!-- Section 2 - Bring you ideas to life -->
+<div class="container">
+  <div class="section">
+    <h2 class="developer-program__header2">Bring your ideas to life with a free mantle acount</h2>
+    <p class="developer-program__subheader2">Get started with $250</p>
+    <div class="row ml-md-5">
+      <div class="col-12 col-sm-4">
+        <img src="assets/icons/network.png" />
+        <label class="developer-program__label2">Insert reason</label>
+        <p class="pricing__info">
+          Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua.
+        </p>
       </div>
-    </div>
-
-    <div class="developer-program__section3">
-      <h3 class="developer-program__header3">A world of possibilities with Mantle</h3>
-      <div class="developer-program__body3">
-        <div>
-          <label class="developer-program__label3">Describe possibility</label>
-          <p class="developer-program__description3">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
-        </div>
-        <div>
-          <label class="developer-program__label3">Describe possibility</label>
-          <p class="developer-program__description3">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
-        </div>
-        <div>
-          <label class="developer-program__label3">Describe possibility</label>
-          <p class="developer-program__description3">
-            Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
-        </div>
+      <div class="col-12 col-sm-4">
+        <img src="assets/icons/network.png" />
+        <label class="developer-program__label2">Insert reason</label>
+        <p class="pricing__info">
+          Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua.
+        </p>
+      </div>
+      <div class="col-12 col-sm-4">
+        <img src="assets/icons/network.png" />
+        <label class="developer-program__label2">Insert reason</label>
+        <p class="pricing__info">
+          Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua.
+        </p>
       </div>
     </div>
   </div>
-
-  <app-contact-form [contactForm]="contactForm"></app-contact-form>
 </div>
+
+<app-single-column [data]="developerProgramSingleColumnData"></app-single-column>
+
+<app-contact-form [contactForm]="contactForm"></app-contact-form>

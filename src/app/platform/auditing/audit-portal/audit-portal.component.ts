@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { StaggeredColumnFields } from '../../../shared/staggered-columns/staggered-columns.component';
-import { StaggeredIconFields } from '../../../shared/staggered-icons/staggered-icons.component';
+import { StaggeredColumnFields } from '../../../shared/body-sections/staggered-columns/staggered-columns.component';
+import { StaggeredIconFields } from '../../../shared/body-sections/staggered-icons/staggered-icons.component';
 
 @Component({
   selector: 'app-audit-portal',

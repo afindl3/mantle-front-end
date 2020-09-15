@@ -7,6 +7,18 @@ import { ContactFormFields, ContactFormType } from '../../shared/contact-form/co
   styleUrls: ['./partner-program.component.scss'],
 })
 export class PartnerProgramComponent implements OnInit {
+  partnerProgramListItems = [
+    'Cross Cloud Storage',
+    'Distributed Identity',
+    'Agrreement Validation',
+    'Data Provenance',
+    'Audit Portal',
+    'Cross Cloud Storage',
+    'Distributed Identity',
+    'Agrreement Validation',
+    'Data Provenance',
+    'Audit Portal',
+  ];
   contactForm: ContactFormFields = {
     title: 'Become a partner',
     subtitle:

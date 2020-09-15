@@ -5,23 +5,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { BlogTileComponent } from './body-subsections/blog-tile/blog-tile.component';
+import { CaseSectionComponent } from './body-sections/case-section/case-section.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
-import { SingleImgHeaderComponent } from './headers/single-img-header/single-img-header.component';
 import { MeshHeaderDarkComponent } from './headers/mesh-header-dark/mesh-header-dark.component';
 import { MeshHeaderLightComponent } from './headers/mesh-header-light/mesh-header-light.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavExtendedComponent } from './nav-extended/nav-extended.component';
 import { MultiImgHeaderComponent } from './headers/multi-img-header/multi-img-header.component';
-import { TrustedCompaniesComponent } from './trusted-companies/trusted-companies.component';
-import { PosterComponent } from './poster/poster.component';
-import { StaggeredIconsComponent } from './staggered-icons/staggered-icons.component';
-import { TestimonialsComponent } from './testimonials/testimonials.component';
-import { SplitSubheaderComponent } from './split-subheader/split-subheader.component';
+import { TrustedCompaniesComponent } from './body-sections/trusted-companies/trusted-companies.component';
+import { PosterComponent } from './body-subsections/poster/poster.component';
 import { RequestAccessComponent } from './request-access/request-access.component';
-import { StaggeredColumnsComponent } from './staggered-columns/staggered-columns.component';
-import { BlogTileComponent } from './blog-tile/blog-tile.component';
-import { CaseSectionComponent } from './case-section/case-section.component';
+import { SingleColumnComponent } from './body-sections/single-column/single-column.component';
+import { SingleImgHeaderComponent } from './headers/single-img-header/single-img-header.component';
+import { SplitSubheaderComponent } from './body-sections/split-subheader/split-subheader.component';
+import { StaggeredColumnsComponent } from './body-sections/staggered-columns/staggered-columns.component';
+import { StaggeredIconsComponent } from './body-sections/staggered-icons/staggered-icons.component';
+import { TestimonialsComponent } from './body-sections/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CaseSectionComponent } from './case-section/case-section.component';
     NavExtendedComponent,
     PosterComponent,
     RequestAccessComponent,
+    SingleColumnComponent,
     SingleImgHeaderComponent,
     SplitSubheaderComponent,
     StaggeredColumnsComponent,
@@ -54,6 +56,7 @@ import { CaseSectionComponent } from './case-section/case-section.component';
     MultiImgHeaderComponent,
     NavBarComponent,
     PosterComponent,
+    SingleColumnComponent,
     SingleImgHeaderComponent,
     SplitSubheaderComponent,
     StaggeredColumnsComponent,

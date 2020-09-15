@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="section">
+    <div class="row mb-5">
+      <div class="col-12 col-md-8 col-xl-6">
+        <h3 class="single-column__heading">{{ data.heading }}</h3>
+      </div>
+    </div>
+
+    <div
+      *ngFor="let item of data.items; let i = index"
+      class="single-column__body-container"
+      [ngClass]="{ 'mb-5': i !== data.items.length - 1 }"
+    >
+      <label class="single-column__body-title">{{ item.title }}</label>
+      <p class="single-column__body-description">{{ item.description }}</p>
+    </div>
+  </div>
+</div>
