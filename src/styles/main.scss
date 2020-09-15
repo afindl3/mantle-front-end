@@ -10,7 +10,7 @@
 @import './base/_fonts';
 
 // SECTION 1 - Override bootstrap
-// Modal
+// Modal - Nav bar
 .modal-dialog {
   max-width: 85%;
   @include media-breakpoint-down(sm) {
@@ -21,6 +21,30 @@
 
 .modal-backdrop {
   opacity: 0 !important;
+}
+
+// Carousel - Customer testimonial
+.carousel-control-prev {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  background: red;
+}
+
+.carousel-control-next {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  background: purple;
+}
+
+.sr-only {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  color: black;
+  padding-top: 5px;
 }
 
 // Accordion - Footer

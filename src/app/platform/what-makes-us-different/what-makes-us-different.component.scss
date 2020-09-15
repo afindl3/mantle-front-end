@@ -2,12 +2,22 @@
 @import 'src/styles/base/_typography';
 
 .different {
-  &__content-container {
-    padding-top: 200px;
-    margin-bottom: 160px;
-    // @include media-breakpoint-down(md) {
-    //   margin-bottom: 50px;
-    // }
+  &__content-container1 {
+    padding-top: 180px;
+    margin-bottom: 189px;
+    @include media-breakpoint-down(md) {
+      padding-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content-container2 {
+    padding-top: 180px;
+    margin-bottom: 125px;
+    @include media-breakpoint-down(md) {
+      padding-top: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__paragraph {

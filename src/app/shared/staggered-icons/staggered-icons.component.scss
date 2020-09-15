@@ -5,6 +5,9 @@
   &__header {
     margin-bottom: 48px;
     @include header3($earth-maroon);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 24px;
+    }
   }
 
   &__subheader {
