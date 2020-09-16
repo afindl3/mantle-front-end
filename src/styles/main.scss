@@ -10,8 +10,16 @@
 @import './base/_fonts';
 
 // SECTION 1 - Override bootstrap
+.container {
+  @include media-breakpoint-down(xs) {
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+}
+
 // Modal - Nav bar
 .modal-dialog {
+  margin-top: 100px;
   max-width: 85%;
   @include media-breakpoint-down(sm) {
     max-width: 100%;
@@ -21,30 +29,6 @@
 
 .modal-backdrop {
   opacity: 0 !important;
-}
-
-// Carousel - Customer testimonial
-.carousel-control-prev {
-  position: relative;
-  display: inline-block;
-  width: 130px;
-  background: red;
-}
-
-.carousel-control-next {
-  position: relative;
-  display: inline-block;
-  width: 130px;
-  background: purple;
-}
-
-.sr-only {
-  position: relative;
-  display: inline-block;
-  width: 100px;
-  height: 30px;
-  color: black;
-  padding-top: 5px;
 }
 
 // Accordion - Footer
@@ -64,11 +48,13 @@
 }
 
 .card-header {
-  background: $mono-grey4;
+  padding: 20px 33px;
+  background: $mono-white1;
 }
 
 .card-body {
-  background: $mono-grey4;
+  padding: 0 33px 20px 33px;
+  background: $mono-white1;
 }
 
 // SECTION 2 - Global custom containers/sections

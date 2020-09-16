@@ -3,16 +3,22 @@
 
 .poster {
   &__container {
-    padding: 20px;
+    padding: 20px 20px 15px 20px;
     height: 100%;
   }
 
   &__container1 {
     max-width: 247px;
+    @include media-breakpoint-down(xs) {
+      max-width: 100%;
+    }
   }
 
   &__container2 {
     max-width: 355px;
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
   }
 
   &__background1 {
@@ -54,8 +60,14 @@
     color: $earth-orange;
   }
 
+  &__image-container {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   &__image {
     max-width: 100%;
+    max-height: 185px;
   }
 
   &__description {

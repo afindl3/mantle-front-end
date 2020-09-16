@@ -33,16 +33,20 @@
 <!-- Mobile dropdown menu -->
 <ul *ngIf="showMobileMenu" class="nav-bar__menu">
   <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="openMenuModal('platform')">
-    Platform
-    <img src="assets/icons/arrow-right-maroon.png" />
+    <p>Platform</p>
+    <div>
+      <img class="mt-1" src="assets/icons/arrow-right-maroon.png" />
+    </div>
   </li>
   <li
     class="nav-bar__menu-item"
     [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
     (click)="openMenuModal('developers')"
   >
-    Developers
-    <img src="assets/icons/arrow-right-maroon.png" />
+    <p>Developers</p>
+    <div>
+      <img class="mt-1" src="assets/icons/arrow-right-maroon.png" />
+    </div>
   </li>
   <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/platform/pricing">
     Pricing
@@ -51,6 +55,8 @@
     About
   </li>
   <li class="nav-bar__menu-button">
-    <button class="button__primary" (click)="openAccessModal()">Request Access</button>
+    <button class="button__primary d-flex justify-content-between" (click)="openAccessModal()">
+      Request Access<img src="assets/icons/arrow-diagonal-black.png" />
+    </button>
   </li>
 </ul>

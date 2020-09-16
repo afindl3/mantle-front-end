@@ -16,32 +16,34 @@
         Learn more <img src="assets/icons/arrow-diagonal-black.png" />
       </button>
     </div>
+
+    <div class="home__posters-backdrop">
+      <img src="assets/backgrounds/mesh-home-poster.png" />
+    </div>
+
     <div class="home__posters-container">
       <div class="home__poster-container mb-3 mb-md-0">
         <app-poster
           [title]="'Cross Cloud Storage'"
           [category]="'PRIVACY'"
-          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
           [style]="1"
           [link]="'/platform/privacy/cross-cloud-storage'"
           [size]="1"
         ></app-poster>
       </div>
-      <div class="home__poster-container mb-3 mb-md-0">
+      <div class="home__poster-container mb-3 mb-md-0 ml-md-4">
         <app-poster
           [title]="'Agreement Validation'"
           [category]="'AUDITING'"
-          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
           [style]="2"
           [link]="'/platform/auditing/agreement-validation'"
           [size]="1"
         ></app-poster>
       </div>
-      <div class="home__poster-container">
+      <div class="home__poster-container ml-md-4">
         <app-poster
           [title]="'Distributed Identity'"
           [category]="'PRIVACY'"
-          [description]="'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor'"
           [style]="3"
           [link]="'/platform/privacy/distributed-identity'"
           [size]="1"
@@ -62,29 +64,32 @@
     <div class="row">
       <div class="col-12 col-md-4">
         <p
-          class="home__label4"
-          [ngClass]="selectedSection === 1 ? 'home__label4--selected' : 'home__label4--unselected'"
+          class="home__option"
+          [ngClass]="selectedSection === 1 ? 'home__option--selected' : 'home__option--unselected'"
           (click)="selectedSection = 1"
         >
-          LOREM IPSUM
+          <img *ngIf="selectedSection === 1" class="home__selected-icon" src="assets/icons/circle-gold.png" />
+          <span class="home__option-label">LOREM IPSUM</span>
         </p>
       </div>
       <div class="col-12 col-md-4">
         <p
-          class="home__label4"
-          [ngClass]="selectedSection === 2 ? 'home__label4--selected' : 'home__label4--unselected'"
+          class="home__option"
+          [ngClass]="selectedSection === 2 ? 'home__option--selected' : 'home__option--unselected'"
           (click)="selectedSection = 2"
         >
-          LOREM IPSUM
+          <img *ngIf="selectedSection === 2" class="home__selected-icon" src="assets/icons/circle-gold.png" />
+          <span class="home__option-label">LOREM IPSUM</span>
         </p>
       </div>
       <div class="col-12 col-md-4">
         <p
-          class="home__label4"
-          [ngClass]="selectedSection === 3 ? 'home__label4--selected' : 'home__label4--unselected'"
+          class="home__option"
+          [ngClass]="selectedSection === 3 ? 'home__option--selected' : 'home__option--unselected'"
           (click)="selectedSection = 3"
         >
-          LOREM IPSUM
+          <img *ngIf="selectedSection === 3" class="home__selected-icon" src="assets/icons/circle-gold.png" />
+          <span class="home__option-label">LOREM IPSUM</span>
         </p>
       </div>
     </div>

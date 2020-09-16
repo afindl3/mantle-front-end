@@ -13,8 +13,8 @@ export class BlogTileComponent implements OnInit {
   @Input() footnote1: string;
   @Input() link: string;
   @Input() footnote2: string;
-  @Input() offset: boolean;
-  @Input() style: number; // Determines colour of headinng label
+  @Input() offset: boolean; // Tab body content to right, no padding around image
+  @Input() style: number; // Determines colour of heading label
 
   constructor() {}
 

@@ -19,9 +19,12 @@
   >
     {{ category }}
   </p>
-  <img *ngIf="style === 1" class="poster__image" src="assets/images/shape-1.png" />
-  <img *ngIf="style === 2" class="poster__image" src="assets/images/shape-2.png" />
-  <img *ngIf="style === 3" class="poster__image" src="assets/images/shape-3.png" />
+  <div class="poster__image-container">
+    <img *ngIf="style === 1" class="poster__image" src="assets/images/shape-1.png" />
+    <img *ngIf="style === 2" class="poster__image" src="assets/images/shape-2.png" />
+    <img *ngIf="style === 3" class="poster__image" src="assets/images/shape-3.png" />
+  </div>
+
   <p
     class="poster__description"
     [ngClass]="{

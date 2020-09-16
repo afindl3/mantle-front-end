@@ -1,7 +1,7 @@
-<div class="blog-tile__container">
+<div [ngClass]="offset ? 'blog-tile__container--offset' : 'blog-tile__container'">
   <img class="blog-tile__image" [src]="image" />
 
-  <div [ngClass]="{ 'blog-tile__offset-container': offset }">
+  <div [ngClass]="{ 'blog-tile__body--offset': offset }">
     <label
       *ngIf="headingLabel"
       [ngClass]="{ 'blog-tile__heading-label1': style === 1, 'blog-tile__heading-label2': style === 2, 'mb-3': !heading && body }"
@@ -11,8 +11,8 @@
     <p *ngIf="body" class="blog-tile__body">{{ body }}</p>
 
     <div class="blog-tile__footnote-container">
-      <p class="blog-tile__footnote" [routerLink]="link">{{ footnote1 }}</p>
-      <p class="blog-tile__footnote">{{ footnote2 }}</p>
+      <p class="blog-tile__footnote1" [routerLink]="link">{{ footnote1 }}</p>
+      <p class="blog-tile__footnote2">{{ footnote2 }}</p>
     </div>
   </div>
 </div>

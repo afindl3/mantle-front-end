@@ -2,9 +2,18 @@
 @import 'src/styles/base/_typography';
 
 .footer {
+  &__background-image {
+    display: none;
+    @include media-breakpoint-down(xs) {
+      display: block;
+      width: 100%;
+      position: absolute;
+      margin-top: calc(20vw * -1 - 86px);
+    }
+  }
   &__background {
     padding-top: 101px;
-    background: $mono-grey4;
+    background: $mono-white1;
     position: relative;
 
     &:before {
@@ -16,7 +25,7 @@
       left: 0;
       position: absolute;
       right: 0;
-      transform: skewY(4deg);
+      transform: skewY(10deg);
       transform-origin: 100% 0;
       z-index: -1;
     }
@@ -58,17 +67,24 @@
   }
 
   &__logo-container {
-    margin-top: 88px;
+    position: absolute;
+    bottom: 0;
     @include copyMicro($mono-black);
     @include media-breakpoint-down(sm) {
+      position: relative;
       margin-top: 31px;
     }
+  }
+
+  &__email {
+    color: $mono-black;
+    text-decoration: underline;
   }
 
   &__footnote {
     margin-top: 36px;
     border-top: 1px solid $mono-grey1;
-    padding: 30px 0;
+    padding: 30px 0 37px;
     @include copyMicro($mono-grey1);
   }
 }

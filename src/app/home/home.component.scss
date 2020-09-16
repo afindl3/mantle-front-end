@@ -13,26 +13,50 @@
   }
 
   &__content-container {
-    margin-bottom: 300px;
+    margin-bottom: 115px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 20px;
+    }
+  }
+
+  &__posters-backdrop {
+    position: absolute;
+    right: 0;
+    margin-top: -146px;
+    background: linear-gradient(178.15deg, rgba(240, 240, 240, 0) 1.08%, #f0f0f0 32.39%);
+    @include media-breakpoint-down(lg) {
+      margin-top: 338px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top: 194px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 1118px;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-top: 1016px;
+    }
+    @media (max-width: 414px) {
+      margin-top: 1047px;
     }
   }
 
   &__posters-container {
     position: absolute;
     right: 0;
-    width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     @include media-breakpoint-down(lg) {
       position: relative;
       width: 100%;
-      padding: 0 15px;
       margin-bottom: 130px;
+      justify-content: center;
     }
     @include media-breakpoint-down(sm) {
       display: block;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 0 18px;
     }
   }
 
@@ -40,6 +64,9 @@
     @include media-breakpoint-down(sm) {
       width: fit-content;
       margin: 0 auto;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 100%;
     }
   }
 
@@ -59,7 +86,7 @@
     @include copyLarge($mono-white);
   }
 
-  &__label4 {
+  &__option {
     text-align: center;
     padding-bottom: 20px;
     margin-bottom: 35px;
@@ -67,13 +94,36 @@
     @include caption2($mono-white);
   }
 
-  &__label4--unselected {
+  &__option--unselected {
     opacity: 0.5;
     border-bottom: 1px solid $mono-white;
   }
 
-  &__label4--selected {
+  &__option--selected {
     border-bottom: 1px solid $earth-yellow;
+  }
+
+  &__selected-icon {
+    position: absolute;
+    top: -17px;
+    left: 90px;
+    @include media-breakpoint-down(lg) {
+      left: 60px;
+    }
+    @include media-breakpoint-down(md) {
+      left: 19px;
+    }
+    @include media-breakpoint-down(sm) {
+      left: 171px;
+    }
+    @include media-breakpoint-down(xs) {
+      left: calc(50vw - 120px);
+    }
+  }
+
+  &__option-label {
+    position: relative;
+    z-index: 1;
   }
 
   &__image-container {
@@ -86,7 +136,7 @@
   }
 
   &__image-footer--left {
-    width: 75%;
+    width: 85%;
     text-align: right;
     padding: 10px 20px;
     color: $mono-black;
@@ -94,7 +144,7 @@
   }
 
   &__image-footer--right {
-    width: 25%;
+    width: 15%;
     display: flex;
     justify-content: center;
     padding: 10px 20px;
@@ -104,8 +154,8 @@
 
   // Section 5 - Future proof
   &__background5 {
-    padding-top: 130px;
-    background: $mono-white;
+    padding-top: 180px;
+    background: $mono-white1;
   }
 
   &__section-container5 {
@@ -129,7 +179,8 @@
 
   // Section 6 - Blog
   &__link {
-    margin-bottom: 50px;
+    display: block;
+    margin-bottom: 58px;
     @include caption2($earth-red);
   }
 }
