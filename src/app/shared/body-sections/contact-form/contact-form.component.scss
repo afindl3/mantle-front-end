@@ -14,7 +14,14 @@
 
   &__modal-container {
     padding-top: 50px;
-    padding-bottom: 0;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 0;
+      padding-left: 33px;
+      padding-right: 33px;
+    }
   }
 
   &__header {
