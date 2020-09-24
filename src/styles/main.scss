@@ -18,6 +18,12 @@
 }
 
 // Modal - Nav bar
+.modal-content {
+  @include media-breakpoint-down(sm) {
+    height: 100vh;
+  }
+}
+
 .modal-dialog {
   margin-top: 100px;
   max-width: 85%;

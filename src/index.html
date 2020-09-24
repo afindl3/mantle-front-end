@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- note that the form below is hidden, but necessary for auto-form handling with Netlify -->
-    <form name="contact" netlify hidden>
+    <form name="requestAccess" netlify hidden>
       <input type="text" name="firstName" />
       <input type="text" name="lastName" />
       <input type="text" name="company" />
@@ -19,6 +19,13 @@
       <textarea name="message"></textarea>
     </form>
 
+    <form name="contactUs" netlify hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <textarea name="message"></textarea>
+    </form>
     <app-root></app-root>
   </body>
 </html>

@@ -2,6 +2,12 @@ import { Injectable } from '@angular/core';
 import { createClient } from 'contentful';
 import { BehaviorSubject } from 'rxjs';
 
+/*
+  Contentful State Store Service -
+  Any page that requires a specific content type will first check if the content type exists as an observable
+  in the state store and otherwise fetch the content type directly from contentful
+  */
+
 const CONFIG = {
   space: '7pp8bgnb5ioi',
   accessToken: 'G_DfQhch4pbwlmfH1NpP1D7n1-0bIqjKwSjbFmRavjs',
@@ -16,16 +22,24 @@ export class ContentfulService {
     accessToken: CONFIG.accessToken,
   });
 
+  private readonly _environmentVariables = new BehaviorSubject<any>([]);
   private readonly _faqs = new BehaviorSubject<any[]>([]);
   private readonly _milestones = new BehaviorSubject<any[]>([]);
   private readonly _team = new BehaviorSubject<any[]>([]);
   private readonly _blog = new BehaviorSubject<any[]>([]);
 
+  readonly environmentVariables$ = this._environmentVariables.asObservable();
   readonly faqs$ = this._faqs.asObservable();
   readonly milestones$ = this._milestones.asObservable();
   readonly team$ = this._team.asObservable();
   readonly blog$ = this._blog.asObservable();
 
+  get environmentVariables(): any {
+    return this._environmentVariables.getValue();
+  }
+  set environmentVariables(val: any) {
+    this._environmentVariables.next(val);
+  }
   get faqs(): any[] {
     return this._faqs.getValue();
   }
@@ -52,6 +66,16 @@ export class ContentfulService {
   }
 
   constructor() {}
+
+  async fetchEnvironmentVariables() {
+    if (this.environmentVariables.length === 0) {
+      const entries = await this.client.getEntries({
+        content_type: 'environmentVariables',
+      });
+      console.log(entries.items[0].fields);
+      this.environmentVariables = entries.items[0].fields;
+    }
+  }
 
   async fetchBlog() {
     if (this.blog.length === 0) {

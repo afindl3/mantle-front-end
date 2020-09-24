@@ -1,7 +1,8 @@
 <div class="access__container">
   <img class="mb-5" src="assets/icons/logo-stacked.png" />
-  <form [formGroup]="contactForm" name="contact" method="post" (ngSubmit)="onSubmit()">
-    <input type="hidden" name="form-name" value="contact" />
+
+  <form [formGroup]="form" name="requestAccess" method="post" (ngSubmit)="onSubmit()">
+    <input type="hidden" name="form-name" value="requestAccess" />
 
     <div class="row">
       <div class="col-12 col-sm-6">
@@ -75,7 +76,7 @@
           name="message"
           formControlName="message"
           placeholder="To accelerate access, provide some details on your intended use of Mantle BAAS."
-          rrequirred
+          required
         ></textarea>
       </div>
     </div>

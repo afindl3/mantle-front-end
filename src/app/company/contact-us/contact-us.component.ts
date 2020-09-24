@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactFormFields, ContactFormType } from '../../shared/contact-form/contact-form.component';
+import { ContactFormFields, ContactFormType } from '../../shared/body-sections/contact-form/contact-form.component';
 
 @Component({
   selector: 'app-contact-us',

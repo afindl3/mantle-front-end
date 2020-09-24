@@ -1,39 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-request-access',
-  templateUrl: './request-access.component.html',
-  styleUrls: ['./request-access.component.scss'],
+  selector: 'app-contact-form',
+  templateUrl: './contact-form.component.html',
+  styleUrls: ['./contact-form.component.scss'],
 })
-export class RequestAccessComponent implements OnInit {
+export class ContactFormComponent implements OnInit {
+  @Input() contactForm: ContactFormFields;
+  @Input() isInModal = false;
+  isDarkBackground = true;
+
   form = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
-    company: new FormControl(''),
-    title: new FormControl(''),
-    role: new FormControl(''),
     email: new FormControl(''),
+    company: new FormControl(''),
     message: new FormControl(''),
   });
 
   constructor(private http: HttpClient, public activeModal: NgbActiveModal) {}
 
-  ngOnInit() {
-    console.log('Request accesss componnent init');
+  ngOnInit(): void {
+    this.isDarkBackground = this.contactForm.type !== 'contact';
   }
 
   onSubmit() {
     const body = new HttpParams()
-      .set('form-name', 'requestAccess')
+      .set('form-name', 'contactUs')
       .append('firstName', this.form.value.firstName)
       .append('lastName', this.form.value.lastName)
-      .append('company', this.form.value.company)
-      .append('title', this.form.value.title)
-      .append('role', this.form.value.role)
       .append('email', this.form.value.email)
+      .append('company', this.form.value.company)
       .append('message', this.form.value.message);
     this.http.post('/', body.toString(), { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).subscribe(
       (res) => {},
@@ -60,4 +60,17 @@ export class RequestAccessComponent implements OnInit {
       }
     );
   }
+}
+
+export type ContactFormFields = {
+  title: string;
+  subtitle: string;
+  type: ContactFormType;
+};
+
+export enum ContactFormType {
+  Account = 'account',
+  Partner = 'partner',
+  Newsletter = 'newsletter',
+  Contact = 'contact',
 }

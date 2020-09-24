@@ -1,7 +1,78 @@
-<div class="app">
-  <app-nav-bar></app-nav-bar>
+<ng-container
+  *ngIf="!(contentfulService.environmentVariables$ | async).isUnderConstruction || skipConstructionCheck; else constructionPage"
+>
+  <div class="app-background">
+    <app-nav-bar></app-nav-bar>
 
-  <router-outlet (activate)="onActivate()"></router-outlet>
+    <router-outlet (activate)="onActivate()"></router-outlet>
 
-  <app-footer></app-footer>
-</div>
+    <app-footer></app-footer>
+  </div>
+</ng-container>
+
+<!-- TODO - Below can be be deleted after construction page is turned off -->
+<ng-template #constructionPage>
+  <!-- Main navigation horizontal header -->
+  <div class="nav-bar__header" [ngClass]="showMobileMenu ? 'nav-bar__header-shadow' : 'nav-bar__secondary-background'">
+    <div>
+      <img
+        routerLink="/home"
+        class="nav-bar__logo"
+        [src]="showMobileMenu ? 'assets/icons/logo-primary.png' : 'assets/icons/logo-secondary.png'"
+      />
+    </div>
+
+    <ul class="d-flex">
+      <li class="nav-bar__item">
+        <a class="nav-bar__link" href="https://developer.mantleblockchain.com/docs">Documentation</a>
+      </li>
+      <li class="nav-bar__item">
+        <a class="nav-bar__link" href="https://app.mantleblockchain.com/login">Login</a>
+      </li>
+      <li class="nav-bar__button">
+        <button class="button__primary" (click)="openAccessModal()">Request Access</button>
+      </li>
+      <li class="nav-bar__menu-toggle" (click)="toggleMobileMenu()">
+        <img *ngIf="showMobileMenu" src="assets/icons/close.png" />
+        <img *ngIf="!showMobileMenu" src="assets/icons/hamburger-menu-white.png" />
+      </li>
+    </ul>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <div *ngIf="showMobileMenu" class="nav-bar__menu-container">
+    <ul>
+      <li class="nav-bar__menu-item">
+        <a class="nav-bar__link" href="https://developer.mantleblockchain.com/docs">Documentation</a>
+      </li>
+      <li class="nav-bar__menu-item">
+        <a class="nav-bar__link" href="https://app.mantleblockchain.com/login">Login</a>
+      </li>
+    </ul>
+    <div class="nav-bar__menu-button">
+      <button class="button__primary d-flex justify-content-between" (click)="openAccessModal()">
+        Request Access<img src="assets/icons/arrow-diagonal-black.png" />
+      </button>
+    </div>
+  </div>
+
+  <div class="construction__background">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <label class="construction__heading-label">COMING SOON - 2020</label>
+          <h1 class="construction__heading">We're under construction</h1>
+          <p class="construction__subheading">We're cooking something real good right now. For now, just wait and see.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-8 col-md-4">
+          <button class="button__primary d-flex justify-content-between" (click)="openContactModal()">
+            Contact Us<img src="assets/icons/arrow-diagonal-black.png" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

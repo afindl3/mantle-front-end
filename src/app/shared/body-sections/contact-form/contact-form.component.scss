@@ -12,6 +12,11 @@
     padding-bottom: 76px;
   }
 
+  &__modal-container {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
   &__header {
     margin-bottom: 48px;
     @include media-breakpoint-down(sm) {

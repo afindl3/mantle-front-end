@@ -7,7 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { BlogTileComponent } from './body-subsections/blog-tile/blog-tile.component';
 import { CaseSectionComponent } from './body-sections/case-section/case-section.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactFormComponent } from './body-sections/contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { MeshHeaderDarkComponent } from './headers/mesh-header-dark/mesh-header-dark.component';
 import { MeshHeaderLightComponent } from './headers/mesh-header-light/mesh-header-light.component';
