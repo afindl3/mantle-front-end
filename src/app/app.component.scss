@@ -15,7 +15,8 @@
     background-image: url('/assets/backgrounds/construction-mesh-desktop.png');
     background-repeat: no-repeat;
     background-position: right bottom;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
+      background-size: 100% auto;
       background-image: url('/assets/backgrounds/construction-mesh-mobile.png');
     }
   }
@@ -23,9 +24,6 @@
   &__heading-label {
     margin-bottom: 4px;
     @include caption2($earth-yellow);
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
   }
 
   &__heading {
