@@ -1,6 +1,4 @@
-<ng-container
-  *ngIf="!(contentfulService.environmentVariables$ | async).isUnderConstruction || skipConstructionCheck; else constructionPage"
->
+<ng-container *ngIf="true; else constructionPage">
   <div class="app-background">
     <app-nav-bar></app-nav-bar>
 

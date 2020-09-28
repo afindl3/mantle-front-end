@@ -3,6 +3,7 @@
 
 .staggered-icons {
   &__header {
+    max-width: 470px;
     margin-bottom: 48px;
     @include header3($earth-maroon);
     @include media-breakpoint-down(sm) {
@@ -11,12 +12,13 @@
   }
 
   &__subheader {
+    max-width: 430px;
     @include copyLarge($mono-grey1);
   }
 
   &__items-container {
     max-width: 640px;
-    margin: -135px auto 0;
+    margin: -80px auto 0;
     @include media-breakpoint-down(lg) {
       margin: -50px auto 0;
     }
@@ -34,6 +36,8 @@
   }
 
   &__item-title {
+    margin-top: 24px;
+    margin-bottom: 8px;
     @include subhead2($earth-brown);
   }
 

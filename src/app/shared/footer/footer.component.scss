@@ -2,18 +2,18 @@
 @import 'src/styles/base/_typography';
 
 .footer {
-  &__background-image {
+  &__mobile-mesh {
     display: none;
     @include media-breakpoint-down(xs) {
       display: block;
       width: 100%;
       position: absolute;
-      margin-top: calc(20vw * -1 - 86px);
+      margin-top: calc(20vw * -1 - 41px);
     }
   }
 
   &__background {
-    padding-top: 101px;
+    padding-top: 50px;
     background: $mono-white1;
     position: relative;
 
@@ -30,6 +30,11 @@
       transform-origin: 100% 0;
       z-index: -1;
     }
+
+    background-image: url('/assets/backgrounds/mesh-footer-desktop.png');
+    background-repeat: no-repeat;
+    // background-size: 60%;
+    background-position: right bottom;
   }
 
   // Section 1 - Ready for Mantle
@@ -46,7 +51,11 @@
   }
 
   &__subheader {
+    max-width: 554px;
     @include copyLarge($mono-grey1);
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+    }
   }
 
   // Section 2 - Links

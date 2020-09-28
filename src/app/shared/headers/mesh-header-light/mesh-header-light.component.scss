@@ -31,6 +31,11 @@
     @include header1($earth-maroon);
   }
 
+  &__subheading {
+    max-width: 636px;
+    @include copyMedium($mono-black);
+  }
+
   &__breadcrumb {
     @include captionSubNav($earth-brown);
     span {

@@ -14,8 +14,13 @@
     @include caption2($mono-grey1);
   }
 
+  &__price {
+    @include subhead2($mono-black);
+  }
+
   &__info {
     margin-top: 48px;
+    @include copyMedium($mono-grey1);
     @include media-breakpoint-down(sm) {
       margin-top: 24px;
     }

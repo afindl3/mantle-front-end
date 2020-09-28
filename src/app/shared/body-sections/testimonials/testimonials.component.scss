@@ -11,12 +11,19 @@
   }
 
   &__subheader {
-    @include copyMedium($mono-grey1);
+    max-width: 315px;
+    @include copyLarge($mono-grey1);
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
   }
 
   &__card {
     padding: 40px;
     width: 643px;
+    height: fit-content;
+    background: $mono-white;
+    margin-right: 30px;
     box-shadow: 0px 18px 72px rgba(240, 240, 240, 0.45), 0px 16px 44px rgba(240, 240, 240, 0.4),
       0px 9px 24px rgba(240, 240, 240, 0.15), 0px 4px 12px -2px rgba(88, 88, 88, 0.05);
     @include media-breakpoint-down(sm) {
@@ -36,11 +43,17 @@
 
   // Desktop only
   &__carousel-container {
+    margin-top: -150px;
+    margin-bottom: 240px;
     overflow: hidden;
+    display: block;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &__carousel {
-    margin-left: 30%;
+    margin-left: 40%;
     display: inline-flex;
   }
 

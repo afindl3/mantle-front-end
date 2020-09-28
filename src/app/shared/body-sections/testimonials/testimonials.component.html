@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row mb-3 mb-md-5">
+  <div class="row mb-5">
     <div class="col-12 col-md-8 col-xl-6">
       <h3 class="testimonials__header">Hear from our customers</h3>
       <p class="testimonials__subheader">
@@ -9,40 +9,43 @@
   </div>
 </div>
 
-<div class="section d-none d-md-block">
-  <div class="testimonials__carousel-container">
-    <div class="testimonials__carousel">
+<!-- Desktop -->
+<div class="testimonials__carousel-container">
+  <div class="testimonials__carousel">
+    <div>
       <div class="testimonials__card">
         <p class="testimonials__card-header">{{ customerTestimonials[activeTestimonial].title }}</p>
         <p class="testimonials__card-label">{{ customerTestimonials[activeTestimonial].label }}</p>
-        <div class="d-flex mt-4">
-          <div
-            class="testimonials__previous"
-            [ngClass]="{ testimonials__disabled: activeTestimonial === 0 }"
-            (click)="onPrevious()"
-          >
-            <div><img src="assets/icons/arrow-left-black.png" /></div>
-            <span>Previous</span>
-          </div>
-          <div
-            class="testimonials__next"
-            [ngClass]="{ testimonials__disabled: activeTestimonial === customerTestimonials.length - 1 }"
-            (click)="onNext()"
-          >
-            <span>Next</span>
-            <div><img src="assets/icons/arrow-right-black.png" /></div>
-          </div>
-        </div>
       </div>
 
-      <div *ngIf="customerTestimonials[activeTestimonial + 1]" class="testimonials__card">
-        <p class="testimonials__card-header">{{ customerTestimonials[activeTestimonial + 1].title }}</p>
-        <p class="testimonials__card-label">{{ customerTestimonials[activeTestimonial + 1].label }}</p>
+      <div class="d-flex mt-4">
+        <div
+          class="testimonials__previous"
+          [ngClass]="{ testimonials__disabled: activeTestimonial === 0 }"
+          (click)="onPrevious()"
+        >
+          <div><img src="assets/icons/arrow-left-black.png" /></div>
+          <span>Previous</span>
+        </div>
+        <div
+          class="testimonials__next"
+          [ngClass]="{ testimonials__disabled: activeTestimonial === customerTestimonials.length - 1 }"
+          (click)="onNext()"
+        >
+          <span>Next</span>
+          <div><img src="assets/icons/arrow-right-black.png" /></div>
+        </div>
       </div>
+    </div>
+
+    <div *ngIf="customerTestimonials[activeTestimonial + 1]" class="testimonials__card">
+      <p class="testimonials__card-header">{{ customerTestimonials[activeTestimonial + 1].title }}</p>
+      <p class="testimonials__card-label">{{ customerTestimonials[activeTestimonial + 1].label }}</p>
     </div>
   </div>
 </div>
 
+<!-- Mobile -->
 <div class="container d-block d-md-none">
   <div class="section">
     <div

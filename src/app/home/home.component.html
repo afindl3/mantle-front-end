@@ -131,7 +131,11 @@
   <div class="section">
     <a class="home__link" routerLink="/developers/insights">INSIGHTS FROM MANTLE ></a>
     <div class="row">
-      <div *ngFor="let article of contentfulService.blog$ | async | slice: 0:2" class="col-12 col-md-6">
+      <div
+        *ngFor="let article of contentfulService.blog$ | async | slice: 0:2; let i = index"
+        class="col-12 col-md-6"
+        [ngClass]="{ 'mb-3 md-md-0': i === 0 }"
+      >
         <app-blog-tile
           [image]="article.image.fields.file.url"
           [heading]="article.title"

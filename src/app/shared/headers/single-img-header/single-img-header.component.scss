@@ -57,7 +57,7 @@
 
   &__subheading {
     max-width: 375px;
-    @include copyMedium($mono-grey1);
+    @include copyMedium($mono-black);
   }
 
   &__breadcrumbs {

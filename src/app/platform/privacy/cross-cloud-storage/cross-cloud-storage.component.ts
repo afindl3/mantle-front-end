@@ -8,32 +8,31 @@ import { StaggeredIconFields } from '../../../shared/body-sections/staggered-ico
 })
 export class CrossCloudStorageComponent implements OnInit {
   crossCloudStorage: StaggeredIconFields = {
-    heading: 'Why use Mantles cross cloud storage?',
-    subheading:
-      'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    heading: "Why use the Mantle's cross cloud storage?",
+    subheading: "Mantle's cybersecurity makes every workplace a secure location.",
     items: [
       {
-        title: 'Insert reason',
+        title: '2.',
         description:
-          'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet',
+          'Mantle makes enterprises resilient to cybersecurity and data risks by protecting our customers from ransomware attacks, physical hardware lockouts and permanent data loss.',
         image: 'assets/icons/network.png',
       },
       {
-        title: 'Insert reason',
+        title: '1.',
         description:
-          'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet',
+          'Mantle utilizes novel data fragmentation and multi-cloud hosting systems to offer advanced data privacy as a service.',
         image: 'assets/icons/network.png',
       },
       {
-        title: 'Insert reason',
+        title: '4.',
         description:
-          'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet',
+          'Possibly a sales point would be to ensure that all WFH situations are completely secure for employees not working from a secure location.',
         image: 'assets/icons/network.png',
       },
       {
-        title: 'Insert reason',
+        title: '3.',
         description:
-          'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet',
+          'Mantle ensures multi-cloud file retrieval, reducing your dependence on physical backups and ensuring your data is safe.',
         image: 'assets/icons/network.png',
       },
     ],
