@@ -2,12 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ContentfulService } from './services/contentful/contentful.service';
-import { RequestAccessComponent } from './shared/request-access/request-access.component';
-import {
-  ContactFormComponent,
-  ContactFormFields,
-  ContactFormType,
-} from './shared/body-sections/contact-form/contact-form.component';
+import { RequestAccessComponent } from './shared/modals/request-access/request-access.component';
+import { ContactModalComponent } from './shared/modals/contact-modal/contact-modal.component';
+import { ContactFormFields, ContactFormType } from './shared/body-sections/contact-form/contact-form.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +18,7 @@ export class AppComponent implements OnInit {
   contactForm: ContactFormFields = {
     title: "We'd love to hear from you!",
     subtitle: 'Please fill out the form below and we will get back to you as soon as we can.',
-    type: ContactFormType.Contact,
+    type: ContactFormType.ContactUs,
   };
   skipConstructionCheck = false;
 
@@ -62,7 +59,7 @@ export class AppComponent implements OnInit {
   }
 
   openContactModal() {
-    const modalRef = this.modalService.open(ContactFormComponent);
+    const modalRef = this.modalService.open(ContactModalComponent);
     modalRef.componentInstance.contactForm = this.contactForm;
     modalRef.componentInstance.isInModal = true;
     modalRef.result

@@ -9,10 +9,10 @@
 <!-- Section 3 - Mantle empowers -->
 <div class="container">
   <div class="row">
-    <div class="home__content-container col-12 col-lg-5 col-xl-4">
+    <div class="home__container3 col-12 col-lg-5 col-xl-4">
       <h2 class="home__header3">Mantle Empowers & Protects Businesses</h2>
       <p class="home__paragraph3">Mantle's technology offering extends businesses' data audit & privacy capabilities.</p>
-      <button class="button__primary d-flex justify-content-between" routerLink="/platform/what-is-mantle">
+      <button class="button__primary home__button3" routerLink="/platform/what-is-mantle">
         Learn more <img src="assets/icons/arrow-diagonal-black.png" />
       </button>
     </div>
@@ -134,7 +134,7 @@
       <div
         *ngFor="let article of contentfulService.blog$ | async | slice: 0:2; let i = index"
         class="col-12 col-md-6"
-        [ngClass]="{ 'mb-3 md-md-0': i === 0 }"
+        [ngClass]="{ 'mb-3 mb-md-0': i === 0 }"
       >
         <app-blog-tile
           [image]="article.image.fields.file.url"

@@ -2,7 +2,7 @@
 
 @mixin buttonBase($color, $background, $border) {
   color: $color;
-  padding: 17px;
+  padding: 18px 20px;
   width: 100%;
   background-color: $background;
   border: 2px solid $border;

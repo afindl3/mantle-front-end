@@ -2,7 +2,14 @@
 @import 'src/styles/base/_typography';
 
 .home {
-  // Section 3 - How mantle empowers
+  // Section 3 - Mantle empowers
+  &__container3 {
+    margin-bottom: 115px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+  }
+
   &__header3 {
     @include header3($earth-maroon);
   }
@@ -12,10 +19,14 @@
     @include copyMedium($mono-grey1);
   }
 
-  &__content-container {
-    margin-bottom: 115px;
-    @include media-breakpoint-down(lg) {
-      margin-bottom: 20px;
+  &__button3 {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    width: 75%;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
     }
   }
 
@@ -141,6 +152,9 @@
     padding: 10px 20px;
     color: $mono-black;
     background: #c4c4c4;
+    @include media-breakpoint-down(xs) {
+      width: 75%;
+    }
   }
 
   &__image-footer--right {
@@ -150,6 +164,9 @@
     padding: 10px 20px;
     color: $mono-white;
     background: $mono-black;
+    @include media-breakpoint-down(xs) {
+      width: 25%;
+    }
   }
 
   // Section 5 - Future proof

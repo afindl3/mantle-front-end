@@ -4,16 +4,25 @@
 .footer {
   &__mobile-mesh {
     display: none;
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
       display: block;
       width: 100%;
       position: absolute;
-      margin-top: calc(20vw * -1 - 41px);
+      margin-top: calc(20vw * -1 - 37px);
+    }
+  }
+
+  &__desktop-mesh {
+    background-image: url('/assets/backgrounds/mesh-footer-desktop.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    @include media-breakpoint-down(sm) {
+      background-image: none;
     }
   }
 
   &__background {
-    padding-top: 50px;
+    padding-top: 100px;
     background: $mono-white1;
     position: relative;
 
@@ -30,11 +39,6 @@
       transform-origin: 100% 0;
       z-index: -1;
     }
-
-    background-image: url('/assets/backgrounds/mesh-footer-desktop.png');
-    background-repeat: no-repeat;
-    // background-size: 60%;
-    background-position: right bottom;
   }
 
   // Section 1 - Ready for Mantle

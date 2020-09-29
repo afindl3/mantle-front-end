@@ -11,7 +11,7 @@ export class ContactUsComponent implements OnInit {
     title: "We'd love to hear from you!",
     subtitle:
       'Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    type: ContactFormType.Contact,
+    type: ContactFormType.ContactUs,
   };
 
   constructor() {}

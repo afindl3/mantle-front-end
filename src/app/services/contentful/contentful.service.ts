@@ -72,7 +72,7 @@ export class ContentfulService {
       const entries = await this.client.getEntries({
         content_type: 'environmentVariables',
       });
-      console.log(entries.items[0].fields);
+      // console.log(entries.items[0].fields);
       this.environmentVariables = entries.items[0].fields;
     }
   }
@@ -87,7 +87,7 @@ export class ContentfulService {
       entries.items.forEach((item) => {
         fetchedArticles.push(item.fields);
       });
-      console.log(fetchedArticles);
+      // console.log(fetchedArticles);
       this.blog = fetchedArticles;
     }
   }
@@ -102,7 +102,7 @@ export class ContentfulService {
       entries.items.forEach((item) => {
         fetchedFaqs.push(item.fields);
       });
-      console.log(fetchedFaqs);
+      // console.log(fetchedFaqs);
       this.faqs = fetchedFaqs;
     }
   }
@@ -117,7 +117,7 @@ export class ContentfulService {
       entries.items.forEach((item) => {
         fetchedMilestones.push(item.fields);
       });
-      console.log(fetchedMilestones);
+      // console.log(fetchedMilestones);
       this.milestones = fetchedMilestones;
     }
   }
@@ -132,7 +132,7 @@ export class ContentfulService {
       entries.items.forEach((item) => {
         fetchedTeam.push(item.fields);
       });
-      console.log(fetchedTeam);
+      // console.log(fetchedTeam);
       this.team = fetchedTeam;
     }
   }

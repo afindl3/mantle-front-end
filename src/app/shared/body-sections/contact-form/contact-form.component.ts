@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-contact-form',
@@ -10,10 +9,31 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ContactFormComponent implements OnInit {
   @Input() contactForm: ContactFormFields;
-  @Input() isInModal = false;
   isDarkBackground = true;
 
-  form = new FormGroup({
+  accountForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl(''),
+    company: new FormControl(''),
+    message: new FormControl(''),
+  });
+  partnerForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl(''),
+    job: new FormControl(''),
+    company: new FormControl(''),
+    phone: new FormControl(''),
+    country: new FormControl(''),
+    partnership: new FormControl(''),
+  });
+  newsletterForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl(''),
+  });
+  contactUsForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     email: new FormControl(''),
@@ -21,20 +41,14 @@ export class ContactFormComponent implements OnInit {
     message: new FormControl(''),
   });
 
-  constructor(private http: HttpClient, public activeModal: NgbActiveModal) {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.isDarkBackground = this.contactForm.type !== 'contact';
+    this.isDarkBackground = this.contactForm.type !== ContactFormType.ContactUs;
   }
 
   onSubmit() {
-    const body = new HttpParams()
-      .set('form-name', 'contactUs')
-      .append('firstName', this.form.value.firstName)
-      .append('lastName', this.form.value.lastName)
-      .append('email', this.form.value.email)
-      .append('company', this.form.value.company)
-      .append('message', this.form.value.message);
+    const body = this.getBody();
     this.http.post('/', body.toString(), { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).subscribe(
       (res) => {},
       (err) => {
@@ -42,23 +56,64 @@ export class ContactFormComponent implements OnInit {
           // Client side error
           alert('Sorry - Something went wrong when sending your message.');
           console.log(err.error.message);
-          this.activeModal.close('error');
         } else {
           // Backend error
           if (err.status === 200) {
             alert('Your message has been sent to the Mantle team!');
-            this.activeModal.close('success');
           } else {
             alert('Sorry - Something went wrong when sending your message.');
             console.log('Error status:');
             console.log(err.status);
             console.log('Error body:');
             console.log(err.error);
-            this.activeModal.close('error');
           }
         }
       }
     );
+  }
+
+  private getBody(): any {
+    let body;
+    switch (this.contactForm.type) {
+      case ContactFormType.Account:
+        body = new HttpParams()
+          .set('form-name', 'account')
+          .append('firstName', this.accountForm.value.firstName)
+          .append('lastName', this.accountForm.value.lastName)
+          .append('email', this.accountForm.value.email)
+          .append('company', this.accountForm.value.company)
+          .append('message', this.accountForm.value.message);
+        break;
+      case ContactFormType.Partner:
+        body = new HttpParams()
+          .set('form-name', 'partner')
+          .append('firstName', this.partnerForm.value.firstName)
+          .append('lastName', this.partnerForm.value.lastName)
+          .append('email', this.partnerForm.value.email)
+          .append('job', this.partnerForm.value.job)
+          .append('company', this.partnerForm.value.company)
+          .append('phone', this.partnerForm.value.phone)
+          .append('country', this.partnerForm.value.country)
+          .append('partnership', this.partnerForm.value.partnership);
+        break;
+      case ContactFormType.Newsletter:
+        body = new HttpParams()
+          .set('form-name', 'newsletter')
+          .append('firstName', this.newsletterForm.value.firstName)
+          .append('lastName', this.newsletterForm.value.lastName)
+          .append('email', this.newsletterForm.value.email);
+        break;
+      case ContactFormType.ContactUs:
+        body = new HttpParams()
+          .set('form-name', 'contactUs')
+          .append('firstName', this.accountForm.value.firstName)
+          .append('lastName', this.accountForm.value.lastName)
+          .append('email', this.accountForm.value.email)
+          .append('company', this.accountForm.value.company)
+          .append('message', this.accountForm.value.message);
+        break;
+    }
+    return body;
   }
 }
 
@@ -72,5 +127,5 @@ export enum ContactFormType {
   Account = 'account',
   Partner = 'partner',
   Newsletter = 'newsletter',
-  Contact = 'contact',
+  ContactUs = 'contactUs',
 }

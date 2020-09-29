@@ -21,9 +21,7 @@ export class RequestAccessComponent implements OnInit {
 
   constructor(private http: HttpClient, public activeModal: NgbActiveModal) {}
 
-  ngOnInit() {
-    console.log('Request accesss componnent init');
-  }
+  ngOnInit() {}
 
   onSubmit() {
     const body = new HttpParams()

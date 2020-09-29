@@ -1,0 +1,83 @@
+<div class="contact-form">
+  <div class="container contact-form__container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3 class="contact-form__header">
+          {{ contactForm.title }}
+        </h3>
+        <p class="contact-form__subheader">
+          {{ contactForm.subtitle }}
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <form [formGroup]="form" name="contactUs" method="post" (ngSubmit)="onSubmit()">
+          <input type="hidden" name="form-name" value="contactUs" />
+
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <input
+                class="contact-form__input-text contact-form__input-text--light"
+                type="text"
+                name="firstName"
+                formControlName="firstName"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div class="col-12 col-sm-6">
+              <input
+                class="contact-form__input-text contact-form__input-text--light"
+                type="text"
+                name="lastName"
+                formControlName="lastName"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input
+                class="contact-form__input-text contact-form__input-text--light"
+                type="email"
+                name="email"
+                formControlName="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input
+                class="contact-form__input-text contact-form__input-text--light"
+                type="text"
+                name="company"
+                formControlName="company"
+                placeholder="Company"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <textarea
+                class="contact-form__input-text contact-form__input-text--light contact-form__input-textarea"
+                name="message"
+                formControlName="message"
+                placeholder="Describe your project in max 5000 characters"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-8 m-auto">
+              <button class="button__primary" type="submit">Submit Form</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

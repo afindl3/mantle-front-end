@@ -3,8 +3,8 @@ import { Router, NavigationEnd } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { NavExtendedComponent } from '../nav-extended/nav-extended.component';
-import { RequestAccessComponent } from '../request-access/request-access.component';
+import { NavExtendedComponent } from '../modals/nav-extended/nav-extended.component';
+import { RequestAccessComponent } from '../modals/request-access/request-access.component';
 
 @Component({
   selector: 'app-nav-bar',

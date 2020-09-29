@@ -12,7 +12,7 @@
 
   &__subheader {
     max-width: 315px;
-    @include copyLarge($mono-grey1);
+    @include copyMedium($mono-grey1);
     @include media-breakpoint-down(sm) {
       max-width: 100%;
     }

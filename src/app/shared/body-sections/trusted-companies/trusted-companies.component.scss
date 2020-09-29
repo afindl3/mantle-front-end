@@ -7,4 +7,8 @@
     @include caption2($earth-brown);
     font-family: $circular-std-bold;
   }
+
+  &__image {
+    max-width: 100%;
+  }
 }

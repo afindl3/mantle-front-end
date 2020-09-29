@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ContactFormFields, ContactFormType } from '../../shared/body-sections/contact-form/contact-form.component';
 import { ContentfulService } from '../../services/contentful/contentful.service';
 
@@ -15,9 +16,14 @@ export class InsightsComponent implements OnInit {
     type: ContactFormType.Newsletter,
   };
 
-  constructor(public contentfulService: ContentfulService) {}
+  constructor(public contentfulService: ContentfulService, private router: Router) {}
 
   ngOnInit(): void {
     this.contentfulService.fetchBlog();
+  }
+
+  onClick(selectedArticle: number) {
+    console.log(selectedArticle);
+    this.router.navigate(['/developers/insights/article', selectedArticle], { queryParamsHandling: 'merge' });
   }
 }

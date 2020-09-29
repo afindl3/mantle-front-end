@@ -3,7 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { NgbAccordion, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { RequestAccessComponent } from '../request-access/request-access.component';
+import { RequestAccessComponent } from '../modals/request-access/request-access.component';
 
 @Component({
   selector: 'app-footer',

@@ -28,7 +28,6 @@ export class RoutingService {
   }
 
   getRouteSegments(): string[] {
-    console.log(this.routeSegments);
     return this.routeSegments;
   }
 }

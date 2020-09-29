@@ -8,15 +8,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BlogTileComponent } from './body-subsections/blog-tile/blog-tile.component';
 import { CaseSectionComponent } from './body-sections/case-section/case-section.component';
 import { ContactFormComponent } from './body-sections/contact-form/contact-form.component';
+import { ContactModalComponent } from './modals/contact-modal/contact-modal.component';
 import { FooterComponent } from './footer/footer.component';
 import { MeshHeaderDarkComponent } from './headers/mesh-header-dark/mesh-header-dark.component';
 import { MeshHeaderLightComponent } from './headers/mesh-header-light/mesh-header-light.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { NavExtendedComponent } from './nav-extended/nav-extended.component';
+import { NavExtendedComponent } from './modals/nav-extended/nav-extended.component';
 import { MultiImgHeaderComponent } from './headers/multi-img-header/multi-img-header.component';
 import { TrustedCompaniesComponent } from './body-sections/trusted-companies/trusted-companies.component';
 import { PosterComponent } from './body-subsections/poster/poster.component';
-import { RequestAccessComponent } from './request-access/request-access.component';
+import { RequestAccessComponent } from './modals/request-access/request-access.component';
 import { SingleColumnComponent } from './body-sections/single-column/single-column.component';
 import { SingleImgHeaderComponent } from './headers/single-img-header/single-img-header.component';
 import { SplitSubheaderComponent } from './body-sections/split-subheader/split-subheader.component';
@@ -29,6 +30,7 @@ import { TestimonialsComponent } from './body-sections/testimonials/testimonials
     BlogTileComponent,
     CaseSectionComponent,
     ContactFormComponent,
+    ContactModalComponent,
     FooterComponent,
     MeshHeaderDarkComponent,
     MeshHeaderLightComponent,
