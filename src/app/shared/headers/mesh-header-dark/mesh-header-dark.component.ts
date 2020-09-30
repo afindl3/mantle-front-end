@@ -8,8 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MeshHeaderDarkComponent implements OnInit {
   @Input() headingLabel: string;
   @Input() heading: string;
-  @Input() breadcrumb1: string;
-  @Input() breadcrumb2: string;
 
   constructor() {}
 

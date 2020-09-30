@@ -1,0 +1,20 @@
+<div class="container">
+  <p class="breadcrumbs__paragraph">
+    <span class="breadcrumbs__brown" [routerLink]="'/' + routeSegments[0]">{{ routeSegments[0] | titlecase }}</span>
+    <span>
+      <span> /</span>
+      <span
+        [ngClass]="{ breadcrumbs__brown: routeSegments.length === 3 }"
+        [routerLink]="'/' + routeSegments[0] + '/' + routeSegments[1]"
+      >
+        {{ routeSegments[1] | titlecase }}</span
+      >
+    </span>
+    <span
+      *ngIf="routeSegments.length > 2"
+      [routerLink]="'/' + routeSegments[0] + '/' + routeSegments[1] + '/' + routeSegments[2]"
+    >
+      / {{ routeSegments[2] | titlecase }}</span
+    >
+  </p>
+</div>

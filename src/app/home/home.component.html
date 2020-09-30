@@ -128,8 +128,8 @@
 
 <!-- Section 6 - Insights-->
 <div class="container">
-  <div class="section">
-    <a class="home__link" routerLink="/developers/insights">INSIGHTS FROM MANTLE ></a>
+  <a class="home__link" routerLink="/developers/insights">INSIGHTS FROM MANTLE ></a>
+  <div class="inset-section">
     <div class="row">
       <div
         *ngFor="let article of contentfulService.blog$ | async | slice: 0:2; let i = index"

@@ -87,3 +87,39 @@ body {
 .button {
   @include button;
 }
+
+// SECTION 3 - Contentful rich text styles
+.contentful--bold {
+  font-family: $circular-std-bold;
+}
+
+.contentful--italic {
+  font-style: italic;
+}
+
+.contentful--underline {
+  text-decoration: underline;
+}
+
+.contentful__header {
+  margin-bottom: 21px;
+  @include subhead2($earth-maroon);
+}
+
+.contentful__paragraph--large {
+  margin-bottom: 30px;
+  @include copyMedium($mono-grey1);
+}
+
+.contentful__paragraph--small {
+  margin-bottom: 30px;
+  @include copyMain($mono-grey1);
+}
+
+.contentful__blockquote {
+  padding-left: 40px;
+  border-left: 4px solid $earth-maroon;
+  p {
+    @include subhead1($earth-maroon);
+  }
+}

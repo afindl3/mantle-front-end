@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { createClient } from 'contentful';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { BehaviorSubject } from 'rxjs';
 
 /*
@@ -11,6 +13,19 @@ import { BehaviorSubject } from 'rxjs';
 const CONFIG = {
   space: '7pp8bgnb5ioi',
   accessToken: 'G_DfQhch4pbwlmfH1NpP1D7n1-0bIqjKwSjbFmRavjs',
+};
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: (text) => `<span class="contentful--bold">${text}</span>`,
+    [MARKS.ITALIC]: (text) => `<span class="contentful--italic">${text}</span>`,
+    [MARKS.UNDERLINE]: (text) => `<span class="contentful--underline">${text}</span>`,
+  },
+  renderNode: {
+    [BLOCKS.HEADING_2]: (node, next) => `<h2 class="contentful__header">${next(node.content)}</h2>`,
+    [BLOCKS.HEADING_6]: (node, next) => `<p class="contentful__paragraph--large">${next(node.content)}</p>`,
+    [BLOCKS.QUOTE]: (node, next) => `<blockquote class="contentful__blockquote">${next(node.content)}</blockquote>`,
+    [BLOCKS.PARAGRAPH]: (node, next) => `<p class="contentful__paragraph--small">${next(node.content)}</p>`,
+  },
 };
 
 @Injectable({
@@ -34,34 +49,34 @@ export class ContentfulService {
   readonly team$ = this._team.asObservable();
   readonly blog$ = this._blog.asObservable();
 
-  get environmentVariables(): any {
+  private get environmentVariables(): any {
     return this._environmentVariables.getValue();
   }
-  set environmentVariables(val: any) {
+  private set environmentVariables(val: any) {
     this._environmentVariables.next(val);
   }
-  get faqs(): any[] {
+  private get faqs(): any[] {
     return this._faqs.getValue();
   }
-  set faqs(val: any[]) {
+  private set faqs(val: any[]) {
     this._faqs.next(val);
   }
-  get milestones(): any[] {
+  private get milestones(): any[] {
     return this._milestones.getValue();
   }
-  set milestones(val: any[]) {
+  private set milestones(val: any[]) {
     this._milestones.next(val);
   }
-  get team(): any[] {
+  private get team(): any[] {
     return this._team.getValue();
   }
-  set team(val: any[]) {
+  private set team(val: any[]) {
     this._team.next(val);
   }
-  get blog(): any[] {
+  private get blog(): any[] {
     return this._blog.getValue();
   }
-  set blog(val: any[]) {
+  private set blog(val: any[]) {
     this._blog.next(val);
   }
 
@@ -85,6 +100,7 @@ export class ContentfulService {
         order: 'fields.order',
       });
       entries.items.forEach((item) => {
+        item.fields['body'] = documentToHtmlString(item.fields['body'], options);
         fetchedArticles.push(item.fields);
       });
       // console.log(fetchedArticles);

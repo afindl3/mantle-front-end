@@ -1,23 +1,39 @@
-<app-mesh-header-dark
-  [headingLabel]="'DEVELOPERS'"
-  [heading]="'All Insights'"
-  [breadcrumb1]="'Developers'"
-  [breadcrumb2]="'Insights'"
-></app-mesh-header-dark>
+<app-mesh-header-dark [headingLabel]="'DEVELOPERS'" [heading]="'All Insights'"></app-mesh-header-dark>
+
+<div class="insights__card-container" *ngIf="featuredArticle" (click)="onClick(0)">
+  <div class="insights__card-content">
+    <div class="insights__card-body">
+      <div>
+        <h4 class="insights__card-heading">{{ featuredArticle.title }}</h4>
+      </div>
+      <div class="insights__footnote-container">
+        <p class="insights__footnote1">{{ featuredArticle.category }}</p>
+        <p class="insights__footnote2">{{ featuredArticle.date.split('T')[0] }}</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img [src]="featuredArticle.image.fields.file.url" />
+  </div>
+</div>
+
+<div class="insights__breadcrumb-container">
+  <app-breadcrumb></app-breadcrumb>
+</div>
 
 <div class="container">
   <div class="section">
     <div class="row">
       <div class="col-12 col-md-10">
         <div class="row">
-          <div *ngFor="let article of contentfulService.blog$ | async; let i = index" class="col-12 col-md-6">
+          <div *ngFor="let article of contentfulService.blog$ | async | slice: 1; let i = index" class="col-12 col-md-6">
             <app-blog-tile
               [image]="article.image.fields.file.url"
               [heading]="article.title"
               [footnote1]="article.category"
               [footnote2]="article.date.split('T')[0]"
               [offset]="true"
-              (click)="onClick(i)"
+              (click)="onClick(i + 1)"
             ></app-blog-tile>
           </div>
         </div>

@@ -3,8 +3,8 @@ import { Router, NavigationEnd } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { NavExtendedComponent } from '../modals/nav-extended/nav-extended.component';
-import { RequestAccessComponent } from '../modals/request-access/request-access.component';
+import { NavExtendedComponent } from '../../modals/nav-extended/nav-extended.component';
+import { RequestAccessComponent } from '../../modals/request-access/request-access.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,7 +13,7 @@ import { RequestAccessComponent } from '../modals/request-access/request-access.
 })
 export class NavBarComponent implements OnInit {
   routeSubscription: Subscription;
-  isPrimaryHeader = true;
+  isPrimaryHeader = true; // Light header
   showMobileMenu = false;
 
   constructor(private modalService: NgbModal, private router: Router) {}

@@ -2,6 +2,10 @@
 @import 'src/styles/base/_typography';
 
 .networks {
+  &__breadcrumb-container {
+    margin-bottom: 66px;
+  }
+
   // Section 2 - Blog + Index
   &__index {
     text-align: right;

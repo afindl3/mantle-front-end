@@ -1,0 +1,15 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.breadcrumbs {
+  &__paragraph {
+    @include captionSubNav($mono-grey3);
+    @include media-breakpoint-down(sm) {
+      margin-top: 47px;
+    }
+  }
+
+  &__brown {
+    @include captionSubNav($earth-brown);
+  }
+}
