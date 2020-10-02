@@ -1,0 +1,76 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.contact-form {
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 0;
+      padding-left: 33px;
+      padding-right: 33px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 48px;
+    @include subhead1($earth-maroon);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subheader {
+    @include copyLarge($mono-grey1);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__input-text {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__input-text--light {
+    border: 1px solid $mono-grey1;
+  }
+
+  &__input-textarea {
+    height: 150px;
+  }
+
+  &__input-radio {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0 0 0 1px $mono-white;
+  }
+
+  &__input-radio:focus {
+    border: 1px solid $mono-white;
+  }
+
+  &__input-radio:before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 30% auto;
+    border-radius: 50%;
+  }
+
+  &__input-radio:checked {
+    box-shadow: 0 0 0 1px $mono-white;
+    border: none;
+  }
+
+  &__input-radio:checked:before {
+    background: $mono-white;
+  }
+}

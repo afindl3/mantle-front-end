@@ -1,0 +1,23 @@
+<app-multi-img-header
+  [headingLabel]="'FREQUENTLY ASKED QUESTIONS'"
+  [heading]="'FAQ'"
+  [showBreadcrumb]="true"
+></app-multi-img-header>
+
+<div class="container">
+  <div class="inset-section">
+    <ul>
+      <li *ngFor="let faq of contentfulService.faqs$ | async; let i = index" (click)="onClick(i)">
+        <div class="row mb-5">
+          <div class="col-2 col-md-1">
+            <label class="faq__number">{{ faq.id }}</label>
+          </div>
+          <div class="col-10 col-md-11">
+            <h2 class="faq__header2">{{ faq.question }}</h2>
+            <p *ngIf="selectedFaq === i" class="faq__subheader2">{{ faq.answer }}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

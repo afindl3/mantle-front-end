@@ -1,0 +1,340 @@
+<div class="contact-form" [ngClass]="{ 'contact-form__background--dark': isDarkBackground }">
+  <div class="container contact-form__container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3
+          class="contact-form__header"
+          [ngClass]="isDarkBackground ? 'contact-form__header--light' : 'contact-form__header--dark'"
+        >
+          {{ contactForm.title }}
+        </h3>
+        <p [ngClass]="isDarkBackground ? 'contact-form__subheader--light' : 'contact-form__subheader--dark'">
+          {{ contactForm.subtitle }}
+        </p>
+      </div>
+
+      <div [ngSwitch]="contactForm.type" class="col-12 col-md-6">
+        <ng-container *ngSwitchCase="'account'">
+          <ng-container *ngTemplateOutlet="account"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'partner'">
+          <ng-container *ngTemplateOutlet="partner"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'newsletter'">
+          <ng-container *ngTemplateOutlet="newsletter"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'contactUs'">
+          <ng-container *ngTemplateOutlet="contact"></ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #account>
+  <form [formGroup]="accountForm" name="account" method="post" (ngSubmit)="onSubmit()">
+    <input type="hidden" name="form-name" value="account" />
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="firstName"
+          formControlName="firstName"
+          placeholder="First Name"
+          required
+        />
+      </div>
+      <div class="col-12 col-sm-6">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="lastName"
+          formControlName="lastName"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="email"
+          name="email"
+          formControlName="email"
+          placeholder="Email Address"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="company"
+          formControlName="company"
+          placeholder="Company"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <textarea
+          class="contact-form__input-text contact-form__input-text--dark contact-form__input-textarea"
+          name="message"
+          formControlName="message"
+          placeholder="Describe your project in max 5000 characters"
+          required
+        ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mb-3 d-flex">
+        <div>
+          <input class="contact-form__input-radio mr-3" type="radio" />
+        </div>
+        <label>
+          I agree to receive communications from Mantle Technology about out APIs and content that may be of interest to you. By
+          clicking Enroll Now below, you consent to allows Mantle Technology to store and process the personal informatioinn
+          submitted above to provide you the contetnt requested. You may unsubscribe at any time.
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mb-3 d-flex">
+        <div>
+          <input class="contact-form__input-radio mr-3" type="radio" />
+        </div>
+        <label>I agree to the terms of service. This is required for enrolling to the Developer Program</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="button__primary" type="submit">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #partner>
+  <form [formGroup]="partnerForm" name="partner" method="post" (ngSubmit)="onSubmit()">
+    <input type="hidden" name="form-name" value="partner" />
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="firstName"
+          formControlName="firstName"
+          placeholder="First Name"
+          required
+        />
+      </div>
+      <div class="col-12 col-sm-6">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="lastName"
+          formControlName="lastName"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="email"
+          name="email"
+          formControlName="email"
+          placeholder="Email Address"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-7">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="job"
+          formControlName="job"
+          placeholder="Job title"
+          required
+        />
+      </div>
+      <div class="col-12 col-sm-5">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="company"
+          formControlName="company"
+          placeholder="Company"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-8">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="phone"
+          name="phone"
+          formControlName="phone"
+          placeholder="Phone number (optional)"
+        />
+      </div>
+      <div class="col-12 col-sm-4">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="country"
+          formControlName="country"
+          placeholder="Country"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <select
+          class="contact-form__input-text contact-form__input-text--dark contact-form__input-select"
+          name="partnership"
+          formControlName="partnership"
+        >
+          <option value="" disabled>Choose a partnership type</option>
+          <option value="architect">A</option>
+          <option value="developer">B</option>
+          <option value="executive">C</option>
+          <option value="manager">D</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="button__primary" type="submit">Submit Form</button>
+      </div>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #newsletter>
+  <form [formGroup]="newsletterForm" name="newslettter" method="post" (ngSubmit)="onSubmit()">
+    <input type="hidden" name="form-name" value="newslettter" />
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="firstName"
+          formControlName="firstName"
+          placeholder="First Name"
+          required
+        />
+      </div>
+      <div class="col-12 col-sm-6">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="text"
+          name="lastName"
+          formControlName="lastName"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <input
+          class="contact-form__input-text contact-form__input-text--dark"
+          type="email"
+          name="email"
+          formControlName="email"
+          placeholder="Email Address"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="button__primary" type="submit">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #contact>
+  <form [formGroup]="contactUsForm" name="contactUs" method="post" (ngSubmit)="onSubmit()">
+    <input type="hidden" name="form-name" value="contactUs" />
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input
+          class="contact-form__input-text contact-form__input-text--light"
+          type="text"
+          name="firstName"
+          formControlName="firstName"
+          placeholder="First Name"
+          required
+        />
+      </div>
+      <div class="col-12 col-sm-6">
+        <input
+          class="contact-form__input-text contact-form__input-text--light"
+          type="text"
+          name="lastName"
+          formControlName="lastName"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <input
+          class="contact-form__input-text contact-form__input-text--light"
+          type="email"
+          name="email"
+          formControlName="email"
+          placeholder="Email Address"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <input
+          class="contact-form__input-text contact-form__input-text--light"
+          type="text"
+          name="company"
+          formControlName="company"
+          placeholder="Company"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <textarea
+          class="contact-form__input-text contact-form__input-text--light contact-form__input-textarea"
+          name="message"
+          formControlName="message"
+          placeholder="Describe your project in max 5000 characters"
+          required
+        ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="button__primary" type="submit">Submit Form</button>
+      </div>
+    </div>
+  </form>
+</ng-template>

@@ -1,0 +1,105 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.contact-form {
+  // Left
+  &__background--dark {
+    color: $mono-white;
+    background: $earth-maroon;
+  }
+
+  &__container {
+    padding-top: 93px;
+    padding-bottom: 76px;
+  }
+
+  &__header {
+    margin-bottom: 48px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__header--light {
+    @include subhead1($mono-white);
+  }
+
+  &__header--dark {
+    @include subhead1($earth-maroon);
+  }
+
+  &__subheader--light {
+    @include copyLarge($mono-white);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__subheader--dark {
+    @include copyLarge($mono-grey1);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  // Right
+  &__input-text {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__input-text--light {
+    border: 1px solid $mono-grey1;
+  }
+
+  &__input-text--dark {
+    background: $earth-maroon;
+    border: 1px solid $mono-white;
+    color: $mono-white;
+    &::placeholder {
+      color: $mono-white;
+    }
+  }
+
+  &__input-textarea {
+    height: 150px;
+  }
+
+  &__input-select {
+    appearance: none;
+    background: url('/assets/icons/arrow-down-white.png') no-repeat right 1rem center/25px 20px;
+  }
+
+  &__input-radio {
+    margin-top: 5px;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0 0 0 1px $mono-white;
+  }
+
+  &__input-radio:focus {
+    border: 1px solid $mono-white;
+  }
+
+  &__input-radio:before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 30% auto;
+    border-radius: 50%;
+  }
+
+  &__input-radio:checked {
+    box-shadow: 0 0 0 1px $mono-white;
+    border: none;
+  }
+
+  &__input-radio:checked:before {
+    background: $mono-white;
+  }
+}

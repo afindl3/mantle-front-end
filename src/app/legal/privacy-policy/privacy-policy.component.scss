@@ -1,0 +1,19 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.privacy {
+  &__heading {
+    @include subhead2($mono-black);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__caption1 {
+    @include caption1($mono-black);
+  }
+
+  &__caption2 {
+    @include caption2($mono-black);
+  }
+}

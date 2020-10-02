@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row mb-5">
+    <div class="col-12 col-md-8 col-xl-6">
+      <h3 class="testimonials__header">Hear from our customers</h3>
+      <p class="testimonials__subheader">
+        Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Desktop -->
+<div class="testimonials__carousel-container">
+  <div class="testimonials__carousel">
+    <div>
+      <div class="testimonials__card">
+        <p class="testimonials__card-header">{{ customerTestimonials[activeTestimonial].title }}</p>
+        <p class="testimonials__card-label">{{ customerTestimonials[activeTestimonial].label }}</p>
+      </div>
+
+      <div class="d-flex mt-4">
+        <div
+          class="testimonials__previous"
+          [ngClass]="{ testimonials__disabled: activeTestimonial === 0 }"
+          (click)="onPrevious()"
+        >
+          <div><img src="assets/icons/arrow-left-black.png" /></div>
+          <span>Previous</span>
+        </div>
+        <div
+          class="testimonials__next"
+          [ngClass]="{ testimonials__disabled: activeTestimonial === customerTestimonials.length - 1 }"
+          (click)="onNext()"
+        >
+          <span>Next</span>
+          <div><img src="assets/icons/arrow-right-black.png" /></div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="customerTestimonials[activeTestimonial + 1]" class="testimonials__card">
+      <p class="testimonials__card-header">{{ customerTestimonials[activeTestimonial + 1].title }}</p>
+      <p class="testimonials__card-label">{{ customerTestimonials[activeTestimonial + 1].label }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile -->
+<div class="container d-block d-md-none">
+  <div class="section">
+    <div
+      *ngFor="let customerTestimonial of customerTestimonials; let i = index"
+      class="testimonials__card"
+      [ngClass]="{ 'mb-4': i !== customerTestimonials.length - 1 }"
+    >
+      <p class="testimonials__card-header">{{ customerTestimonial.title }}</p>
+      <p class="testimonials__card-label">{{ customerTestimonial.label }}</p>
+    </div>
+  </div>
+</div>

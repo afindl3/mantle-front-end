@@ -1,0 +1,26 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.faq {
+  // Section 2 - What happens
+  &__number {
+    @include caption1($earth-orange);
+  }
+
+  &__header2 {
+    margin-bottom: 18px;
+    padding-left: 90px;
+    border-left: 4px solid $earth-maroon;
+    @include header3($earth-maroon);
+    @include media-breakpoint-down(sm) {
+      padding-left: 40px;
+    }
+  }
+
+  &__subheader2 {
+    padding-left: 94px;
+    @include media-breakpoint-down(sm) {
+      padding-left: 44px;
+    }
+  }
+}

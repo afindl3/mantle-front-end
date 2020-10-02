@@ -1,0 +1,95 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.poster {
+  &__container {
+    padding: 20px 20px 15px 20px;
+    height: 100%;
+  }
+
+  &__container1 {
+    max-width: 247px;
+    @include media-breakpoint-down(xs) {
+      max-width: 100%;
+    }
+  }
+
+  &__container2 {
+    max-width: 355px;
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
+  }
+
+  &__background1 {
+    background: $earth-maroon;
+  }
+
+  &__background2 {
+    background: $sea-teal;
+  }
+
+  &__background3 {
+    background: $earth-brown;
+  }
+
+  &__header1 {
+    margin-bottom: 8px;
+    @include subhead2($mono-white);
+  }
+
+  &__header2 {
+    margin-bottom: 8px;
+    @include header3($mono-white);
+  }
+
+  &__category {
+    margin-bottom: 10px;
+    @include caption2($earth-orange);
+  }
+
+  &__category--1 {
+    color: $earth-orange;
+  }
+
+  &__category--2 {
+    color: $earth-yellow;
+  }
+
+  &__category--3 {
+    color: $earth-orange;
+  }
+
+  &__image-container {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &__image {
+    max-width: 100%;
+    max-height: 185px;
+  }
+
+  &__description {
+    margin-top: 31px;
+    padding-bottom: 25px;
+    margin-bottom: 27px;
+    @include copyMicro($mono-white);
+  }
+
+  &__description--1 {
+    border-bottom: 1px solid $earth-orange;
+  }
+
+  &__description--2 {
+    border-bottom: 1px solid $earth-yellow;
+  }
+
+  &__description--3 {
+    border-bottom: 1px solid $earth-orange;
+  }
+
+  &__link {
+    @include copyMicro($mono-white);
+  }
+}

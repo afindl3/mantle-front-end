@@ -1,0 +1,37 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.header {
+  &__backdrop {
+    background: $earth-maroon;
+    background-image: url('/assets/backgrounds/mesh-dark.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding-top: 220px;
+    padding-bottom: 200px;
+    margin-bottom: 80px;
+    @include media-breakpoint-down(sm) {
+      padding-top: 70px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__heading-label {
+    margin-bottom: 20px;
+    max-width: 800px;
+    @include caption2($earth-yellow);
+  }
+
+  &__heading {
+    max-width: 800px;
+    @include header1($mono-white);
+  }
+
+  &__breadcrumb {
+    margin-top: 80px;
+    @include captionSubNav($earth-brown);
+    span {
+      @include captionSubNav($mono-grey3);
+    }
+  }
+}

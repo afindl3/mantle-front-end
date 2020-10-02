@@ -1,0 +1,71 @@
+@import './_variables.scss';
+
+@mixin buttonBase($color, $background, $border) {
+  color: $color;
+  padding: 18px 20px;
+  width: 100%;
+  background-color: $background;
+  border: 2px solid $border;
+}
+
+@mixin button {
+  &__primary {
+    @include buttonBase($mono-black, $earth-orange, $earth-orange);
+  }
+
+  &__primary:hover {
+    @include buttonBase($mono-black, $earth-orange, $earth-orange);
+  }
+
+  &__primary:focus {
+    @include buttonBase($mono-black, $earth-orange, $earth-orange);
+  }
+
+  &__primary:active {
+    @include buttonBase($mono-black, $earth-orange, $earth-orange);
+  }
+
+  &__primary:disabled {
+    @include buttonBase($mono-grey1, $mono-grey4, $mono-grey4);
+  }
+
+  &__secondary {
+    @include buttonBase($earth-maroon, $mono-white, $earth-maroon);
+  }
+
+  &__secondary:hover {
+    @include buttonBase($earth-maroon, $mono-white, $earth-maroon);
+  }
+
+  &__secondary:focus {
+    @include buttonBase($earth-maroon, $mono-white, $earth-maroon);
+  }
+
+  &__secondary:active {
+    @include buttonBase($earth-maroon, $mono-white, $earth-maroon);
+  }
+
+  &__secondary:disabled {
+    @include buttonBase($mono-grey1, $mono-grey4, $mono-grey4);
+  }
+
+  &__tertiary {
+    @include buttonBase($mono-white, $earth-brown, $earth-brown);
+  }
+
+  &__tertiary:hover {
+    @include buttonBase($mono-white, $earth-brown, $earth-brown);
+  }
+
+  &__tertiary:focus {
+    @include buttonBase($mono-white, $earth-brown, $earth-brown);
+  }
+
+  &__tertiary:active {
+    @include buttonBase($mono-white, $earth-brown, $earth-brown);
+  }
+
+  &__tertiary:disabled {
+    @include buttonBase($mono-grey1, $mono-grey4, $mono-grey4);
+  }
+}

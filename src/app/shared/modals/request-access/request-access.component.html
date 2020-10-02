@@ -1,0 +1,90 @@
+<div class="access__container">
+  <img class="mb-5" src="assets/icons/logo-stacked.png" />
+
+  <form [formGroup]="form" name="requestAccess" method="post" (ngSubmit)="onSubmit()">
+    <input type="hidden" name="form-name" value="requestAccess" />
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input
+          class="access__input-text"
+          type="text"
+          name="firstName"
+          formControlName="firstName"
+          placeholder="First Name"
+          required
+        />
+      </div>
+      <div class="col-12 col-sm-6">
+        <input
+          class="access__input-text"
+          type="text"
+          name="lastName"
+          formControlName="lastName"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <input
+          class="access__input-text"
+          type="text"
+          name="company"
+          formControlName="company"
+          placeholder="Company Name"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <input class="access__input-text" type="text" name="title" formControlName="title" placeholder="Title" required />
+      </div>
+      <div class="col-12 col-sm-6">
+        <select class="access__input-select" name="role" formControlName="role">
+          <option value="" disabled>Role</option>
+          <option value="architect">Architect</option>
+          <option value="developer">Developer</option>
+          <option value="executive">Executive</option>
+          <option value="manager">Manager</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <input
+          class="access__input-text"
+          type="email"
+          name="email"
+          formControlName="email"
+          placeholder="you@example.com"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <textarea
+          class="access__input-textarea"
+          name="message"
+          formControlName="message"
+          placeholder="To accelerate access, provide some details on your intended use of Mantle BAAS."
+          required
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-6 m-auto">
+        <button class="button__primary" type="submit">Request access</button>
+      </div>
+    </div>
+  </form>
+</div>

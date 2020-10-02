@@ -1,0 +1,28 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.pricing {
+  // Section 2 - Exploration
+  &__section-label {
+    margin-top: 27px;
+    margin-left: -27px;
+    @include caption2($earth-maroon);
+  }
+
+  &__price-label {
+    margin-top: 30px;
+    @include caption2($mono-grey1);
+  }
+
+  &__price {
+    @include subhead2($mono-black);
+  }
+
+  &__info {
+    margin-top: 48px;
+    @include copyMedium($mono-grey1);
+    @include media-breakpoint-down(sm) {
+      margin-top: 24px;
+    }
+  }
+}

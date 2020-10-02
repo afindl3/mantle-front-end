@@ -1,0 +1,15 @@
+<div class="header__container">
+  <div class="header__backdrop">
+    <div class="container">
+      <label class="header__heading-label">{{ headingLabel }}</label>
+      <h1 class="header__heading">{{ heading }}</h1>
+      <p class="header__subheading">{{ subheading }}</p>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="breadcrumb1 && breadcrumb2">
+    <p class="header__breadcrumb">
+      {{ breadcrumb1 }} <span>/ {{ breadcrumb2 }}</span>
+    </p>
+  </div>
+</div>

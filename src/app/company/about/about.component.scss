@@ -1,0 +1,84 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.about {
+  // Section 2 - Work with the Mantle team
+  &__header2 {
+    margin-bottom: 21px;
+    @include subhead2($earth-maroon);
+  }
+
+  &__paragraph2 {
+    @include copyMedium($mono-grey1);
+  }
+
+  &__people-container {
+    margin-top: 66px;
+  }
+
+  &__person-container {
+    margin: 0 auto;
+    max-width: 257px;
+  }
+
+  &__headshot {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 4px;
+    @include subhead2($earth-maroon);
+  }
+
+  &__position {
+    display: block;
+    padding-bottom: 32px;
+    margin-bottom: 55px;
+    border-bottom: 1px solid $earth-orange;
+    @include caption2($earth-red);
+  }
+
+  // Index Column - Milestones
+  &__index-label {
+    margin-bottom: 28px;
+    @include caption2($earth-red);
+  }
+
+  &__index-item {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__circle--filled {
+    margin-right: 15px;
+    height: 25px;
+    width: 25px;
+    background: $earth-orange;
+    border-radius: 50%;
+  }
+
+  &__circle--empty {
+    margin-right: 15px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid $earth-orange;
+    border-radius: 50%;
+  }
+
+  &__index-year {
+    @include caption2($earth-maroon);
+  }
+
+  &__index-title {
+    margin-bottom: 16px;
+    @include subhead1($earth-maroon);
+  }
+
+  &__index-logo {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    height: 35px;
+  }
+}

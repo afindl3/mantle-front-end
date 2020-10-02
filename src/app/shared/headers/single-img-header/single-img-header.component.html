@@ -1,0 +1,35 @@
+<div class="header__backdrop1">
+  <div class="header__backdrop2">
+    <div class="container">
+      <label class="header__heading-label">{{ headingLabel }}</label>
+      <h1 class="header__heading">{{ heading }}</h1>
+      <p class="header__subheading">{{ subheading }}</p>
+    </div>
+
+    <!-- Block image only displays on mobile -->
+    <div>
+      <img class="header__heading-image" src="assets/backgrounds/athens.png" />
+    </div>
+
+    <div class="container" *ngIf="showBreadcrumb">
+      <p class="header__breadcrumbs">
+        <span class="header__breadcrumb--brown" [routerLink]="'/' + routeSegments[0]">{{ routeSegments[0] | titlecase }}</span>
+        <span>
+          <span> /</span>
+          <span
+            [ngClass]="{ 'header__breadcrumb--brown': routeSegments.length === 3 }"
+            [routerLink]="'/' + routeSegments[0] + '/' + routeSegments[1]"
+          >
+            {{ routeSegments[1] | titlecase }}</span
+          >
+        </span>
+        <span
+          *ngIf="routeSegments.length > 2"
+          [routerLink]="'/' + routeSegments[0] + '/' + routeSegments[1] + '/' + routeSegments[2]"
+        >
+          / {{ routeSegments[2] | titlecase }}</span
+        >
+      </p>
+    </div>
+  </div>
+</div>

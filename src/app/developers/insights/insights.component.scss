@@ -1,0 +1,65 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.insights {
+  &__breadcrumb-container {
+    margin-bottom: 81px;
+  }
+
+  // Section 2 - Featured blog post
+  &__card-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -200px;
+  }
+
+  &__card-content {
+    max-width: 521px;
+    padding: 32px 26px;
+    background: $mono-white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: -1px;
+  }
+
+  &__card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__card-heading {
+    @include subhead1($earth-maroon);
+  }
+
+  &__footnote-container {
+    // color: $mono-white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    margin-top: 30px;
+    border-top: 1px solid $earth-orange;
+  }
+
+  &__footnote1 {
+    @include caption2($mono-grey1);
+  }
+
+  // Section 3 - Blog + Index
+  &__index {
+    text-align: right;
+  }
+
+  &__index-label {
+    margin-bottom: 28px;
+    @include caption2($earth-red);
+  }
+
+  &__index-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+}

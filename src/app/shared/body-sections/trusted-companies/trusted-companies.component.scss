@@ -1,0 +1,14 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.trusted-companies {
+  &__header {
+    text-align: center;
+    @include caption2($earth-brown);
+    font-family: $circular-std-bold;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+}

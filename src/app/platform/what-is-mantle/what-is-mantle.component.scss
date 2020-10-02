@@ -1,0 +1,21 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.mantle {
+  // Section 2 - Mantle tech offering
+  &__label2 {
+    margin-bottom: 90px;
+    @include caption2($earth-red);
+  }
+
+  &__header2 {
+    margin-bottom: 16px;
+    @include header3($earth-maroon);
+  }
+
+  // Section 3 - Intellectual property
+  &__header3 {
+    margin-bottom: 35px;
+    @include header3($earth-maroon);
+  }
+}

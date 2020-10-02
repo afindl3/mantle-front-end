@@ -1,0 +1,14 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.privacy {
+  &__paragraph2 {
+    max-width: 646px;
+    @include copyMedium($mono-grey1);
+  }
+
+  &__header3 {
+    margin-bottom: 48px;
+    @include caption2($earth-red);
+  }
+}

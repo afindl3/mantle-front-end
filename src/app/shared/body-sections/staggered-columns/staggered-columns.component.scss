@@ -1,0 +1,63 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.staggered-columns {
+  &__header {
+    margin-bottom: 48px;
+    @include header3($earth-maroon);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subheader {
+    @include copyLarge($mono-grey1);
+  }
+
+  &__items-container {
+    width: 85%;
+    margin: -125px auto 0;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__item-container {
+    padding: 0 15px;
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
+  }
+
+  &__item-title1 {
+    margin-bottom: 28px;
+    @include header2($earth-brown);
+  }
+
+  &__item-title2 {
+    margin-bottom: 28px;
+    @include caption1($earth-brown);
+  }
+
+  &__item-body {
+    padding-bottom: 32px;
+    border-bottom: 4px solid $earth-brown;
+  }
+
+  &__col1 {
+    margin-top: 250px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__col2 {
+    margin-top: 125px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+}

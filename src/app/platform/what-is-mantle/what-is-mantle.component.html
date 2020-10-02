@@ -1,0 +1,94 @@
+<app-multi-img-header [headingLabel]="'PLATFORM'" [heading]="'What is Mantle?'" [showBreadcrumb]="false"></app-multi-img-header>
+
+<!-- Section 2 -->
+<div class="container">
+  <div class="section">
+    <label class="mantle__label2">MANTLE'S TECHNOLOGY OFFERING</label>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h2 class="mantle__header2">Audit</h2>
+        <p>Digital identity & data audit trail</p>
+        <div class="row">
+          <div class="col-6 mt-5">
+            <img src="assets/icons/network.png" />
+            <p class="mt-4">Removes redundant data duplication</p>
+          </div>
+          <div class="col-6 mt-5">
+            <img src="assets/icons/network.png" />
+            <p class="mt-4">Provides a single source of truth for dispute resolution</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 mt-5 mt-md-0">
+        <h2 class="mantle__header2">Privacy</h2>
+        <p>Advanced security and governance to enhance cybersecurity</p>
+        <div class="row">
+          <div class="col-6 mt-5">
+            <img src="assets/icons/network.png" />
+            <p class="mt-4">Reduces risks and complexities of hosting & securing data locally</p>
+          </div>
+          <div class="col-6 mt-5">
+            <img src="assets/icons/network.png" />
+            <p class="mt-4">Eliminate reliance on a single cloud provider with multi-cloud hosting</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <img src="assets/videos/use-case-video.png" width="100%" />
+</div>
+
+<!-- Section 3 -->
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h3 class="mantle__header3">Intellectual Property Edge</h3>
+        <p>Mantle holds significant value in it's novel innovation that include three trade secrets ready for patent.</p>
+        <button
+          class="button__primary d-flex justify-content-between mt-3 mt-md-5"
+          routerLink="/platform/what-makes-us-different"
+        >
+          Learn more <img src="assets/icons/arrow-diagonal-black.png" />
+        </button>
+      </div>
+      <div class="col-12 col-md-8 mt-5 mt-md-0">
+        <div class="row">
+          <div class="col-12 col-sm-4">
+            <app-blog-tile
+              [image]="'assets/images/blog-tile-zoom-1.png'"
+              [headingLabel]="'SMARTHASH'"
+              [body]="'Breakthrough in cryptography to enhance privacy in file sharing'"
+              [offset]="false"
+              [style]="1"
+            ></app-blog-tile>
+          </div>
+          <div class="col-12 col-sm-4">
+            <app-blog-tile
+              [image]="'assets/images/blog-tile-zoom-1.png'"
+              [headingLabel]="'MATRICIAL SHARDING'"
+              [body]="'Distributed storage providing enhanced governance and privacy'"
+              [offset]="false"
+              [style]="1"
+            ></app-blog-tile>
+          </div>
+          <div class="col-12 col-sm-4">
+            <app-blog-tile
+              [image]="'assets/images/blog-tile-zoom-1.png'"
+              [headingLabel]="'BLOCKCHAIN VIRTUALIZATION'"
+              [body]="'Allows for governance, scalability and interoperability of Blockchain networks.'"
+              [offset]="false"
+              [style]="1"
+            ></app-blog-tile>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-trusted-companies></app-trusted-companies>

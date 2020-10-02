@@ -1,0 +1,96 @@
+<app-mesh-header-light
+  [headingLabel]="'ABOUT US'"
+  [heading]="'Delivering Trust-as-a Service'"
+  [breadcrumb1]="'Developers'"
+  [breadcrumb2]="'About'"
+></app-mesh-header-light>
+
+<div class="container">
+  <div class="inset-section">
+    <div class="row">
+      <div class="col-12 col-md-8 col-xl-9">
+        <div class="about__blog">
+          <div>
+            <h2 class="about__header2">Work with the Mantle Team</h2>
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <br />
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+          </div>
+          <div class="about__people-container">
+            <div class="row">
+              <div
+                *ngFor="let member of contentfulService.team$ | async; let i = index"
+                class="col-12 col-md-6"
+                [ngClass]="{ 'mt-md-5': i % 2 === 1 }"
+              >
+                <div class="about__person-container">
+                  <img class="about__headshot" [src]="member.headshot.fields.file.url" />
+                  <label class="about__name">{{ member.name }}</label>
+                  <label class="about__position">{{ member.position }}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <br />
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <br />
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <br />
+            <p class="about__paragraph2">
+              Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-xl-3 mt-5 mt-md-0">
+        <label class="about__index-label">BENEFITS</label>
+        <ul>
+          <li
+            *ngFor="let milestone of contentfulService.milestones$ | async; let i = index"
+            class="about__index-item"
+            (click)="onClick(i)"
+          >
+            <div>
+              <div [ngClass]="selectedMilestone === i ? 'about__circle--filled' : 'about__circle--empty'"></div>
+            </div>
+            <div>
+              <p class="about__index-year">{{ milestone.year }}</p>
+              <p class="about__index-title">{{ milestone.title }}</p>
+              <p *ngIf="selectedMilestone === i">{{ milestone.description }}</p>
+            </div>
+          </li>
+        </ul>
+        <label class="about__index-label">AWARDRS</label>
+        <ol>
+          <li><img class="about__index-logo" src="assets/images/globalive-logo.png" /></li>
+          <li><img class="about__index-logo" src="assets/images/creative-logo.png" /></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

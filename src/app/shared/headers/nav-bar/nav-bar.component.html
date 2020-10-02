@@ -1,0 +1,80 @@
+<!-- Main navigation horizontal header -->
+<div
+  class="nav-bar__header"
+  [ngClass]="{
+    'nav-bar__secondary-background': !isPrimaryHeader && !showMobileMenu,
+    'nav-bar__header-shadow': isPrimaryHeader || showMobileMenu
+  }"
+>
+  <ul class="d-flex">
+    <li routerLink="/home">
+      <img
+        class="nav-bar__logo"
+        [src]="isPrimaryHeader || showMobileMenu ? 'assets/icons/logo-maroon.png' : 'assets/icons/logo-white.png'"
+      />
+    </li>
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="openMenuModal('platform')">
+      Platform
+    </li>
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="openMenuModal('developers')">
+      Developers
+    </li>
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/platform/pricing">
+      Pricing
+    </li>
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/about">About</li>
+  </ul>
+  <ul class="d-flex">
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/faq">FAQ</li>
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }">
+      <a class="nav-bar__link" href="https://app.mantleblockchain.com/login">Login</a>
+    </li>
+    <li class="nav-bar__button">
+      <button class="button__primary" (click)="openAccessModal()">Request Access</button>
+    </li>
+    <li class="nav-bar__menu-toggle" (click)="toggleMobileMenu()">
+      <img *ngIf="showMobileMenu" src="assets/icons/close.png" />
+      <img
+        *ngIf="!showMobileMenu"
+        [src]="isPrimaryHeader ? 'assets/icons/hamburger-menu-maroon.png' : 'assets/icons/hamburger-menu-white.png'"
+      />
+    </li>
+  </ul>
+</div>
+
+<!-- Mobile dropdown menu -->
+<div *ngIf="showMobileMenu" class="nav-bar__menu-container">
+  <ul>
+    <li
+      class="nav-bar__menu-item"
+      [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
+      (click)="openMenuModal('platform')"
+    >
+      <p>Platform</p>
+      <div>
+        <img class="mt-1" src="assets/icons/arrow-right-maroon.png" />
+      </div>
+    </li>
+    <li
+      class="nav-bar__menu-item"
+      [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
+      (click)="openMenuModal('developers')"
+    >
+      <p>Developers</p>
+      <div>
+        <img class="mt-1" src="assets/icons/arrow-right-maroon.png" />
+      </div>
+    </li>
+    <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/platform/pricing">
+      Pricing
+    </li>
+    <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/about">
+      About
+    </li>
+  </ul>
+  <div class="nav-bar__menu-button">
+    <button class="button__primary d-flex justify-content-between" (click)="openAccessModal()">
+      Request Access<img src="assets/icons/arrow-diagonal-black.png" />
+    </button>
+  </div>
+</div>

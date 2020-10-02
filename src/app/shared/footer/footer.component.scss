@@ -1,0 +1,104 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.footer {
+  &__mobile-mesh {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+      width: 100%;
+      position: absolute;
+      margin-top: calc(20vw * -1 - 37px);
+    }
+  }
+
+  &__desktop-mesh {
+    background-image: url('/assets/backgrounds/mesh-footer-desktop.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    @include media-breakpoint-down(sm) {
+      background-image: none;
+    }
+  }
+
+  &__background {
+    padding-top: 100px;
+    background: $mono-white1;
+    position: relative;
+
+    &:before {
+      background: inherit;
+      top: 0;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transform: skewY(10deg);
+      transform-origin: 100% 0;
+      z-index: -1;
+    }
+  }
+
+  // Section 1 - Ready for Mantle
+  &__section1 {
+    margin-bottom: 136px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 12px;
+    @include header3($earth-maroon);
+  }
+
+  &__subheader {
+    max-width: 554px;
+    @include copyLarge($mono-grey1);
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+    }
+  }
+
+  // Section 2 - Links
+  &__label {
+    display: block;
+    color: $earth-maroon;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    cursor: pointer;
+  }
+
+  &__link {
+    color: $mono-grey1;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__logo-container {
+    position: absolute;
+    bottom: 0;
+    @include copyMicro($mono-black);
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      margin-top: 31px;
+    }
+  }
+
+  &__email {
+    color: $mono-black;
+    text-decoration: underline;
+  }
+
+  &__footnote {
+    margin-top: 36px;
+    border-top: 1px solid $mono-grey1;
+    padding: 30px 0 37px;
+    @include copyMicro($mono-grey1);
+  }
+}
