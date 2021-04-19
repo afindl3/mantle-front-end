@@ -1,8 +1,7 @@
-<app-single-img-header
-  [heading]="'This is the brand promise'"
-  [subheading]="'Mantle delivers the benefits of blockchain, without the complexity and cost of infrastructure change.'"
-  [showBreadcrumb]="false"
-></app-single-img-header>
+<app-single-img-header [heading]="'Mantle makes it easy for businesses to benefit from blockchain.'"
+  [subheading]="'We deliver the benefits of blockchain without the costs and complexities of new technology adoption.'"
+  [showBreadcrumb]="false">
+</app-single-img-header>
 
 <app-trusted-companies></app-trusted-companies>
 
@@ -10,8 +9,9 @@
 <div class="container">
   <div class="row">
     <div class="home__container3 col-12 col-lg-5 col-xl-4">
-      <h2 class="home__header3">Mantle Empowers & Protects Businesses</h2>
-      <p class="home__paragraph3">Mantle's technology offering extends businesses' data audit & privacy capabilities.</p>
+      <h2 class="home__header3">Mantle Enables Businesses to Benefit from Emerging Technologies </h2>
+      <p class="home__paragraph3">Mantle's technology offering extends businesses' data audit & privacy capabilities.
+      </p>
       <button class="button__primary home__button3" routerLink="/platform/what-is-mantle">
         Learn more <img src="assets/icons/arrow-diagonal-black.png" />
       </button>
@@ -23,31 +23,16 @@
 
     <div class="home__posters-container">
       <div class="home__poster-container mb-3 mb-md-0">
-        <app-poster
-          [title]="'Cross Cloud Storage'"
-          [category]="'PRIVACY'"
-          [style]="1"
-          [link]="'/platform/privacy/cross-cloud-storage'"
-          [size]="1"
-        ></app-poster>
+        <app-poster [title]="'Advanced Cybersecurity'" [category]="'PRIVACY'" [style]="1"
+          [link]="'/platform/privacy/cross-cloud-storage'" [size]="1"></app-poster>
       </div>
       <div class="home__poster-container mb-3 mb-md-0 ml-md-4">
-        <app-poster
-          [title]="'Agreement Validation'"
-          [category]="'AUDITING'"
-          [style]="2"
-          [link]="'/platform/auditing/agreement-validation'"
-          [size]="1"
-        ></app-poster>
+        <app-poster [title]="'Privacy & Data Compliance'" [category]="'AUDITING'" [style]="2"
+          [link]="'/platform/auditing/agreement-validation'" [size]="1"></app-poster>
       </div>
       <div class="home__poster-container ml-md-4">
-        <app-poster
-          [title]="'Distributed Identity'"
-          [category]="'PRIVACY'"
-          [style]="3"
-          [link]="'/platform/privacy/distributed-identity'"
-          [size]="1"
-        ></app-poster>
+        <app-poster [title]="'Future Proof Architecture'" [category]="'PRIVACY'" [style]="3"
+          [link]="'/platform/privacy/distributed-identity'" [size]="1"></app-poster>
       </div>
     </div>
   </div>
@@ -58,36 +43,31 @@
   <div class="container">
     <h3 class="home__header4">Mantle's platform makes every developer a blockchain developer.</h3>
     <p class="home__paragraph4">
-      Developers can focus on their front-end application development while Mantle's technology infrastructure powers all
+      Developers can focus on their front-end application development while Mantle's technology infrastructure powers
+      all
       blockchain and data storage needs.
     </p>
     <div class="row">
       <div class="col-12 col-md-4">
-        <p
-          class="home__option"
+        <p class="home__option"
           [ngClass]="selectedSection === 1 ? 'home__option--selected' : 'home__option--unselected'"
-          (click)="selectedSection = 1"
-        >
+          (click)="selectedSection = 1">
           <img *ngIf="selectedSection === 1" class="home__selected-icon" src="assets/icons/circle-gold.png" />
           <span class="home__option-label">LOREM IPSUM</span>
         </p>
       </div>
       <div class="col-12 col-md-4">
-        <p
-          class="home__option"
+        <p class="home__option"
           [ngClass]="selectedSection === 2 ? 'home__option--selected' : 'home__option--unselected'"
-          (click)="selectedSection = 2"
-        >
+          (click)="selectedSection = 2">
           <img *ngIf="selectedSection === 2" class="home__selected-icon" src="assets/icons/circle-gold.png" />
           <span class="home__option-label">LOREM IPSUM</span>
         </p>
       </div>
       <div class="col-12 col-md-4">
-        <p
-          class="home__option"
+        <p class="home__option"
           [ngClass]="selectedSection === 3 ? 'home__option--selected' : 'home__option--unselected'"
-          (click)="selectedSection = 3"
-        >
+          (click)="selectedSection = 3">
           <img *ngIf="selectedSection === 3" class="home__selected-icon" src="assets/icons/circle-gold.png" />
           <span class="home__option-label">LOREM IPSUM</span>
         </p>
@@ -96,7 +76,9 @@
     <div class="home__image-container">
       <img class="home__image" src="assets/images/code.png" />
       <div class="d-flex">
-        <div class="home__image-footer--left"><p>Help</p></div>
+        <div class="home__image-footer--left">
+          <p>Help</p>
+        </div>
         <div class="home__image-footer--right">
           <img src="assets/icons/play.png" />
           <p>Run</p>
@@ -114,7 +96,8 @@
         <div class="col-12 col-md-6">
           <h4 class="home__header5">Future-proof Blockchain Architecture</h4>
           <p class="home__paragraph5">
-            Comitting to a single blockchain can pose many issues in the future. Mantle's blockchain agnostic apprroach ensures
+            Comitting to a single blockchain can pose many issues in the future. Mantle's blockchain agnostic apprroach
+            ensures
             that you cann experience continuity in your business.
           </p>
         </div>
@@ -131,18 +114,10 @@
   <a class="home__link" routerLink="/developers/insights">INSIGHTS FROM MANTLE ></a>
   <div class="inset-section">
     <div class="row">
-      <div
-        *ngFor="let article of contentfulService.blog$ | async | slice: 0:2; let i = index"
-        class="col-12 col-md-6"
-        [ngClass]="{ 'mb-3 mb-md-0': i === 0 }"
-      >
-        <app-blog-tile
-          [image]="article.image.fields.file.url"
-          [heading]="article.title"
-          [footnote1]="article.category"
-          [footnote2]="article.date.split('T')[0]"
-          [offset]="true"
-        ></app-blog-tile>
+      <div *ngFor="let article of contentfulService.blog$ | async | slice: 0:2; let i = index" class="col-12 col-md-6"
+        [ngClass]="{ 'mb-3 mb-md-0': i === 0 }">
+        <app-blog-tile [image]="article.image.fields.file.url" [heading]="article.title" [footnote1]="article.category"
+          [footnote2]="article.date.split('T')[0]" [offset]="true"></app-blog-tile>
       </div>
     </div>
   </div>

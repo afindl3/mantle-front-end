@@ -23,11 +23,12 @@ export class AppComponent implements OnInit {
   skipConstructionCheck = false;
 
   constructor(public contentfulService: ContentfulService, private route: ActivatedRoute, private modalService: NgbModal) {
-    this.route.queryParams.subscribe((params) => {
-      if (params.unlockMtlSiteKey === 'true') {
-        this.skipConstructionCheck = true;
-      }
-    });
+    // this.route.queryParams.subscribe((params) => {
+    //   if (params.skipConstructionCheck === 'true') {
+    //     this.skipConstructionCheck = true;
+    //   }
+    // });
+    this.skipConstructionCheck = true;
   }
 
   ngOnInit() {

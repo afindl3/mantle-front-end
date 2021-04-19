@@ -1,9 +1,5 @@
-<!-- <ng-container
-  *ngIf="!(contentfulService.environmentVariables$ | async).isUnderConstruction || skipConstructionCheck; else constructionPage"
-> -->
 <ng-container
-  *ngIf="skipConstructionCheck; else emptyPage"
->
+  *ngIf="!(contentfulService.environmentVariables$ | async).isUnderConstruction || skipConstructionCheck; else constructionPage">
   <div class="app-background">
     <app-nav-bar></app-nav-bar>
 
@@ -13,20 +9,13 @@
   </div>
 </ng-container>
 
-<ng-template #emptyPage>
-  <div></div>
-</ng-template>
-
 <!-- TODO - Below can be be deleted after construction page is turned off -->
 <ng-template #constructionPage>
   <!-- Main navigation horizontal header -->
   <div class="nav-bar__header" [ngClass]="showMobileMenu ? 'nav-bar__header-shadow' : 'nav-bar__secondary-background'">
     <div>
-      <img
-        routerLink="/home"
-        class="nav-bar__logo"
-        [src]="showMobileMenu ? 'assets/icons/logo-maroon.png' : 'assets/icons/logo-white.png'"
-      />
+      <img routerLink="/home" class="nav-bar__logo"
+        [src]="showMobileMenu ? 'assets/icons/logo-maroon.png' : 'assets/icons/logo-white.png'" />
     </div>
 
     <ul class="d-flex">
