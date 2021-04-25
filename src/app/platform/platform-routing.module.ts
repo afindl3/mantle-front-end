@@ -14,21 +14,16 @@ const routes: Routes = [
         component: WhatIsMantleComponent,
       },
       {
-        path: 'what-makes-us-different',
-        loadChildren: () =>
-          import('./what-makes-us-different/what-makes-us-different.module').then((m) => m.WhatMakesUsDifferentModule),
+        path: 'advanced-cybersecurity',
+        loadChildren: () => import('./advanced-cybersecurity/advanced-cybersecurity.module').then((m) => m.AdvancedCybersecurityModule),
       },
       {
-        path: 'privacy',
-        loadChildren: () => import('./privacy/privacy.module').then((m) => m.PrivacyModule),
+        path: 'privacy-data-compliance',
+        loadChildren: () => import('./privacy-data/privacy-data.module').then((m) => m.PrivacyDataModule),
       },
       {
-        path: 'auditing',
-        loadChildren: () => import('./auditing/auditing.module').then((m) => m.AuditingModule),
-      },
-      {
-        path: 'case-studies',
-        loadChildren: () => import('./case-studies/case-studies.module').then((m) => m.CaseStudiesModule),
+        path: 'future-proof-architecture',
+        loadChildren: () => import('./future-proof/future-proof.module').then((m) => m.FutureProofModule),
       },
       {
         path: 'pricing',
@@ -47,4 +42,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PlatformRoutingModule {}
+export class PlatformRoutingModule { }

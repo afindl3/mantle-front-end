@@ -2,13 +2,12 @@
 @import 'src/styles/base/_typography';
 
 .about {
-  // Section 2 - Work with the Mantle team
-  &__header2 {
-    margin-bottom: 21px;
-    @include subhead2($earth-maroon);
+  // Section 1
+  &__container1 {
+    margin-bottom: 150px;
   }
 
-  &__paragraph2 {
+  &__paragraph1 {
     @include copyMedium($mono-grey1);
   }
 
@@ -40,7 +39,7 @@
     @include caption2($earth-red);
   }
 
-  // Index Column - Milestones
+  // Section 2 - Milestones
   &__index-label {
     margin-bottom: 28px;
     @include caption2($earth-red);

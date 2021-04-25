@@ -7,9 +7,11 @@
     </div>
   </div>
 
-  <div class="container" *ngIf="breadcrumb1 && breadcrumb2">
-    <p class="header__breadcrumb">
-      {{ breadcrumb1 }} <span>/ {{ breadcrumb2 }}</span>
+  <div class="container" *ngIf="routeSegments && routeSegments[0] && routeSegments[0]">
+    <p class="header__breadcrumbs">
+      <span class="header__breadcrumb--brown" [routerLink]="'/' + routeSegments[0]">{{ routeSegments[0] | titlecase
+        }} </span>
+      <span [routerLink]="'/' + routeSegments[0] + '/' + routeSegments[1]">/ {{ routeSegments[1] | titlecase }}</span>
     </p>
   </div>
 </div>

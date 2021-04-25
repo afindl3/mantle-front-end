@@ -3,7 +3,6 @@ import { Router, NavigationEnd } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { NavExtendedComponent } from '../../modals/nav-extended/nav-extended.component';
 import { RequestAccessComponent } from '../../modals/request-access/request-access.component';
 
 @Component({
@@ -16,7 +15,7 @@ export class NavBarComponent implements OnInit {
   isPrimaryHeader = true; // Light header
   showMobileMenu = false;
 
-  constructor(private modalService: NgbModal, private router: Router) {}
+  constructor(private modalService: NgbModal, private router: Router) { }
 
   ngOnInit(): void {
     this.routeSubscription = this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
@@ -29,19 +28,9 @@ export class NavBarComponent implements OnInit {
     this.showMobileMenu = !this.showMobileMenu;
   }
 
-  openMenuModal(section: string): void {
-    const modalRef = this.modalService.open(NavExtendedComponent);
-    modalRef.componentInstance.extendedMenuType = section;
-    modalRef.result
-      .then((result) => {
-        // Result is either 'close' or 'back'
-        if (result === 'close') {
-          this.showMobileMenu = false;
-        }
-      })
-      .catch((dismissed) => {
-        this.showMobileMenu = false;
-      });
+  onClick(route: string) {
+    this.showMobileMenu = false;
+    this.router.navigate([route], { queryParamsHandling: 'merge' });
   }
 
   openAccessModal() {

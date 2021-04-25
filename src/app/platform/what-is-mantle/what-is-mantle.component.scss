@@ -2,20 +2,31 @@
 @import 'src/styles/base/_typography';
 
 .mantle {
-  // Section 2 - Mantle tech offering
-  &__label2 {
-    margin-bottom: 90px;
-    @include caption2($earth-red);
-  }
-
-  &__header2 {
-    margin-bottom: 16px;
-    @include header3($earth-maroon);
-  }
-
-  // Section 3 - Intellectual property
+  // Section 3 - What makes Mantle Special?
   &__header3 {
-    margin-bottom: 35px;
+    margin-bottom: 48px;
+    text-align: center;
     @include header3($earth-maroon);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subheader3 {
+    max-width: 430px;
+    @include copyLarge($mono-grey1);
+  }
+
+  &__title3 {
+    margin-bottom: 24px;
+    @include subhead2($earth-maroon);
+  }
+
+  &__button3 {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    max-width: 200px;
+    margin-bottom: 50px;
   }
 }

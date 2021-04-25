@@ -1,31 +1,30 @@
 <!-- Main navigation horizontal header -->
-<div
-  class="nav-bar__header"
-  [ngClass]="{
+<div class="nav-bar__header" [ngClass]="{
     'nav-bar__secondary-background': !isPrimaryHeader && !showMobileMenu,
     'nav-bar__header-shadow': isPrimaryHeader || showMobileMenu
-  }"
->
+  }">
   <ul class="d-flex">
     <li routerLink="/home">
-      <img
-        class="nav-bar__logo"
-        [src]="isPrimaryHeader || showMobileMenu ? 'assets/icons/logo-maroon.png' : 'assets/icons/logo-white.png'"
-      />
+      <img class="nav-bar__logo"
+        [src]="isPrimaryHeader || showMobileMenu ? 'assets/icons/logo-maroon.png' : 'assets/icons/logo-white.png'" />
     </li>
-    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="openMenuModal('platform')">
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
+      routerLink="/platform/what-is-mantle">
       Platform
     </li>
-    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" (click)="openMenuModal('developers')">
-      Developers
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }">
+      <a class="nav-bar__link" href="https://developer.mantleblockchain.com/docs">Developers</a>
     </li>
-    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/platform/pricing">
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
+      routerLink="/platform/pricing">
       Pricing
     </li>
-    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/about">About</li>
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/about">
+      About</li>
   </ul>
   <ul class="d-flex">
-    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/faq">FAQ</li>
+    <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/faq">FAQ
+    </li>
     <li class="nav-bar__item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }">
       <a class="nav-bar__link" href="https://app.mantleblockchain.com/login">Login</a>
     </li>
@@ -34,10 +33,8 @@
     </li>
     <li class="nav-bar__menu-toggle" (click)="toggleMobileMenu()">
       <img *ngIf="showMobileMenu" src="assets/icons/close.png" />
-      <img
-        *ngIf="!showMobileMenu"
-        [src]="isPrimaryHeader ? 'assets/icons/hamburger-menu-maroon.png' : 'assets/icons/hamburger-menu-white.png'"
-      />
+      <img *ngIf="!showMobileMenu"
+        [src]="isPrimaryHeader ? 'assets/icons/hamburger-menu-maroon.png' : 'assets/icons/hamburger-menu-white.png'" />
     </li>
   </ul>
 </div>
@@ -45,30 +42,19 @@
 <!-- Mobile dropdown menu -->
 <div *ngIf="showMobileMenu" class="nav-bar__menu-container">
   <ul>
-    <li
-      class="nav-bar__menu-item"
-      [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
-      (click)="openMenuModal('platform')"
-    >
+    <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
+      (click)="onClick('/platform/what-is-mantle')">
       <p>Platform</p>
-      <div>
-        <img class="mt-1" src="assets/icons/arrow-right-maroon.png" />
-      </div>
     </li>
-    <li
-      class="nav-bar__menu-item"
-      [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
-      (click)="openMenuModal('developers')"
-    >
-      <p>Developers</p>
-      <div>
-        <img class="mt-1" src="assets/icons/arrow-right-maroon.png" />
-      </div>
+    <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }">
+      <p><a class="nav-bar__link" href="https://developer.mantleblockchain.com/docs">Developers</a></p>
     </li>
-    <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/platform/pricing">
+    <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
+      (click)="onClick('/platform/pricing')">
       Pricing
     </li>
-    <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }" routerLink="/company/about">
+    <li class="nav-bar__menu-item" [ngClass]="{ 'nav-bar__secondary-color': !isPrimaryHeader }"
+      (click)="onClick('/platform/about')">
       About
     </li>
   </ul>

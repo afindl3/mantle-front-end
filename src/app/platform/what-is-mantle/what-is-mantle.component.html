@@ -1,94 +1,72 @@
-<app-multi-img-header [headingLabel]="'PLATFORM'" [heading]="'What is Mantle?'" [showBreadcrumb]="false"></app-multi-img-header>
+<app-single-img-header [headingLabel]="'PLATFORM'" [heading]="'What is Mantle?'"
+  [subheading]="'Mantle is a plug & play solution for businesses to adopt blockchain technology. We make blockchain adoption fast and simple for any business.'"
+  [showBreadcrumb]="false">
+</app-single-img-header>
 
-<!-- Section 2 -->
-<div class="container">
-  <div class="section">
-    <label class="mantle__label2">MANTLE'S TECHNOLOGY OFFERING</label>
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <h2 class="mantle__header2">Audit</h2>
-        <p>Digital identity & data audit trail</p>
-        <div class="row">
-          <div class="col-6 mt-5">
-            <img src="assets/icons/network.png" />
-            <p class="mt-4">Removes redundant data duplication</p>
-          </div>
-          <div class="col-6 mt-5">
-            <img src="assets/icons/network.png" />
-            <p class="mt-4">Provides a single source of truth for dispute resolution</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 mt-5 mt-md-0">
-        <h2 class="mantle__header2">Privacy</h2>
-        <p>Advanced security and governance to enhance cybersecurity</p>
-        <div class="row">
-          <div class="col-6 mt-5">
-            <img src="assets/icons/network.png" />
-            <p class="mt-4">Reduces risks and complexities of hosting & securing data locally</p>
-          </div>
-          <div class="col-6 mt-5">
-            <img src="assets/icons/network.png" />
-            <p class="mt-4">Eliminate reliance on a single cloud provider with multi-cloud hosting</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section">
-  <img src="assets/videos/use-case-video.png" width="100%" />
-</div>
+<app-split-subheader [heading]="'Mantle saves businesses the time and money. '"
+  [subheading]="'Mantle has conducted years of R&D to build a flexible platform to extract business benefits from blockchain and other emerging technologies.'">
+</app-split-subheader>
 
 <!-- Section 3 -->
 <div class="container">
   <div class="section">
-    <div class="row">
-      <div class="col-12 col-md-4">
-        <h3 class="mantle__header3">Intellectual Property Edge</h3>
-        <p>Mantle holds significant value in it's novel innovation that include three trade secrets ready for patent.</p>
-        <button
-          class="button__primary d-flex justify-content-between mt-3 mt-md-5"
-          routerLink="/platform/what-makes-us-different"
-        >
-          Learn more <img src="assets/icons/arrow-diagonal-black.png" />
+    <div class="row mb-5">
+      <div class="col-12">
+        <h3 class="mantle__header3">What makes Mantle Special?</h3>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-12 col-md-6 text-right mr-5">
+        <img src="assets/images/shape-3.png" />
+      </div>
+      <div class="col-12 col-md-5">
+        <h4 class="mantle__title3">Advanced Cybersecurity</h4>
+        <p class="mb-3">Businesses are constantly utilizing data by sharing it internally and externally. Businesses
+          currently do not
+          have sufficient cybersecurity controls to prevent data leaks.</p>
+        <p>Mantle seamlessly integrates into the back-end of our client’s existing software, extending their
+          cybersecurity features to a level that ensures confidence.</p>
+        <button class="mantle__button3 button__secondary" routerLink="/platform/advanced-cybersecurity">
+          Learn more <img src="assets/icons/arrow-diagonal-maroon.png" />
         </button>
       </div>
-      <div class="col-12 col-md-8 mt-5 mt-md-0">
-        <div class="row">
-          <div class="col-12 col-sm-4">
-            <app-blog-tile
-              [image]="'assets/images/blog-tile-zoom-1.png'"
-              [headingLabel]="'SMARTHASH'"
-              [body]="'Breakthrough in cryptography to enhance privacy in file sharing'"
-              [offset]="false"
-              [style]="1"
-            ></app-blog-tile>
-          </div>
-          <div class="col-12 col-sm-4">
-            <app-blog-tile
-              [image]="'assets/images/blog-tile-zoom-1.png'"
-              [headingLabel]="'MATRICIAL SHARDING'"
-              [body]="'Distributed storage providing enhanced governance and privacy'"
-              [offset]="false"
-              [style]="1"
-            ></app-blog-tile>
-          </div>
-          <div class="col-12 col-sm-4">
-            <app-blog-tile
-              [image]="'assets/images/blog-tile-zoom-1.png'"
-              [headingLabel]="'BLOCKCHAIN VIRTUALIZATION'"
-              [body]="'Allows for governance, scalability and interoperability of Blockchain networks.'"
-              [offset]="false"
-              [style]="1"
-            ></app-blog-tile>
-          </div>
-        </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-12 col-md-4 text-right mr-5">
+        <img src="assets/images/shape-2.png" />
+      </div>
+      <div class="col-12 col-md-5">
+        <h4 class="mantle__title3">Privacy & Data Compliance</h4>
+        <p class="mb-3">Today, businesses store their valuable business and client data physically on premise or in the
+          cloud. Both
+          methods become data honeypots vulnerable to breaches and ransomware attacks.</p>
+        <p>We enhance our client’s privacy protocols to world-leading standards, ensuring they stay ahead in the
+          ever-evolving world of data compliance and regulatory change. With Mantle’s unique cross-cloud decentralized
+          mantle, we keep companies safe from cyberattacks and data theft.</p>
+        <button class="mantle__button3 button__secondary" routerLink="/platform/privacy-data-compliance">
+          Learn more <img src="assets/icons/arrow-diagonal-maroon.png" />
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6 text-right mr-5">
+        <img src="assets/images/shape-1.png" />
+      </div>
+      <div class="col-12 col-md-5">
+        <h4 class="mantle__title3">Future Proof Achitecture</h4>
+        <p class="mb-3">Businesses have not yet effectively utilized blockchain. Mantle is built to take away the pains
+          of new
+          technology adoption, letting you focus on your core business offerings.</p>
+        <p>We enable companies to bypass the costly research and development stages, allowing them to benefit from
+          blockchain without committing to a single infrastructure. Mantle is built to stay flexible and ready for the
+          future.</p>
+        <button class="mantle__button3 button__secondary" routerLink="/platform/future-proof-architecture">
+          Learn more <img src="assets/icons/arrow-diagonal-maroon.png" />
+        </button>
       </div>
     </div>
   </div>
 </div>
-
-<app-trusted-companies></app-trusted-companies>

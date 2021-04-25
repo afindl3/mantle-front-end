@@ -36,10 +36,12 @@
     @include copyMedium($mono-black);
   }
 
-  &__breadcrumb {
-    @include captionSubNav($earth-brown);
-    span {
+  &__breadcrumbs {
+
       @include captionSubNav($mono-grey3);
-    }
+  }
+
+  &__breadcrumb--brown {
+    @include captionSubNav($earth-brown);
   }
 }

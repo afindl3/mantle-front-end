@@ -14,7 +14,6 @@ import { FooterComponent } from './footer/footer.component';
 import { MeshHeaderDarkComponent } from './headers/mesh-header-dark/mesh-header-dark.component';
 import { MeshHeaderLightComponent } from './headers/mesh-header-light/mesh-header-light.component';
 import { NavBarComponent } from './headers/nav-bar/nav-bar.component';
-import { NavExtendedComponent } from './modals/nav-extended/nav-extended.component';
 import { MultiImgHeaderComponent } from './headers/multi-img-header/multi-img-header.component';
 import { PosterComponent } from './body-subsections/poster/poster.component';
 import { RequestAccessComponent } from './modals/request-access/request-access.component';
@@ -38,7 +37,6 @@ import { TrustedCompaniesComponent } from './body-sections/trusted-companies/tru
     MeshHeaderLightComponent,
     MultiImgHeaderComponent,
     NavBarComponent,
-    NavExtendedComponent,
     PosterComponent,
     RequestAccessComponent,
     SingleColumnComponent,
@@ -70,4 +68,4 @@ import { TrustedCompaniesComponent } from './body-sections/trusted-companies/tru
     TrustedCompaniesComponent,
   ],
 })
-export class SharedModule {}
+export class SharedModule { }

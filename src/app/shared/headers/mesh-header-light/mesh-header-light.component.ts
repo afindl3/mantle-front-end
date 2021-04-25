@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { RoutingService } from '../../../services/routing/routing.service';
 
 @Component({
   selector: 'app-mesh-header-light',
@@ -9,10 +10,12 @@ export class MeshHeaderLightComponent implements OnInit {
   @Input() headingLabel: string;
   @Input() heading: string;
   @Input() subheading: string;
-  @Input() breadcrumb1: string;
-  @Input() breadcrumb2: string;
+  @Input() showBreadcrumb: boolean;
+  routeSegments: string[];
 
-  constructor() {}
+  constructor(private routingService: RoutingService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.routeSegments = this.routingService.getRouteSegments();
+  }
 }

@@ -2,8 +2,14 @@
 @import 'src/styles/base/_typography';
 
 .split-subheader {
+  &__background {
+    background-color: $mono-white1;
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
+
   &__header {
-    @include header3($earth-maroon);
+    @include header3($mono-grey1);
     @include media-breakpoint-down(sm) {
       margin-bottom: 24px;
     }
