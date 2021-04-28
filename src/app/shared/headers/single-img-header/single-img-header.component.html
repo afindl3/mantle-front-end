@@ -2,7 +2,8 @@
   <div class="header__backdrop2">
     <div class="container">
       <label *ngIf="headingLabel" class="header__heading-label">{{ headingLabel }}</label>
-      <h1 class="header__heading">{{ heading }}</h1>
+      <h1 class="header__heading"
+        [ngClass]="{ 'header__heading--top': !headingLabel, 'header__heading--bottom': !subheading }">{{ heading }}</h1>
       <p *ngIf="subheading" class="header__subheading">{{ subheading }}</p>
     </div>
 

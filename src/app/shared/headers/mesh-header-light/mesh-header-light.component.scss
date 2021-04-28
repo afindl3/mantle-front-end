@@ -12,6 +12,7 @@
   &__backdrop {
     background-image: url('/assets/backgrounds/mesh-light.png');
     background-repeat: no-repeat;
+    background-size: 100% auto;
     background-position: right top;
     padding-top: 246px;
     @include media-breakpoint-down(sm) {
@@ -33,6 +34,7 @@
 
   &__subheading {
     max-width: 636px;
+    margin-bottom: 40px;
     @include copyMedium($mono-black);
   }
 

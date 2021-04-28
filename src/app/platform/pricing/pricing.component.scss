@@ -3,6 +3,19 @@
 
 .pricing {
   // Section 2 - Exploration
+  &__container {
+    margin-bottom: 350px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 250px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 130px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 100px;
+    }
+  }
+
   &__section-label {
     margin-top: 27px;
     margin-left: -27px;

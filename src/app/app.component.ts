@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ContentfulService } from './services/contentful/contentful.service';
 import { RequestAccessComponent } from './shared/modals/request-access/request-access.component';
@@ -20,16 +19,8 @@ export class AppComponent implements OnInit {
     subtitle: 'Please fill out the form below and we will get back to you as soon as we can.',
     type: ContactFormType.ContactUs,
   };
-  skipConstructionCheck = false;
 
-  constructor(public contentfulService: ContentfulService, private route: ActivatedRoute, private modalService: NgbModal) {
-    // this.route.queryParams.subscribe((params) => {
-    //   if (params.skipConstructionCheck === 'true') {
-    //     this.skipConstructionCheck = true;
-    //   }
-    // });
-    this.skipConstructionCheck = true;
-  }
+  constructor(public contentfulService: ContentfulService, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.contentfulService.fetchEnvironmentVariables();

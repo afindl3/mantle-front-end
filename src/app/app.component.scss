@@ -4,37 +4,8 @@
 .app-background {
   background-image: url('/assets/backgrounds/stripes.png');
   position: sticky;
-}
-
-// TODO - Below can be be deleted after construction page is turned off
-.construction {
-  &__background {
-    background: $earth-maroon;
-    height: calc(100vh - 92px);
-    padding-top: 150px;
-    background-image: url('/assets/backgrounds/construction-mesh-desktop.png');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    @include media-breakpoint-down(xs) {
-      background-size: 100% auto;
-      background-image: url('/assets/backgrounds/construction-mesh-mobile.png');
-    }
-  }
-
-  &__heading-label {
-    margin-bottom: 4px;
-    @include caption2($earth-yellow);
-  }
-
-  &__heading {
-    @include header1($mono-white);
-  }
-
-  &__subheading {
-    margin-top: 16px;
-    margin-bottom: 32px;
-    @include copyMedium($mono-white);
-  }
+  background-repeat: repeat-y;
+  background-size: 100% auto;
 }
 
 .nav-bar {

@@ -5,12 +5,13 @@
   &__backdrop1 {
     background-image: url('/assets/backgrounds/multi-shape.png');
     background-repeat: no-repeat;
-    background-size: 60%;
-    background-position: center top;
+    background-position: 70% top;
     padding-top: 130px;
     margin-bottom: 200px;
     @include media-breakpoint-down(md) {
       padding-top: 75px;
+      background-size: 60%;
+      margin-bottom: 120px;
     }
     @include media-breakpoint-down(sm) {
       background-size: 100%;
@@ -23,8 +24,10 @@
   &__backdrop2 {
     background-image: url('/assets/backgrounds/learning.png');
     background-repeat: no-repeat;
-    background-size: 55%;
     background-position: right center;
+    @include media-breakpoint-down(md) {
+      background-size: 55%;
+    }
     @include media-breakpoint-down(sm) {
       background-image: none;
     }
@@ -40,7 +43,7 @@
   }
 
   &__heading-label {
-    padding-top: 150px;
+    padding-top: 350px;
     margin-bottom: 20px;
     max-width: 636px;
     @include caption2($earth-red);
