@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { RoutingService } from '../../../services/routing/routing.service';
 
 @Component({
   selector: 'app-mesh-header-dark',
@@ -8,8 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MeshHeaderDarkComponent implements OnInit {
   @Input() headingLabel: string;
   @Input() heading: string;
+  @Input() subheading: string;
+  routeSegments: string[];
 
-  constructor() {}
+  constructor(private routingService: RoutingService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.routeSegments = this.routingService.getRouteSegments();
+  }
 }

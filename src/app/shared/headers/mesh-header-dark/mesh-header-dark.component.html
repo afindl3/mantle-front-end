@@ -2,5 +2,14 @@
   <div class="container">
     <label class="header__heading-label">{{ headingLabel }}</label>
     <h1 class="header__heading">{{ heading }}</h1>
+    <p *ngIf="subheading" class="header__subheading">{{ subheading }}</p>
   </div>
+</div>
+
+<div class="container" *ngIf="routeSegments && routeSegments[0] && routeSegments[1]">
+  <p class="header__breadcrumbs">
+    <span class="header__breadcrumb--brown" [routerLink]="'/' + routeSegments[0]">{{ routeSegments[0] | titlecase
+      }} </span>
+    <span [routerLink]="'/' + routeSegments[0] + '/' + routeSegments[1]">/ {{ routeSegments[1] | titlecase }}</span>
+  </p>
 </div>

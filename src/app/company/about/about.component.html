@@ -1,70 +1,68 @@
-<app-mesh-header-light [headingLabel]="'ABOUT US'"
-  [heading]="'Delivering the Business Benefits of Emerging Technologies'" [showBreadcrumb]="true">
-</app-mesh-header-light>
+<app-mesh-header-dark [headingLabel]="'ABOUT US'"
+  [heading]="'Delivering the Business Benefits of Emerging Technologies'">
+</app-mesh-header-dark>
 
 <div class="container">
-  <div class="inset-section">
-    <div class="row">
-      <!-- Section 1 -->
-      <div class="col-12 col-md-8 col-xl-9">
-        <div class="about__container1">
-          <div>
-            <p class="about__paragraph1">
-              Mantle was founded in 2017 with a mission to enable traditional businesses the ability to seamlessly adopt
-              blockchain technology. Mantle is built to utilize breakthroughs in blockchain and cryptography, while
-              incorporating innovations in
-              cross-cloud data storage.
-            </p>
-            <br />
-            <p class="about__paragraph1">
-              We are a team of technologists and entrepreneurs who have successfully built and sold multiple software
-              companies in the technology industry. Our head office is located in Montreal, Canada with personnel around
-              the world, notably in Strasbourg, France where we have recently expanded.
-            </p>
-          </div>
-          <div class="about__people-container">
-            <div class="row">
-              <div *ngFor="let member of contentfulService.team$ | async; let i = index" class="col-12 col-md-6"
-                [ngClass]="{ 'mt-md-5': i % 2 === 1 }">
-                <div class="about__person-container">
-                  <img class="about__headshot" [src]="member.headshot.fields.file.url" />
-                  <label class="about__name">{{ member.name }}</label>
-                  <label class="about__position">{{ member.position }}</label>
-                </div>
+  <div class="row">
+    <!-- Section 1 -->
+    <div class="col-12 col-md-8 col-xl-9">
+      <div class="about__container1">
+        <div>
+          <p class="about__paragraph1">
+            Mantle was founded in 2017 with a mission to enable traditional businesses the ability to seamlessly adopt
+            blockchain technology. Mantle is built to utilize breakthroughs in blockchain and cryptography, while
+            incorporating innovations in
+            cross-cloud data storage.
+          </p>
+          <br />
+          <p class="about__paragraph1">
+            We are a team of technologists and entrepreneurs who have successfully built and sold multiple software
+            companies in the technology industry. Our head office is located in Montreal, Canada with personnel around
+            the world, notably in Strasbourg, France where we have recently expanded.
+          </p>
+        </div>
+        <div class="about__people-container">
+          <div class="row">
+            <div *ngFor="let member of contentfulService.team$ | async; let i = index" class="col-12 col-md-6"
+              [ngClass]="{ 'mt-md-5': i % 2 === 1 }">
+              <div class="about__person-container">
+                <img class="about__headshot" [src]="member.headshot.fields.file.url" />
+                <label class="about__name">{{ member.name }}</label>
+                <label class="about__position">{{ member.position }}</label>
               </div>
             </div>
           </div>
-          <div>
-            <p class="about__paragraph1">
-              We are looking to grow the Mantle team with ambitious technology and innovation enthusiasts who are
-              passionate about bringing SaaS products to new markets.
-            </p>
-          </div>
+        </div>
+        <div>
+          <p class="about__paragraph1">
+            We are looking to grow the Mantle team with ambitious technology and innovation enthusiasts who are
+            passionate about bringing SaaS products to new markets.
+          </p>
         </div>
       </div>
+    </div>
 
-      <!-- Section 2 - Milestons -->
-      <div class="col-12 col-md-4 col-xl-3 mt-5 mt-md-0">
-        <label class="about__index-label">BENEFITS</label>
-        <ul>
-          <li *ngFor="let milestone of contentfulService.milestones$ | async; let i = index" class="about__index-item"
-            (click)="onClick(i)">
-            <div>
-              <div [ngClass]="selectedMilestone === i ? 'about__circle--filled' : 'about__circle--empty'"></div>
-            </div>
-            <div>
-              <p class="about__index-year">{{ milestone.year }}</p>
-              <p class="about__index-title">{{ milestone.title }}</p>
-              <p *ngIf="selectedMilestone === i">{{ milestone.description }}</p>
-            </div>
-          </li>
-        </ul>
-        <label class="about__index-label">AWARDRS</label>
-        <ol>
-          <li><img class="about__index-logo" src="assets/images/globalive-logo.png" /></li>
-          <li><img class="about__index-logo" src="assets/images/creative-logo.png" /></li>
-        </ol>
-      </div>
+    <!-- Section 2 - Milestons -->
+    <div class="col-12 col-md-4 col-xl-3 mt-5 mt-md-0">
+      <label class="about__index-label">BENEFITS</label>
+      <ul>
+        <li *ngFor="let milestone of contentfulService.milestones$ | async; let i = index" class="about__index-item"
+          (click)="onClick(i)">
+          <div>
+            <div [ngClass]="selectedMilestone === i ? 'about__circle--filled' : 'about__circle--empty'"></div>
+          </div>
+          <div>
+            <p class="about__index-year">{{ milestone.year }}</p>
+            <p class="about__index-title">{{ milestone.title }}</p>
+            <p *ngIf="selectedMilestone === i">{{ milestone.description }}</p>
+          </div>
+        </li>
+      </ul>
+      <label class="about__index-label">AWARDRS</label>
+      <ol>
+        <li><img class="about__index-logo" src="assets/images/globalive-logo.png" /></li>
+        <li><img class="about__index-logo" src="assets/images/creative-logo.png" /></li>
+      </ol>
     </div>
   </div>
 </div>

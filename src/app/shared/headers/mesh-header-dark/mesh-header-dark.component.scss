@@ -6,13 +6,16 @@
     background: $earth-maroon;
     background-image: url('/assets/backgrounds/mesh-dark.png');
     background-repeat: no-repeat;
+    background-size: 100% auto;
     background-position: left bottom;
-    padding-top: 220px;
-    padding-bottom: 200px;
+    padding-top: 200px;
+    height: 700px;
     margin-bottom: 80px;
     @include media-breakpoint-down(sm) {
-      padding-top: 70px;
-      margin-bottom: 40px;
+      background-size: auto;
+      padding-top: 100px;
+      height: 680px;
+      margin-bottom: 50px;
     }
   }
 
@@ -27,11 +30,18 @@
     @include header1($mono-white);
   }
 
-  &__breadcrumb {
-    margin-top: 80px;
+  &__subheading {
+    max-width: 636px;
+    margin-top: 40px;
+    @include copyMedium($mono-white1);
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 80px;
+    @include captionSubNav($mono-grey3);
+  }
+
+  &__breadcrumb--brown {
     @include captionSubNav($earth-brown);
-    span {
-      @include captionSubNav($mono-grey3);
-    }
   }
 }

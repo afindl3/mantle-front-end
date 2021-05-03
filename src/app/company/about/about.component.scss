@@ -4,7 +4,11 @@
 .about {
   // Section 1
   &__container1 {
+    margin-left: 70px;
     margin-bottom: 150px;
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+    }
     @include media-breakpoint-down(sm) {
       margin-bottom: 0;
     }

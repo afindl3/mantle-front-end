@@ -10,6 +10,7 @@
   letter-spacing: 0.02em;
   @include media-breakpoint-down(xs) {
     font-size: 52px;
+    line-height: 65px;
   }
 }
 

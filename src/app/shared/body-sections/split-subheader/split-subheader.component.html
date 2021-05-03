@@ -1,19 +1,17 @@
-<div class="section">
-  <div class="split-subheader__background">
-    <div class="container">
-      <div class="d-md-flex d-md-justify-content-between">
-        <div>
-          <h2 class="split-subheader__header">{{ heading }}</h2>
-        </div>
+<div class="split-subheader__background">
+  <div class="container">
+    <div class="d-md-flex d-md-justify-content-between">
+      <div>
+        <h2 class="split-subheader__header">{{ heading }}</h2>
+      </div>
 
-        <div class="ml-md-4">
-          <p class="split-subheader__paragraph">
-            {{ subheading }}
-          </p>
-          <ul class="split-subheader__list" *ngIf="listItems">
-            <li class="pt-3" *ngFor="let item of listItems; let i = index">{{ item }}</li>
-          </ul>
-        </div>
+      <div class="ml-md-4">
+        <p class="split-subheader__paragraph">
+          {{ subheading }}
+        </p>
+        <ul class="split-subheader__list" *ngIf="listItems">
+          <li class="pt-3" *ngFor="let item of listItems; let i = index">{{ item }}</li>
+        </ul>
       </div>
     </div>
   </div>

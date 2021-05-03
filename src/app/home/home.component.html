@@ -2,36 +2,48 @@
   [showBreadcrumb]="false">
 </app-single-img-header>
 
-<app-split-subheader [heading]="'Mantle is a plug & play solution for businesses to adopt emerging technologies.'"
-  [subheading]="'We deliver the benefits of blockchain without the costs and complexities of new technology adoption.'">
-</app-split-subheader>
-
-<!-- Section 3 - Mantle empowers -->
-<div class="container">
-  <div class="row">
-    <div class="home__container3 col-12 col-lg-5 col-xl-4">
-      <h2 class="home__header3">Mantle Enables Businesses to Benefit from Emerging Technologies </h2>
-      <button class="button__primary home__button3" routerLink="/platform/what-is-mantle">
-        Learn more <img src="assets/icons/arrow-diagonal-black.png" />
-      </button>
-    </div>
-
-    <div class="home__posters-backdrop">
-      <img src="assets/backgrounds/mesh-home-poster.png" />
-    </div>
-
-    <div class="home__posters-container">
-      <div class="home__poster-container mb-3 mb-md-0">
-        <app-poster [title]="'Advanced Cybersecurity'" [style]="1" [link]="'/platform/advanced-cybersecurity'"
-          [size]="1"></app-poster>
+<div class="home__container2">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="home__header2">Mantle is a plug & play solution for businesses to adopt emerging technologies.</h3>
+        <p class="home__paragraph2">We deliver the benefits of blockchain without the costs and complexities of new
+          technology
+          adoption.</p>
       </div>
-      <div class="home__poster-container mb-3 mb-md-0 ml-md-4">
-        <app-poster [title]="'Privacy & Data Compliance'" [style]="2" [link]="'/platform/privacy-data-compliance'"
-          [size]="1"></app-poster>
-      </div>
-      <div class="home__poster-container ml-md-4">
-        <app-poster [title]="'Future Proof Architecture'" [style]="3" [link]="'/platform/future-proof-architecture'"
-          [size]="1"></app-poster>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3 - Mantle enables -->
+<div class="home__bg3 ">
+  <div class="home__container3 ">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-5 col-xl-4">
+          <h2 class="home__header3">Mantle Enables Businesses to Benefit from Emerging Technologies</h2>
+          <p class="home__paragraph3">Mantle's technology offering extends businesses' data audit & privacy
+            capabilities.
+          </p>
+          <button class="button__primary home__button3" routerLink="/platform/what-is-mantle">
+            Learn more <img src="assets/icons/arrow-diagonal-black.png" />
+          </button>
+        </div>
+
+        <div class="home__posters-container">
+          <div class="home__poster-container mb-3 mb-md-0">
+            <app-poster [title]="'Advanced Cybersecurity'" [style]="1" [link]="'/platform/advanced-cybersecurity'"
+              [size]="1"></app-poster>
+          </div>
+          <div class="home__poster-container mb-3 mb-md-0 ml-md-4">
+            <app-poster [title]="'Privacy & Data Compliance'" [style]="2" [link]="'/platform/privacy-data-compliance'"
+              [size]="1"></app-poster>
+          </div>
+          <div class="home__poster-container ml-md-4">
+            <app-poster [title]="'Future Proof Architecture'" [style]="3" [link]="'/platform/future-proof-architecture'"
+              [size]="1"></app-poster>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -109,11 +121,10 @@
 
 <!-- Section 6 - Insights-->
 <div class="container">
-  <a class="home__link" routerLink="/developers/insights">INSIGHTS FROM MANTLE ></a>
+  <span class="home__link">INSIGHTS FROM MANTLE</span>
   <div class="inset-section">
     <div class="row">
-      <div *ngFor="let article of contentfulService.blog$ | async | slice: 0:2; let i = index" class="col-12 col-md-6"
-        [ngClass]="{ 'mb-3 mb-md-0': i === 0 }">
+      <div *ngFor="let article of contentfulService.blog$ | async; let i = index" class="col-12 col-md-6 mb-5">
         <app-blog-tile [image]="article.image.fields.file.url" [heading]="article.title" [footnote1]="article.category"
           [footnote2]="article.date.split('T')[0]" [offset]="true"></app-blog-tile>
       </div>

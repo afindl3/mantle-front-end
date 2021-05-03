@@ -43,7 +43,7 @@
   }
 
   &__heading-label {
-    padding-top: 350px;
+    padding-top: 345px;
     margin-bottom: 20px;
     max-width: 636px;
     @include caption2($earth-red);
@@ -53,7 +53,7 @@
   }
 
   &__heading {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     max-width: 636px;
     @include header1($earth-maroon);
   }

@@ -6,6 +6,12 @@
     background-color: $mono-white1;
     padding-top: 120px;
     padding-bottom: 150px;
+    margin-bottom: 90px;
+    @include media-breakpoint-down(sm) {
+      padding-top: 60px;
+      padding-bottom: 80px;
+      margin-bottom: 60px
+    }
   }
 
   &__header {

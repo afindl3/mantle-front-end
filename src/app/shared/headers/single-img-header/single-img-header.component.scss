@@ -5,10 +5,10 @@
   &__backdrop1 {
     background-image: url('/assets/backgrounds/mesh-home.png');
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 100% auto;
     background-position: left top;
     padding-top: 130px;
-    margin-bottom: 100px;
+    padding-bottom: 200px;
     @include media-breakpoint-down(md) {
       padding-top: 75px;
     }
@@ -16,7 +16,7 @@
       background-size: 100%;
       background-position: 160px top;
       padding-top: 0px;
-      margin-bottom: 40px;
+      padding-bottom: 0px;
     }
   }
 

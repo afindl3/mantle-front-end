@@ -39,8 +39,7 @@
   }
 
   &__breadcrumbs {
-
-      @include captionSubNav($mono-grey3);
+    @include captionSubNav($mono-grey3);
   }
 
   &__breadcrumb--brown {

@@ -8,13 +8,14 @@
       display: block;
       width: 100%;
       position: absolute;
-      margin-top: calc(20vw * -1 - 75px);
+      margin-top: calc(20vw * -1 - 81px);
     }
   }
 
   &__desktop-mesh {
     background-image: url('/assets/backgrounds/mesh-footer-desktop.png');
     background-repeat: no-repeat;
+    background-size: 100% auto;
     background-position: right bottom;
     @include media-breakpoint-down(sm) {
       background-image: none;
