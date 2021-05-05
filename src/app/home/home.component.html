@@ -127,7 +127,7 @@
       <div *ngFor="let article of contentfulService.blog$ | async | slice: 0:2; let i = index"
         class="col-12 col-md-6 mb-5">
         <app-blog-tile [image]="article.image.fields.file.url" [heading]="article.title" [footnote1]="article.category"
-          [footnote2]="article.date.split('T')[0]" [offset]="true"></app-blog-tile>
+          [footnote2]="article.date.split('T')[0]" [offset]="true" (click)="onClick(i)"></app-blog-tile>
       </div>
     </div>
   </div>

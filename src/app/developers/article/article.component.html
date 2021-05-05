@@ -52,7 +52,7 @@
                 [footnote1]="relatedArticle1.category" [footnote2]="relatedArticle1.date.split('T')[0]" [offset]="true"
                 (click)="onClick('previous')"></app-blog-tile>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-4">
               <app-blog-tile [image]="relatedArticle2.image.fields.file.url" [heading]="relatedArticle2.title"
                 [footnote1]="relatedArticle2.category" [footnote2]="relatedArticle2.date.split('T')[0]" [offset]="true"
                 (click)="onClick('next')"></app-blog-tile>

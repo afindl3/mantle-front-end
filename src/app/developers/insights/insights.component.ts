@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContactFormFields, ContactFormType } from '../../shared/body-sections/contact-form/contact-form.component';
 import { ContentfulService } from '../../services/contentful/contentful.service';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-insights',
