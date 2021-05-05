@@ -5,15 +5,11 @@
 
   <div [ngClass]="offset ? 'blog-tile__body--offset' : 'blog-tile__body'">
     <div>
-      <label
-        *ngIf="headingLabel"
-        [ngClass]="{
+      <label *ngIf="headingLabel" [ngClass]="{
           'blog-tile__heading-label1': style === 1,
           'blog-tile__heading-label2': style === 2,
           'mb-3': !heading && body
-        }"
-        >{{ headingLabel }}</label
-      >
+        }">{{ headingLabel }}</label>
       <h4 *ngIf="heading" class="blog-tile__heading" [ngClass]="{ 'mb-3': body }">{{ heading }}</h4>
       <p *ngIf="body" class="blog-tile__body">{{ body }}</p>
     </div>

@@ -16,7 +16,9 @@ export class BlogTileComponent implements OnInit {
   @Input() offset: boolean; // Tab body content to right, no padding around image
   @Input() style: number; // Determines colour of heading label
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('this')
+  }
 }

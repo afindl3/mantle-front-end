@@ -1,0 +1,74 @@
+@import 'src/styles/base/_variables';
+@import 'src/styles/base/_typography';
+
+.article {
+  // Section 1 - Header Image
+  &__header-image {
+    text-align: right;
+  }
+
+  // Section 2 - Header Card
+  &__card-container {
+    margin-top: -150px;
+    padding: 32px 47px;
+    background: $earth-maroon;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 841px;
+  }
+
+  &__card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__card-heading {
+    @include header3($mono-white);
+  }
+
+  &__footnote-container {
+    color: $mono-white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    margin-top: 30px;
+    border-top: 1px solid $mono-white;
+  }
+
+  &__footnote1 {
+    @include caption2($earth-yellow);
+  }
+
+  &__breadcrumb-container {
+    margin-top: 68px;
+    margin-bottom: 49px;
+  }
+
+  // Section 3 - Contentful blog post
+  &__index-label {
+    margin-bottom: 28px;
+    @include caption2($earth-red);
+  }
+
+  &__index-list {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  &__index-item {
+    margin-bottom: 11px;
+  }
+
+  // Section 4 - Related insights
+  &__container4 {
+    margin-bottom: 150px;
+  }
+
+  &__header4 {
+    margin-bottom: 58px;
+    @include caption2($earth-red);
+  }
+}

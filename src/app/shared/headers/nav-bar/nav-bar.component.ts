@@ -18,9 +18,10 @@ export class NavBarComponent implements OnInit {
   constructor(private modalService: NgbModal, private router: Router) { }
 
   ngOnInit(): void {
+    const secondarHeaderRoutes = ['/developers/insights', '/company/about', '/platform/pricing'];
     this.routeSubscription = this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
       const splitURL = this.router.url.split('?')[0];
-      this.isPrimaryHeader = splitURL !== '/developers/insights' && splitURL !== '/developers/supported-networks';
+      this.isPrimaryHeader = !secondarHeaderRoutes.includes(splitURL);
     });
   }
 

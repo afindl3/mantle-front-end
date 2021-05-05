@@ -55,6 +55,9 @@
     &:hover {
       text-decoration: none;
     }
+    &.nav-bar__secondary-color {
+      color: $mono-white;
+    }
     @include media-breakpoint-down(md) {
       color: $earth-maroon;
     }

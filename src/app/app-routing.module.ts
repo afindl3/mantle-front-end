@@ -19,11 +19,10 @@ const routes: Routes = [
     path: 'legal',
     loadChildren: () => import('./legal/legal.module').then((m) => m.LegalModule),
   },
-  // {
-  //   path: '',
-  //   redirectTo: 'home',
-  //   pathMatch: 'full',
-  // },
+  {
+    path: 'developers',
+    loadChildren: () => import('./developers/developers.module').then((m) => m.DevelopersModule),
+  },
 ];
 
 @NgModule({
